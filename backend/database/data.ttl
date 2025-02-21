@@ -1,238 +1,158 @@
 @prefix ex: <http://127.0.0.1:8000/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-# Define the classes
-ex:Person rdf:type rdfs:Class .
-
-# Define relations with level
-ex:know_with_level_1 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-ex:know_with_level_2 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-ex:know_with_level_3 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-ex:know_with_level_4 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-ex:know_with_level_5 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-ex:know_with_level_6 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-ex:know_with_level_7 rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
-# Define programming languages
-ex:Python rdf:type xsd:string ;
-    rdf:value "Python" .
-
-ex:Frontend rdf:type xsd:string ;
-    rdf:value "Frontend" .
-
-ex:Backend rdf:type xsd:string ;
-    rdf:value "Backend" .
-
-ex:React rdf:type xsd:string ;
-    rdf:value "React" .
-
-ex:JavaScript rdf:type xsd:string ;
-    rdf:value "JavaScript" .
-
-ex:Java rdf:type xsd:string ;
-    rdf:value "Java" .
-
-ex:CSharp rdf:type xsd:string ;
-    rdf:value "C#" .
-
 # Define people and their knowledge levels
 ex:Person1 rdf:type ex:Person ;
     ex:know_with_level_1 "Python" ;
     ex:know_with_level_2 "React" ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "Frontend" ;
-    ex:know_with_level_5 "Backend" ;
-    ex:know_with_level_6 "Java" ;
-    ex:know_with_level_7 "C#" .
+    ex:know_with_level_5 "Backend" .
 
 ex:Person2 rdf:type ex:Person ;
     ex:know_with_level_1 "JavaScript" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Frontend" ;
-    ex:know_with_level_5 "C#" ;
-    ex:know_with_level_6 "Java" ;
-    ex:know_with_level_7 "Backend" .
+    ex:know_with_level_5 "C#" .
+ 
 
 ex:Person3 rdf:type ex:Person ;
     ex:know_with_level_1 "React" ;
     ex:know_with_level_2 "JavaScript" ;
     ex:know_with_level_3 "Python" ;
     ex:know_with_level_4 "Frontend" ;
-    ex:know_with_level_5 "Backend" ;
-    ex:know_with_level_6 "C#" ;
-    ex:know_with_level_7 "Java" .
+    ex:know_with_level_5 "Backend" .
+   
 
 ex:Person4 rdf:type ex:Person ;
     ex:know_with_level_1 "Frontend" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Backend" ;
-    ex:know_with_level_5 "Java" ;
-    ex:know_with_level_6 "JavaScript" ;
-    ex:know_with_level_7 "C#" .
-
+    ex:know_with_level_5 "Java" .
+   
 ex:Person5 rdf:type ex:Person ;
     ex:know_with_level_1 "Backend" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "React" ;
-    ex:know_with_level_5 "Frontend" ;
-    ex:know_with_level_6 "C#" ;
-    ex:know_with_level_7 "Java" .
+    ex:know_with_level_5 "Frontend" .
 
 ex:Person6 rdf:type ex:Person ;
     ex:know_with_level_1 "C#" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "React" ;
-    ex:know_with_level_5 "Frontend" ;
-    ex:know_with_level_6 "Java" ;
-    ex:know_with_level_7 "Backend" .
+    ex:know_with_level_5 "Frontend" .
+   
 
 ex:Person7 rdf:type ex:Person ;
     ex:know_with_level_1 "Java" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "JavaScript" ;
-    ex:know_with_level_5 "Frontend" ;
-    ex:know_with_level_6 "Backend" ;
-    ex:know_with_level_7 "C#" .
+    ex:know_with_level_5 "Frontend" .
+   
 
 ex:Person8 rdf:type ex:Person ;
     ex:know_with_level_1 "Frontend" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "Backend" ;
     ex:know_with_level_4 "JavaScript" ;
-    ex:know_with_level_5 "Java" ;
-    ex:know_with_level_6 "C#" ;
-    ex:know_with_level_7 "React" .
+    ex:know_with_level_5 "Java" .
+   
 
 ex:Person9 rdf:type ex:Person ;
     ex:know_with_level_1 "React" ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "Python" ;
     ex:know_with_level_4 "Backend" ;
-    ex:know_with_level_5 "JavaScript" ;
-    ex:know_with_level_6 "C#" ;
-    ex:know_with_level_7 "Java" .
+    ex:know_with_level_5 "JavaScript" .
+ 
 
 ex:Person10 rdf:type ex:Person ;
     ex:know_with_level_1 "C#" ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "Java" ;
     ex:know_with_level_4 "Python" ;
-    ex:know_with_level_5 "Backend" ;
-    ex:know_with_level_6 "JavaScript" ;
-    ex:know_with_level_7 "React" .
-
+    ex:know_with_level_5 "Backend" .
+    
 ex:Person11 rdf:type ex:Person ;
     ex:know_with_level_1 "Python" ;
     ex:know_with_level_2 "React" ;
     ex:know_with_level_3 "Frontend" ;
     ex:know_with_level_4 "JavaScript" ;
-    ex:know_with_level_5 "Java" ;
-    ex:know_with_level_6 "Backend" ;
-    ex:know_with_level_7 "C#" .
+    ex:know_with_level_5 "Java" .
+   
 
 ex:Person12 rdf:type ex:Person ;
     ex:know_with_level_1 "JavaScript" ;
     ex:know_with_level_2 "C#" ;
     ex:know_with_level_3 "Frontend" ;
     ex:know_with_level_4 "React" ;
-    ex:know_with_level_5 "Python" ;
-    ex:know_with_level_6 "Java" ;
-    ex:know_with_level_7 "Backend" .
+    ex:know_with_level_5 "Python" .
+   
 
 ex:Person13 rdf:type ex:Person ;
     ex:know_with_level_1 "Java" ;
     ex:know_with_level_2 "C#" ;
     ex:know_with_level_3 "Backend" ;
     ex:know_with_level_4 "Frontend" ;
-    ex:know_with_level_5 "React" ;
-    ex:know_with_level_6 "Python" ;
-    ex:know_with_level_7 "JavaScript" .
+    ex:know_with_level_5 "React" .
+   
 
 ex:Person14 rdf:type ex:Person ;
     ex:know_with_level_1 "Python" ;
     ex:know_with_level_2 "Java" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Frontend" ;
-    ex:know_with_level_5 "C#" ;
-    ex:know_with_level_6 "JavaScript" ;
-    ex:know_with_level_7 "Backend" .
+    ex:know_with_level_5 "C#" .
+   
 
 ex:Person15 rdf:type ex:Person ;
     ex:know_with_level_1 "JavaScript" ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "Python" ;
     ex:know_with_level_4 "C#" ;
-    ex:know_with_level_5 "React" ;
-    ex:know_with_level_6 "Backend" ;
-    ex:know_with_level_7 "Java" .
+    ex:know_with_level_5 "React" .
+   
 
 ex:Person16 rdf:type ex:Person ;
     ex:know_with_level_1 "C#" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "JavaScript" ;
-    ex:know_with_level_5 "Backend" ;
-    ex:know_with_level_6 "Frontend" ;
-    ex:know_with_level_7 "Java" .
+    ex:know_with_level_5 "Backend" .
+   
 
 ex:Person17 rdf:type ex:Person ;
     ex:know_with_level_1 "Backend" ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Java" ;
-    ex:know_with_level_5 "React" ;
-    ex:know_with_level_6 "Python" ;
-    ex:know_with_level_7 "JavaScript" .
+    ex:know_with_level_5 "React" .
+    
 
 ex:Person18 rdf:type ex:Person ;
     ex:know_with_level_1 "Java" ;
     ex:know_with_level_2 "Python" ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Backend" ;
-    ex:know_with_level_5 "Frontend" ;
-    ex:know_with_level_6 "React" ;
-    ex:know_with_level_7 "JavaScript" .
+    ex:know_with_level_5 "Frontend" .
+    
 
 ex:Person19 rdf:type ex:Person ;
     ex:know_with_level_1 "Frontend" ;
     ex:know_with_level_2 "Java" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Backend" ;
-    ex:know_with_level_5 "JavaScript" ;
-    ex:know_with_level_6 "Python" ;
-    ex:know_with_level_7 "C#" .
+    ex:know_with_level_5 "JavaScript" .
+    
 
 ex:Person20 rdf:type ex:Person ;
     ex:know_with_level_1 "React" ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Python" ;
-    ex:know_with_level_5 "Backend" ;
-    ex:know_with_level_6 "Java" ;
-    ex:know_with_level_7 "JavaScript" .
-
+    ex:know_with_level_5 "Backend" .
