@@ -6,6 +6,8 @@
 # Define the classes
 ex:Person rdf:type rdfs:Class .
 
+ex:ProgrammingLanguage rdf:type rdfs:Class .
+
 # Define relations with level
 ex:know_with_level_1 rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
@@ -28,23 +30,23 @@ ex:know_with_level_5 rdf:type rdf:Property ;
     rdfs:range xsd:string .
 
 # Define programming languages
-ex:Python rdf:type xsd:string ;
+ex:Python rdf:type xsd:ProgrammingLanguage ;
     rdf:value "Python" .
 
-ex:Frontend rdf:type xsd:string ;
+ex:Frontend rdf:type xsd:ProgrammingLanguage ;
     rdf:value "Frontend" .
 
-ex:Backend rdf:type xsd:string ;
+ex:Backend rdf:type xsd:ProgrammingLanguage ;
     rdf:value "Backend" .
 
-ex:React rdf:type xsd:string ;
+ex:React rdf:type xsd:ProgrammingLanguage ;
     rdf:value "React" .
 
-ex:JavaScript rdf:type xsd:string ;
+ex:JavaScript rdf:type xsd:ProgrammingLanguage ;
     rdf:value "JavaScript" .
 
-ex:Java rdf:type xsd:string ;
+ex:Java rdf:type xsd:ProgrammingLanguage ;
     rdf:value "Java" .
 
-ex:CSharp rdf:type xsd:string ;
+ex:CSharp rdf:type xsd:ProgrammingLanguage ;
     rdf:value "C#" .
