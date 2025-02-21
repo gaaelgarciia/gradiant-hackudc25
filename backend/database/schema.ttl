@@ -1,0 +1,26 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Define the classes
+ex:Person rdf:type rdfs:Class .
+
+# Define the knowledge property with level
+ex:hasKnowledge rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Knowledge .
+
+# Define the Knowledge class
+ex:Knowledge rdf:type rdfs:Class ;
+    rdfs:label "Knowledge" ;
+    rdfs:comment "Represents a specific knowledge in a field with a proficiency level" .
+
+# Define properties for Knowledge
+ex:knowledgeField rdf:type rdf:Property ;
+    rdfs:domain ex:Knowledge ;
+    rdfs:range xsd:string ;  # Field of knowledge (e.g., "Python", "React")
+
+ex:proficiencyLevel rdf:type rdf:Property ;
+    rdfs:domain ex:Knowledge ;
+    rdfs:range xsd:integer ;  # Level from 1 to 5
