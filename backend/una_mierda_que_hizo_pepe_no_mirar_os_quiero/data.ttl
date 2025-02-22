@@ -1,0 +1,389 @@
+@prefix ex: <http://127.0.0.1:8000/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Define the classes
+ex:Person rdf:type rdfs:Class .
+
+ex:ProgrammingLanguage rdf:type rdfs:Class .
+
+# Define the Person properties
+ex:nombre rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string .
+
+ex:email rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string .
+
+ex:repositories rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Repositorio .
+
+# Define properties for Repositories
+ex:nombre rdf:type rdf:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range xsd:string .
+
+ex:url rdf:type rdf:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range xsd:anyURI .
+
+ex:lenguaje rdf:type rdf:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range ex:ProgrammingLanguage .
+
+# Define relations with level
+ex:know_with_level_1 rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 1.	
+
+ex:know_with_level_2 rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 2.	
+
+ex:know_with_level_3 rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 3.	
+
+ex:know_with_level_4 rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 4.	
+
+ex:know_with_level_5 rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 5.	
+
+# Define programming languages
+ex:Python rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "Python" .
+
+ex:Frontend rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "Frontend" .
+
+ex:Backend rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "Backend" .
+
+ex:React rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "React" .
+
+ex:JavaScript rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "JavaScript" .
+
+ex:Java rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "Java" .
+
+ex:CSharp rdf:type xsd:ProgrammingLanguage ;
+    rdf:value "C#" .
+
+
+# Define people and their knowledge levels
+ex:Person1 rdf:type ex:Person ;
+    ex:name "Alice" ;
+    ex:email "alice@example.com" ;
+    ex:know_with_level_1 "Python" ;
+    ex:know_with_level_2 "React" ;
+    ex:know_with_level_3 "JavaScript" ;
+    ex:know_with_level_4 "Frontend" ;
+    ex:know_with_level_5 "Backend" ;
+    ex:repositories ex:Repo1 .
+
+ex:Person2 rdf:type ex:Person ;
+    ex:name "Bob" ;
+    ex:email "bob@example.com" ;
+    ex:know_with_level_1 "JavaScript" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "React" ;
+    ex:know_with_level_4 "Frontend" ;
+    ex:know_with_level_5 "C#" ;
+    ex:repositories ex:Repo2 .
+
+ex:Person3 rdf:type ex:Person ;
+    ex:name "Charlie" ;
+    ex:email "charlie@example.com" ;
+    ex:know_with_level_1 "React" ;
+    ex:know_with_level_2 "JavaScript" ;
+    ex:know_with_level_3 "Python" ;
+    ex:know_with_level_4 "Frontend" ;
+    ex:know_with_level_5 "Backend" ;
+    ex:repositories ex:Repo3 .
+
+ex:Person4 rdf:type ex:Person ;
+    ex:name "David" ;
+    ex:email "david@example.com" ;
+    ex:know_with_level_1 "Frontend" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "React" ;
+    ex:know_with_level_4 "Backend" ;
+    ex:know_with_level_5 "Java" ;
+    ex:repositories ex:Repo4 .
+
+ex:Person5 rdf:type ex:Person ;
+    ex:name "Eve" ;
+    ex:email "eve@example.com" ;
+    ex:know_with_level_1 "Backend" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "JavaScript" ;
+    ex:know_with_level_4 "React" ;
+    ex:know_with_level_5 "Frontend" ;
+    ex:repositories ex:Repo5 .
+
+ex:Person6 rdf:type ex:Person ;
+    ex:name "Frank" ;
+    ex:email "frank@example.com" ;
+    ex:know_with_level_1 "C#" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "JavaScript" ;
+    ex:know_with_level_4 "React" ;
+    ex:know_with_level_5 "Frontend" ;
+    ex:repositories ex:Repo6 .
+
+ex:Person7 rdf:type ex:Person ;
+    ex:name "Grace" ;
+    ex:email "grace@example.com" ;
+    ex:know_with_level_1 "Java" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "React" ;
+    ex:know_with_level_4 "JavaScript" ;
+    ex:know_with_level_5 "Frontend" ;
+    ex:repositories ex:Repo7 .
+
+ex:Person8 rdf:type ex:Person ;
+    ex:name "Hank" ;
+    ex:email "hank@example.com" ;
+    ex:know_with_level_1 "Frontend" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "Backend" ;
+    ex:know_with_level_4 "JavaScript" ;
+    ex:know_with_level_5 "Java" ;
+    ex:repositories ex:Repo8 .
+
+ex:Person9 rdf:type ex:Person ;
+    ex:name "Ivy" ;
+    ex:email "ivy@example.com" ;
+    ex:know_with_level_1 "React" ;
+    ex:know_with_level_2 "Frontend" ;
+    ex:know_with_level_3 "Python" ;
+    ex:know_with_level_4 "Backend" ;
+    ex:know_with_level_5 "JavaScript" ;
+    ex:repositories ex:Repo9 .
+
+ex:Person10 rdf:type ex:Person ;
+    ex:name "Jack" ;
+    ex:email "jack@example.com" ;
+    ex:know_with_level_1 "C#" ;
+    ex:know_with_level_2 "Frontend" ;
+    ex:know_with_level_3 "Java" ;
+    ex:know_with_level_4 "Python" ;
+    ex:know_with_level_5 "Backend" ;
+    ex:repositories ex:Repo10 .
+
+ex:Person11 rdf:type ex:Person ;
+    ex:name "Kathy" ;
+    ex:email "kathy@example.com" ;
+    ex:know_with_level_1 "Python" ;
+    ex:know_with_level_2 "React" ;
+    ex:know_with_level_3 "Frontend" ;
+    ex:know_with_level_4 "JavaScript" ;
+    ex:know_with_level_5 "Java" ;
+    ex:repositories ex:Repo11 .
+
+ex:Person12 rdf:type ex:Person ;
+    ex:name "Leo" ;
+    ex:email "leo@example.com" ;
+    ex:know_with_level_1 "JavaScript" ;
+    ex:know_with_level_2 "C#" ;
+    ex:know_with_level_3 "Frontend" ;
+    ex:know_with_level_4 "React" ;
+    ex:know_with_level_5 "Python" ;
+    ex:repositories ex:Repo12 .
+
+ex:Person13 rdf:type ex:Person ;
+    ex:name "Mia" ;
+    ex:email "mia@example.com" ;
+    ex:know_with_level_1 "Java" ;
+    ex:know_with_level_2 "C#" ;
+    ex:know_with_level_3 "Backend" ;
+    ex:know_with_level_4 "Frontend" ;
+    ex:know_with_level_5 "React" ;
+    ex:repositories ex:Repo13 .
+
+ex:Person14 rdf:type ex:Person ;
+    ex:name "Nina" ;
+    ex:email "nina@example.com" ;
+    ex:know_with_level_1 "Python" ;
+    ex:know_with_level_2 "Java" ;
+    ex:know_with_level_3 "React" ;
+    ex:know_with_level_4 "Frontend" ;
+    ex:know_with_level_5 "C#" ;
+    ex:repositories ex:Repo14 .
+
+ex:Person15 rdf:type ex:Person ;
+    ex:name "Oscar" ;
+    ex:email "oscar@example.com" ;
+    ex:know_with_level_1 "JavaScript" ;
+    ex:know_with_level_2 "Frontend" ;
+    ex:know_with_level_3 "Python" ;
+    ex:know_with_level_4 "C#" ;
+    ex:know_with_level_5 "React" ;
+    ex:repositories ex:Repo15 .
+
+ex:Person16 rdf:type ex:Person ;
+    ex:name "Paul" ;
+    ex:email "paul@example.com" ;
+    ex:know_with_level_1 "C#" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "React" ;
+    ex:know_with_level_4 "JavaScript" ;
+    ex:know_with_level_5 "Backend" ;
+    ex:repositories ex:Repo16 .
+
+ex:Person17 rdf:type ex:Person ;
+    ex:name "Quinn" ;
+    ex:email "quinn@example.com" ;
+    ex:know_with_level_1 "Backend" ;
+    ex:know_with_level_2 "Frontend" ;
+    ex:know_with_level_3 "C#" ;
+    ex:know_with_level_4 "Java" ;
+    ex:know_with_level_5 "React" ;
+    ex:repositories ex:Repo17 .
+
+ex:Person18 rdf:type ex:Person ;
+    ex:name "Rose" ;
+    ex:email "rose@example.com" ;
+    ex:know_with_level_1 "Java" ;
+    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_3 "C#" ;
+    ex:know_with_level_4 "Backend" ;
+    ex:know_with_level_5 "Frontend" ;
+    ex:repositories ex:Repo18 .
+
+ex:Person19 rdf:type ex:Person ;
+    ex:name "Sam" ;
+    ex:email "sam@example.com" ;
+    ex:know_with_level_1 "Frontend" ;
+    ex:know_with_level_2 "Java" ;
+    ex:know_with_level_3 "React" ;
+    ex:know_with_level_4 "Backend" ;
+    ex:know_with_level_5 "JavaScript" ;
+    ex:repositories ex:Repo19 .
+
+ex:Person20 rdf:type ex:Person ;
+    ex:name "Tina" ;
+    ex:email "tina@example.com" ;
+    ex:know_with_level_1 "React" ;
+    ex:know_with_level_2 "Frontend" ;
+    ex:know_with_level_3 "C#" ;
+    ex:know_with_level_4 "Python" ;
+    ex:know_with_level_5 "Backend" ;
+    ex:repositories ex:Repo20 .
+
+# Define repositories
+
+ex:Repo1 rdf:type ex:Repositorio ;
+    ex:nombre "Repo1" ;
+    ex:url "http://repo1.example.com" ;
+    ex:lenguaje "Python" .
+
+ex:Repo2 rdf:type ex:Repositorio ;
+    ex:nombre "Repo2" ;
+    ex:url "http://repo2.example.com" ;
+    ex:lenguaje "JavaScript" .
+
+ex:Repo3 rdf:type ex:Repositorio ;
+    ex:nombre "Repo3" ;
+    ex:url "http://repo3.example.com" ;
+    ex:lenguaje "React" .
+
+ex:Repo4 rdf:type ex:Repositorio ;
+    ex:nombre "Repo4" ;
+    ex:url "http://repo4.example.com" ;
+    ex:lenguaje "Frontend" .
+
+ex:Repo5 rdf:type ex:Repositorio ;
+    ex:nombre "Repo5" ;
+    ex:url "http://repo5.example.com" ;
+    ex:lenguaje "Backend" .
+
+ex:Repo6 rdf:type ex:Repositorio ;
+    ex:nombre "Repo6" ;
+    ex:url "http://repo6.example.com" ;
+    ex:lenguaje "C#" .
+
+ex:Repo7 rdf:type ex:Repositorio ;
+    ex:nombre "Repo7" ;
+    ex:url "http://repo7.example.com" ;
+    ex:lenguaje "Java" .
+
+ex:Repo8 rdf:type ex:Repositorio ;
+    ex:nombre "Repo8" ;
+    ex:url "http://repo8.example.com" ;
+    ex:lenguaje "Python" .
+
+ex:Repo9 rdf:type ex:Repositorio ;
+    ex:nombre "Repo9" ;
+    ex:url "http://repo9.example.com" ;
+    ex:lenguaje "JavaScript" .
+
+ex:Repo10 rdf:type ex:Repositorio ;
+    ex:nombre "Repo10" ;
+    ex:url "http://repo10.example.com" ;
+    ex:lenguaje "React" .
+
+ex:Repo11 rdf:type ex:Repositorio ;
+    ex:nombre "Repo11" ;
+    ex:url "http://repo11.example.com" ;
+    ex:lenguaje "Frontend" .
+
+ex:Repo12 rdf:type ex:Repositorio ;
+    ex:nombre "Repo12" ;
+    ex:url "http://repo12.example.com" ;
+    ex:lenguaje "Backend" .
+
+ex:Repo13 rdf:type ex:Repositorio ;
+    ex:nombre "Repo13" ;
+    ex:url "http://repo13.example.com" ;
+    ex:lenguaje "C#" .
+
+ex:Repo14 rdf:type ex:Repositorio ;
+    ex:nombre "Repo14" ;
+    ex:url "http://repo14.example.com" ;
+    ex:lenguaje "Java" .
+
+ex:Repo15 rdf:type ex:Repositorio ;
+    ex:nombre "Repo15" ;
+    ex:url "http://repo15.example.com" ;
+    ex:lenguaje "Python" .
+
+ex:Repo16 rdf:type ex:Repositorio ;
+    ex:nombre "Repo16" ;
+    ex:url "http://repo16.example.com" ;
+    ex:lenguaje "JavaScript" .
+
+ex:Repo17 rdf:type ex:Repositorio ;
+    ex:nombre "Repo17" ;
+    ex:url "http://repo17.example.com" ;
+    ex:lenguaje "React" .
+
+ex:Repo18 rdf:type ex:Repositorio ;
+    ex:nombre "Repo18" ;
+    ex:url "http://repo18.example.com" ;
+    ex:lenguaje "Frontend" .
+
+ex:Repo19 rdf:type ex:Repositorio ;
+    ex:nombre "Repo19" ;
+    ex:url "http://repo19.example.com" ;
+    ex:lenguaje "Backend" .
+
+ex:Repo20 rdf:type ex:Repositorio ;
+    ex:nombre "Repo20" ;
+    ex:url "http://repo20.example.com" ;
+    ex:lenguaje "C#" .
