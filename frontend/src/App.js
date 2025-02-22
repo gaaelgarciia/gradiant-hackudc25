@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import SkillForm from './components/SkillForm';
+import LoginScreen from './components/LoginScreen';
+import LoginPopup from './components/LoginPopup';
 import { fetchResults } from './services/api';
 import './styles/index.css';
 
@@ -9,6 +11,8 @@ function App() {
   const [results, setResults] = useState([]);
   const [selectedResult, setSelectedResult] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   const handleSearch = async (query) => {
     const data = await fetchResults(query);
@@ -33,17 +37,41 @@ function App() {
     setShowForm(false);
   };
 
+  const handleLogin = (userData) => {
+    setIsLoggedIn(true);
+    console.log('User logged in:', userData);
+  };
+
+  const handleOpenLoginPopup = () => {
+    setShowLoginPopup(true);
+  };
+
+  const handleCloseLoginPopup = () => {
+    setShowLoginPopup(false);
+  };
+
   return (
     <div className="container">
-      <h1>Person Skills Search</h1>
-      <SearchBar onSearch={handleSearch} />
-      <button onClick={handleAddButtonClick} className="add-button">
-        <span>+</span> Add Skill
-      </button>
-      {showForm ? (
-        <SkillForm onSubmit={handleFormSubmit} selectedResult={selectedResult} onClose={handleCloseForm} />
+      {!isLoggedIn ? (
+        <>
+          <LoginScreen onLogin={handleOpenLoginPopup} />
+          {showLoginPopup && (
+            <LoginPopup onClose={handleCloseLoginPopup} onLogin={handleLogin} />
+          )}
+        </>
       ) : (
-        <SearchResults results={results} onResultClick={handleResultClick} />
+        <>
+          <h1>Person Skills Search</h1>
+          <SearchBar onSearch={handleSearch} />
+          <button onClick={handleAddButtonClick} className="add-button">
+            <span>+</span> Add Skill
+          </button>
+          {showForm ? (
+            <SkillForm onSubmit={handleFormSubmit} selectedResult={selectedResult} onClose={handleCloseForm} />
+          ) : (
+            <SearchResults results={results} onResultClick={handleResultClick} />
+          )}
+        </>
       )}
     </div>
   );

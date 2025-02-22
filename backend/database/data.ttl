@@ -17,7 +17,7 @@ ex:Repositorio rdf:type rdfs:Class .
 ex:lenguaje rdf:type rdfs:Property ;
     rdfs:domain ex:Repositorio ;
     rdfs:range ex:ProgrammingLanguage ;
-    owl: hasValue 1 .
+    owl:hasValue 1 .
 
 # Define the Person properties
 ex:nombre rdf:type rdf:Property ;
