@@ -1,31 +1,35 @@
 from rdflib import Namespace
+import numpy as np
 
 EX = Namespace("http://127.0.0.1:8000/")
 
+        #SELECT  ?name (sum(xsd:integer(coalesce(?level, "0"^^xsd:integer)) + xsd:integer(coalesce(?valor, "0"^^xsd:integer))) AS ?suma) 
 def consultar_competencia(graph, competencia):
     query = f"""
         PREFIX ex: <{EX}>
-        SELECT DISTINCT ?name (sum(xsd:integer(coalesce(?level, "0"^^xsd:integer)) + xsd:integer(coalesce(?valor, "0"^^xsd:integer))) AS ?suma) 
+       select ?name ?puntuacion1 ?puntuacion2
         WHERE {{
             ?person a ex:Person ;
                    ex:name ?name ;
                    ?rel "{competencia}" .
-            ?rel owl:hasValue ?level .
+            ?rel owl:hasValue ?puntuacion1 .
             optional {{ ?person a ex:Person ;
                             ex:repositories ?repo .
                         ?repo ex:lenguaje "{competencia}" . 
-                        ex:lenguaje owl:hasValue ?valor }}.
+                        ex:lenguaje owl:hasValue ?puntuacion2 }}.
             
         }}
-        ORDER BY DESC(xsd:integer(?level))
     """
-    
+   
     results = []
     for row in graph.query(query):
+        print(row)
         name = str(row.name)
-        level = str(row.suma).replace('.', '')  # Remove decimal point
+        level = row.puntuacion1 + row.puntuacion2
         results.append([name, level])
-    return results
+        #results.append(row)
+    results = np.array(results)
+    return results[results[:,1].argsort()][::-1]
 
 def consultar_personas(graph, competencias):
     competencias = competencias.split('_')
