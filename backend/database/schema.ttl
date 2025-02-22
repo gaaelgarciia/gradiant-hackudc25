@@ -9,10 +9,31 @@ ex:Person rdf:type rdfs:Class .
 
 ex:ProgrammingLanguage rdf:type rdfs:Class .
 
+# Define the Person properties
+ex:nombre rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string .
 
-ex:has_value rdf:type rdf:Property ;
-	
+ex:email rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string .
 
+ex:repositories rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Repositorio .
+
+# Define properties for Repositories
+ex:nombre rdf:type rdf:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range xsd:string .
+
+ex:url rdf:type rdf:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range xsd:anyURI .
+
+ex:lenguaje rdf:type rdf:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range ex:ProgrammingLanguage .
 
 # Define relations with level
 ex:know_with_level_1 rdf:type rdf:Property ;
