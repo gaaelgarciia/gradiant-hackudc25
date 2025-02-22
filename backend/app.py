@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph, Namespace
 from rdflib.namespace import RDF, RDFS
 import sparql_querys 
-
+from parser import query_parse
 app = FastAPI()
 
 # Enable CORS
