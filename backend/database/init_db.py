@@ -12,8 +12,6 @@ g.parse("schema.ttl", format="ttl")
 # Cargar los datos desde data.ttl
 g.parse("data.ttl", format="ttl")
 
-# Guardar el grafo en un archivo (opcional)
-g.serialize(destination="output.ttl", format="ttl")
 
 
 
