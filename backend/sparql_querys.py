@@ -39,3 +39,15 @@ def consultar_personas(graph, competencias):
         resultado.append(consultar_competencia(graph, competencia))
     return resultado
 
+competencias = ['Python', 'Backend']
+
+def post_competencia(graph, persona, competencia, nivel):
+    #implementación vainilla pero que funcionar funciona
+    
+    if nivel in range(1,6):
+        nivel_formato = f'ex:know_with_level_{nivel}'
+    if competencia in competencias: # esto yo (pepe) no lo haría así, prefeririaconsultarlo en el grafo en vez de hardcodearlo pero bueno poco a poco
+        graph.add(persona, nivel_formato, competencia)
+        graph.serialize('data.ttl', format='ttl')
+    
+        
