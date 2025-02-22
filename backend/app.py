@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from rdflib import Graph, Namespace
 from rdflib.namespace import RDF, RDFS
-from SPARQLWrapper import SPARQLWrapper, JSON
+import sparql_querys 
 
 app = FastAPI()
 
@@ -11,5 +11,5 @@ g.parse("database/data.ttl", format="turtle")
 
 @app.get("/personas/{competencia}")
 def get_personas(competencia: str):
-    resultado = SPARQLWrapper.consultar_personas(g, competencia)
+    resultado = sparql_querys.consultar_personas(g, competencia)
     return {"personas": resultado}
