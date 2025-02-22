@@ -8,3 +8,9 @@ class Competencia(BaseModel):
     competencia: str
     nivel: int
 
+class Repositorio(BaseModel):
+    persona_id: int
+    lenguaje: str
+    nombre: str
+    url:str
+
