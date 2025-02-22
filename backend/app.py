@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph, Namespace
 from rdflib.namespace import RDF, RDFS
 import sparql_querys 
-from parser import parse_query
 app = FastAPI()
 
 # Enable CORS
@@ -21,7 +20,7 @@ g.parse("database/data.ttl", format="turtle")
 
 @app.get("/personas/competencias/{consulta}")
 def get_personas(consulta: str):
-    consulta = parse_query(consulta)
+    consulta = sparql_querys.parse_query(g,consulta)
     resultado = sparql_querys.consultar_personas(g, consulta)
     return {"personas": resultado}
 
@@ -47,12 +46,10 @@ def get_atributos(persona_id: int):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-@app.get("/programming_languages") 
+@app.get("/lenguajes") 
 def get_programming_languages():
     try:
-        lenguajes: sparql_querys.consultar_lenguajes(g)
-        if not languages:
-            raise HTTPException(status_code=404, detail="Lenguajes no encontrados")
+        lenguajes = sparql_querys.consultar_lenguajes_programacion(g)
         return {"programming_lenguajes": lenguajes}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
