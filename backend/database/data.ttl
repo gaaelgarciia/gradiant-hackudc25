@@ -10,6 +10,15 @@ ex:Person rdf:type rdfs:Class .
 
 ex:ProgrammingLanguage rdf:type rdfs:Class .
 
+ex:Repositorio rdf:type rdfs:Class .
+
+#Lenguaje del repositorio
+
+ex:lenguaje rdf:type rdfs:Property ;
+    rdfs:domain ex:Repositorio ;
+    rdfs:range ex:ProgrammingLanguage ;
+    owl: hasValue 1 .
+
 # Define the Person properties
 ex:nombre rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
