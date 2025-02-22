@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
+import { fetchProgrammingLanguages } from '../services/api';
+
 
 const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
   const [nombre, setNombre] = useState(selectedResult ? selectedResult.name : '');
   const [tipo, setTipo] = useState('');
   const [nivel, setNivel] = useState('');
   const [descripcion, setDescripcion] = useState('');
+  const [programmingLanguages, setProgrammingLanguages] = useState([]);
+
+  useEffect(() => {
+    const loadLanguages = async () => {
+      const languages = await fetchProgrammingLanguages();
+      setProgrammingLanguages(languages);
+    };
+    
+    loadLanguages();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit({ nombre, tipo, nivel, descripcion });
     onClose(); // Cerrar el popup al enviar el formulario
   };
-
-  const programmingLanguages = [
-    "Python",
-    "Frontend",
-    "Backend",
-    "React",
-    "JavaScript",
-    "Java",
-    "C#"
-  ];
 
   return (
     <div className="popup-overlay">

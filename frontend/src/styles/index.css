@@ -399,3 +399,36 @@ body {
   transform: translateY(-2px);
   background-color: #333333;
 }
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.skill-level {
+  transition: transform 0.2s ease;
+}
+
+.skill-level:hover {
+  transform: translateY(-2px);
+}
+
+.popup-content ul {
+  padding: 0;
+  margin: 16px 0;
+}
+
+.result-item {
+  background-color: #2d2d2d;
+  padding: 16px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-2px);
+  background-color: #333333;
+}
