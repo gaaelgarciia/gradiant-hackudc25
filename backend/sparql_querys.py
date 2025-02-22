@@ -37,8 +37,8 @@ def consultar_personas(graph, competencias):
     competencias = competencias.split('_')
     resultado = []
     for competencia in competencias:
-        resultado.append(competencia)
-        resultado.append(consultar_competencia(graph, competencia))
+        personas = consultar_competencia(graph, competencia)
+        resultado.append({"competencia": competencia, "personas": personas})
     return resultado
 
 def post_competencia(graph, persona, competencia, nivel=2):
@@ -49,7 +49,6 @@ def post_competencia(graph, persona, competencia, nivel=2):
     if competencia in competencias: # esto yo (pepe) no lo haría así, prefeririaconsultarlo en el grafo en vez de hardcodearlo pero bueno poco a poco
         graph.add(persona, nivel_formato, competencia)
         graph.serialize('data.ttl', format='ttl')
-<<<<<<< HEAD
 
 def consultar_lenguajes_programacion(graph):
     query = f"""
@@ -79,12 +78,11 @@ def verbos(graph):
     return list(predicates)
 
 def get_persona(graph, id_persona):
-    Persona = graph.subjects('ex:id', id_persona)
+    persona_uri = EX[f"{id_persona}"]
     resultado = {}
-    for verbo in verbos(graph):
-        valor = graph.value(Persona, verbo)
-        if valor :
-            resultado[verbo] = valor 
+    for s, p, o in graph.triples((persona_uri, None, None)):
+        predicado = str(p).split("/")[-1]
+        resultado[predicado] = str(o)
     return resultado
     
 def parse_query(graph,query):
@@ -96,12 +94,8 @@ def parse_query(graph,query):
     # Find all matches in the query
     matches = []
     for term in programming_terms:
-        if term in query:
+        if term.lower() in query:
             matches.append(term.capitalize())
     
     # Join matches with underscore and return
     return '_'.join(matches)
-
-        
-=======
->>>>>>> cc3cde60603b0c9392fd2ac0acb44b8b28213bcd

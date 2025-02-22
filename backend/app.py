@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph, Namespace
-from rdflib.namespace import RDF, RDFS
-import sparql_querys 
+import sparql_querys
+
 app = FastAPI()
 
 # Enable CORS
@@ -20,47 +20,45 @@ g.parse("database/data.ttl", format="turtle")
 
 @app.get("/personas/competencias/{consulta}")
 def get_personas(consulta: str):
-    consulta = sparql_querys.parse_query(g,consulta)
-    resultado = sparql_querys.consultar_personas(g, consulta)
-    return {"personas": resultado}
+    try:
+        consulta = sparql_querys.parse_query(g, consulta)
+        resultado = sparql_querys.consultar_personas(g, consulta)
+        return {"personas": resultado}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/personas/id/{persona_id}")
 def get_perfil(persona_id: int):
     try:
-        persona_uri = f"http://127.0.0.1:8000/personas/id/{persona_id}"
-        resultado = sparql_querys.consultar_perfil(g, persona_id)
+        resultado = sparql_querys.get_persona(g, persona_id)
         if not resultado:
             raise HTTPException(status_code=404, detail="Perfil no encontrado")
         return {"perfil": resultado}
     except Exception as e:
-
         raise HTTPException(status_code=500, detail=str(e))
-    
-@app.get("/personas/atributos/{persona_id}")
-def get_atributos(persona_id: int):
+
+@app.get("/personas/atributos/{id_persona}")
+def get_atributos_persona(id_persona: int):
     try:
-        resultado = sparql_querys.get_persona(g, persona_id)    
+        resultado = sparql_querys.get_persona(g, id_persona)
         if not resultado:
-            raise HTTPException(status_code=404, detail="Perfil no encontrado")
+            raise HTTPException(status_code=404, detail="Persona no encontrada")
         return {"atributos": resultado}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
-@app.get("/lenguajes") 
+
+@app.get("/lenguajes")
 def get_programming_languages():
     try:
         lenguajes = sparql_querys.consultar_lenguajes_programacion(g)
         return {"programming_lenguajes": lenguajes}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
-@app.post("/personas/competencias")    
+
+@app.post("/personas/competencias")
 def post_competencia(persona_id: int, competencia: str, nivel: int):
     try:
         sparql_querys.post_competencia(g, persona_id, competencia, nivel)
         return {"message": "Competencia añadida"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-
-
