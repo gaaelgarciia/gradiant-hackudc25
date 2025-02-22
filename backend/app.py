@@ -5,6 +5,15 @@ import sparql_querys
 
 app = FastAPI()
 
+# Enable CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Cargar la base de datos RDF
 g = Graph()
 g.parse("database/data.ttl", format="turtle")
