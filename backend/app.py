@@ -21,6 +21,7 @@ g.parse("database/data.ttl", format="turtle")
 
 @app.get("/personas/competencias/{consulta}")
 def get_personas(consulta: str):
+    consulta = parse_query(consulta)
     resultado = sparql_querys.consultar_personas(g, consulta)
     return {"personas": resultado}
 
