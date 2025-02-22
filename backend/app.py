@@ -1,7 +1,7 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph, Namespace
 from rdflib.namespace import RDF, RDFS
-from fastapi.middleware.cors import CORSMiddleware
 import sparql_querys 
 
 app = FastAPI()
@@ -9,13 +9,13 @@ app = FastAPI()
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Cargar la base de datos RDF
+# Load RDF database
 g = Graph()
 g.parse("database/data.ttl", format="turtle")
 

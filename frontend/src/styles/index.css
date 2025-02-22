@@ -167,4 +167,38 @@ body {
     font-size: 24px;
     color: #fff;
     cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .result-item:hover {
+    transform: translateY(-2px);
+    background-color: #333333;
+  }
+  
+  .person-name {
+    font-weight: 500;
+  }
+  
+  .skill-level {
+    background-color: #444;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
   }

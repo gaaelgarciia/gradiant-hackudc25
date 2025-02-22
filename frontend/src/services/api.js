@@ -7,9 +7,34 @@ export const fetchResults = async (query) => {
             throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        return data.personas;
+        
+        // Extract the skill name and people array
+        const [skillName, peopleArray] = data.personas;
+        
+        // Make sure peopleArray is iterable
+        if (!Array.isArray(peopleArray)) {
+            console.error("People array is not valid:", peopleArray);
+            return {
+                skill: query,
+                people: []
+            };
+        }
+        
+        // Format the data for display (no sorting needed)
+        const formattedResults = peopleArray.map(([name, level]) => ({
+            name,
+            level: parseInt(level)
+        }));
+
+        return {
+            skill: skillName,
+            people: formattedResults
+        };
     } catch (error) {
         console.error("Error fetching results:", error);
-        return [];
+        return {
+            skill: query,
+            people: []
+        };
     }
 };
