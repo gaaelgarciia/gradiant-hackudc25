@@ -24,7 +24,6 @@ def consultar_competencia(graph, competencia):
    
     results = []
     for row in graph.query(query):
-        print(row)
         idPersona = str(row.id)
         name = str(row.name)
         level = row.puntuacion1 + row.puntuacion2
@@ -41,14 +40,17 @@ def consultar_personas(graph, competencias):
         resultado.append({"competencia": competencia, "personas": personas})
     return resultado
 
-def post_competencia(graph, persona, competencia, nivel=2):
-    #implementación vainilla pero que funcionar funciona
-    competencias = consultar_lenguajes_programacion(graph)
-    if nivel in range(1,6):
-        nivel_formato = f'ex:know_with_level_{nivel}'
-    if competencia in competencias: # esto yo (pepe) no lo haría así, prefeririaconsultarlo en el grafo en vez de hardcodearlo pero bueno poco a poco
-        graph.add(persona, nivel_formato, competencia)
-        graph.serialize('data.ttl', format='ttl')
+def post_competencia(graph, persona_id, competencia, nivel):
+    if nivel in range(1, 6):
+        nivel_formato = EX[f'know_with_level_{nivel}']
+    else:
+        raise ValueError("El nivel debe estar entre 1 y 5")
+
+    competencia_uri = EX[competencia.replace(" ", "_")]
+    persona_uri = EX[f"{persona_id}"]
+
+    graph.add((persona_uri, nivel_formato, competencia_uri))
+    graph.serialize('database/data.ttl', format='turtle')    
 
 def consultar_lenguajes_programacion(graph):
     query = f"""

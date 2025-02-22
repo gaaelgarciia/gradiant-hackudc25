@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from rdflib import Graph, Namespace
+from rdflib import Graph
+from classes import Competencia
 import sparql_querys
 
 app = FastAPI()
@@ -55,7 +56,7 @@ def get_programming_languages():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/personas/competencias")
+@app.post("/personas/Postcompetencias")
 def post_competencia(persona_id: int, competencia: str, nivel: int):
     try:
         sparql_querys.post_competencia(g, persona_id, competencia, nivel)
