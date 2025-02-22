@@ -34,4 +34,5 @@ def get_perfil(persona_id: int):
             raise HTTPException(status_code=404, detail="Perfil no encontrado")
         return {"perfil": resultado}
     except Exception as e:
+
         raise HTTPException(status_code=500, detail=str(e))
