@@ -110,11 +110,19 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 500px;
+    position: relative; /* Necesario para posicionar el botón de cierre */
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .popup-content h2 {
     margin-top: 0;
     color: #fff;
+    flex-grow: 1; /* Asegura que el título ocupe el espacio disponible */
   }
   
   .popup-content label {
@@ -134,11 +142,30 @@ body {
   }
   
   .popup-content button {
-    background-color: #007bff;
+    background-color: #444; /* Color gris oscuro */
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .popup-content button:hover {
+    background-color: #555; /* Color gris más claro al pasar el ratón */
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
