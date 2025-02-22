@@ -4,19 +4,23 @@ import SearchResults from './components/SearchResults';
 import SkillForm from './components/SkillForm';
 import LoginScreen from './components/LoginScreen';
 import LoginPopup from './components/LoginPopup';
+import UserInfoPopup from './components/UserInfoPopup';
 import { fetchResults } from './services/api';
 import './styles/index.css';
 
 function App() {
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState({});
   const [selectedResult, setSelectedResult] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginPopup, setShowLoginPopup] = useState(false);
+  const [showUserInfoPopup, setShowUserInfoPopup] = useState(false);
+  const [user, setUser] = useState(null);
 
   const handleSearch = async (query) => {
-    const data = await fetchResults(query);
-    setResults(data);
+    const skills = query.split('_');
+    const response = await fetchResults(skills);
+    setResults(response);
   };
 
   const handleResultClick = (result) => {
@@ -39,6 +43,11 @@ function App() {
 
   const handleLogin = (userData) => {
     setIsLoggedIn(true);
+    setUser({
+      ...userData,
+      skills: ["Python", "React", "JavaScript"], // Example skills, replace with actual data
+      repositories: ["Repo1", "Repo2"] // Example repositories, replace with actual data
+    });
     console.log('User logged in:', userData);
   };
 
@@ -48,6 +57,20 @@ function App() {
 
   const handleCloseLoginPopup = () => {
     setShowLoginPopup(false);
+  };
+
+  const handleOpenUserInfoPopup = () => {
+    setShowUserInfoPopup(true);
+  };
+
+  const handleCloseUserInfoPopup = () => {
+    setShowUserInfoPopup(false);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUser(null);
+    setShowUserInfoPopup(false);
   };
 
   return (
@@ -61,6 +84,9 @@ function App() {
         </>
       ) : (
         <>
+          <button onClick={handleOpenUserInfoPopup} className="user-info-button">
+            Información del Usuario
+          </button>
           <h1>Person Skills Search</h1>
           <SearchBar onSearch={handleSearch} />
           <button onClick={handleAddButtonClick} className="add-button">
@@ -70,6 +96,9 @@ function App() {
             <SkillForm onSubmit={handleFormSubmit} selectedResult={selectedResult} onClose={handleCloseForm} />
           ) : (
             <SearchResults results={results} onResultClick={handleResultClick} />
+          )}
+          {showUserInfoPopup && (
+            <UserInfoPopup user={user} onClose={handleCloseUserInfoPopup} onLogout={handleLogout} />
           )}
         </>
       )}

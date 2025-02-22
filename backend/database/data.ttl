@@ -32,6 +32,10 @@ ex:repositories rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Repositorio .
 
+ex:id rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:int .
+
 # Define properties for Repositories
 ex:nombre rdf:type rdf:Property ;
     rdfs:domain ex:Repositorio ;
@@ -103,7 +107,8 @@ ex:Person1 rdf:type ex:Person ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "Backend" ;
-    ex:repositories ex:Repo1 .
+    ex:repositories ex:Repo1 ;
+    ex:id 1 .
 
 ex:Person2 rdf:type ex:Person ;
     ex:name "Bob" ;
@@ -113,7 +118,8 @@ ex:Person2 rdf:type ex:Person ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "C#" ;
-    ex:repositories ex:Repo2 .
+    ex:repositories ex:Repo2 ;
+    ex:id 2 .
 
 ex:Person3 rdf:type ex:Person ;
     ex:name "Charlie" ;
@@ -123,7 +129,8 @@ ex:Person3 rdf:type ex:Person ;
     ex:know_with_level_3 "Python" ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "Backend" ;
-    ex:repositories ex:Repo3 .
+    ex:repositories ex:Repo3 ;
+    ex:id 3 .
 
 ex:Person4 rdf:type ex:Person ;
     ex:name "David" ;
@@ -133,7 +140,8 @@ ex:Person4 rdf:type ex:Person ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "Java" ;
-    ex:repositories ex:Repo4 .
+    ex:repositories ex:Repo4 ;
+    ex:id 4 .
 
 ex:Person5 rdf:type ex:Person ;
     ex:name "Eve" ;
@@ -143,7 +151,8 @@ ex:Person5 rdf:type ex:Person ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "React" ;
     ex:know_with_level_5 "Frontend" ;
-    ex:repositories ex:Repo5 .
+    ex:repositories ex:Repo5 ;
+    ex:id 5 .
 
 ex:Person6 rdf:type ex:Person ;
     ex:name "Frank" ;
@@ -153,7 +162,8 @@ ex:Person6 rdf:type ex:Person ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "React" ;
     ex:know_with_level_5 "Frontend" ;
-    ex:repositories ex:Repo6 .
+    ex:repositories ex:Repo6 ;
+    ex:id 6 .
 
 ex:Person7 rdf:type ex:Person ;
     ex:name "Grace" ;
@@ -163,7 +173,8 @@ ex:Person7 rdf:type ex:Person ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Frontend" ;
-    ex:repositories ex:Repo7 .
+    ex:repositories ex:Repo7 ;
+    ex:id 7 .
 
 ex:Person8 rdf:type ex:Person ;
     ex:name "Hank" ;
@@ -173,7 +184,8 @@ ex:Person8 rdf:type ex:Person ;
     ex:know_with_level_3 "Backend" ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Java" ;
-    ex:repositories ex:Repo8 .
+    ex:repositories ex:Repo8 ;
+    ex:id 8 .
 
 ex:Person9 rdf:type ex:Person ;
     ex:name "Ivy" ;
@@ -183,7 +195,8 @@ ex:Person9 rdf:type ex:Person ;
     ex:know_with_level_3 "Python" ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "JavaScript" ;
-    ex:repositories ex:Repo9 .
+    ex:repositories ex:Repo9 ;
+    ex:id 9 .
 
 ex:Person10 rdf:type ex:Person ;
     ex:name "Jack" ;
@@ -193,7 +206,8 @@ ex:Person10 rdf:type ex:Person ;
     ex:know_with_level_3 "Java" ;
     ex:know_with_level_4 "Python" ;
     ex:know_with_level_5 "Backend" ;
-    ex:repositories ex:Repo10 .
+    ex:repositories ex:Repo10 ;
+    ex:id 10 .
 
 ex:Person11 rdf:type ex:Person ;
     ex:name "Kathy" ;
@@ -203,7 +217,8 @@ ex:Person11 rdf:type ex:Person ;
     ex:know_with_level_3 "Frontend" ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Java" ;
-    ex:repositories ex:Repo11 .
+    ex:repositories ex:Repo11 ;
+    ex:id 11 .
 
 ex:Person12 rdf:type ex:Person ;
     ex:name "Leo" ;
@@ -213,7 +228,8 @@ ex:Person12 rdf:type ex:Person ;
     ex:know_with_level_3 "Frontend" ;
     ex:know_with_level_4 "React" ;
     ex:know_with_level_5 "Python" ;
-    ex:repositories ex:Repo12 .
+    ex:repositories ex:Repo12 ;
+    ex:id 12 .
 
 ex:Person13 rdf:type ex:Person ;
     ex:name "Mia" ;
@@ -223,7 +239,8 @@ ex:Person13 rdf:type ex:Person ;
     ex:know_with_level_3 "Backend" ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "React" ;
-    ex:repositories ex:Repo13 .
+    ex:repositories ex:Repo13 ;
+    ex:id 13 .
 
 ex:Person14 rdf:type ex:Person ;
     ex:name "Nina" ;
@@ -233,7 +250,8 @@ ex:Person14 rdf:type ex:Person ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "C#" ;
-    ex:repositories ex:Repo14 .
+    ex:repositories ex:Repo14 ;
+    ex:id 14 .
 
 ex:Person15 rdf:type ex:Person ;
     ex:name "Oscar" ;
@@ -243,7 +261,8 @@ ex:Person15 rdf:type ex:Person ;
     ex:know_with_level_3 "Python" ;
     ex:know_with_level_4 "C#" ;
     ex:know_with_level_5 "React" ;
-    ex:repositories ex:Repo15 .
+    ex:repositories ex:Repo15 ;
+    ex:id 15 .
 
 ex:Person16 rdf:type ex:Person ;
     ex:name "Paul" ;
@@ -253,7 +272,8 @@ ex:Person16 rdf:type ex:Person ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Backend" ;
-    ex:repositories ex:Repo16 .
+    ex:repositories ex:Repo16 ;
+    ex:id 16 .
 
 ex:Person17 rdf:type ex:Person ;
     ex:name "Quinn" ;
@@ -263,7 +283,8 @@ ex:Person17 rdf:type ex:Person ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Java" ;
     ex:know_with_level_5 "React" ;
-    ex:repositories ex:Repo17 .
+    ex:repositories ex:Repo17 ;
+    ex:id 17 .
 
 ex:Person18 rdf:type ex:Person ;
     ex:name "Rose" ;
@@ -273,7 +294,8 @@ ex:Person18 rdf:type ex:Person ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "Frontend" ;
-    ex:repositories ex:Repo18 .
+    ex:repositories ex:Repo18 ;
+    ex:id 18 .
 
 ex:Person19 rdf:type ex:Person ;
     ex:name "Sam" ;
@@ -283,7 +305,8 @@ ex:Person19 rdf:type ex:Person ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "JavaScript" ;
-    ex:repositories ex:Repo19 .
+    ex:repositories ex:Repo19 ;
+    ex:id 19 .
 
 ex:Person20 rdf:type ex:Person ;
     ex:name "Tina" ;
@@ -293,7 +316,8 @@ ex:Person20 rdf:type ex:Person ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Python" ;
     ex:know_with_level_5 "Backend" ;
-    ex:repositories ex:Repo20 .
+    ex:repositories ex:Repo20 ;
+    ex:id 20.
 
 # Define repositories
 

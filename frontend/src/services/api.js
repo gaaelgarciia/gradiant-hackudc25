@@ -38,3 +38,34 @@ export const fetchResults = async (query) => {
         };
     }
 };
+
+const PROFILE_API_URL = "http://127.0.0.1:8000/personas/";
+
+export const fetchPerfil = async (personaUri) => {
+    try {
+        // Realizar la solicitud GET para obtener el perfil
+        const response = await fetch(`${PROFILE_API_URL}${personaUri}`);
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        
+        // Convertir la respuesta a JSON
+        const data = await response.json();
+        
+        // Procesar y formatear los resultados del perfil
+        const perfil = {
+            name: data.perfil.name,
+            email: data.perfil.email,
+            skills: data.perfil.skills.map(skill => ({
+                skill: skill.skill,
+                level: parseInt(skill.level)
+            })),
+            repositories: data.perfil.repositories
+        };
+
+        return perfil;
+    } catch (error) {
+        console.error("Error fetching perfil:", error);
+        return null;
+    }
+};

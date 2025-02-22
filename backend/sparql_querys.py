@@ -49,5 +49,40 @@ def post_competencia(graph, persona, competencia, nivel):
     if competencia in competencias: # esto yo (pepe) no lo haría así, prefeririaconsultarlo en el grafo en vez de hardcodearlo pero bueno poco a poco
         graph.add(persona, nivel_formato, competencia)
         graph.serialize('data.ttl', format='ttl')
+
+def consultar_perfil(graph, persona_id):
+    query = f"""
+        PREFIX ex: <{EX}>
+        SELECT ?name ?email ?skill ?level ?repo WHERE {{
+            ?person a ex:Person ;
+                    ex:id "{persona_id}" ;
+                    ex:name ?name .
+            OPTIONAL {{ ?person ex:email ?email }}
+            OPTIONAL {{ ?person ?level ?skill }}
+            OPTIONAL {{ ?person ex:repositories ?repo }}
+        }}
+    """
     
-        
+    results = graph.query(query)
+    perfil = {
+        "name": None,
+        "email": None,
+        "skills": [],
+        "repositories": []
+    }
+    
+    for row in results:
+        if perfil["name"] is None:
+            perfil["name"] = str(row.name)
+        if perfil["email"] is None and hasattr(row, 'email'):
+            perfil["email"] = str(row.email)
+        if hasattr(row, 'skill') and hasattr(row, 'level'):
+            perfil["skills"].append({"skill": str(row.skill), "level": str(row.level)})
+        if hasattr(row, 'repo'):
+            perfil["repositories"].append(str(row.repo))
+    
+    # Eliminar duplicados en las listas
+    perfil["skills"] = [dict(t) for t in {tuple(d.items()) for d in perfil["skills"]}]
+    perfil["repositories"] = list(set(perfil["repositories"]))
+    
+    return perfil
