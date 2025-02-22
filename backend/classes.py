@@ -8,3 +8,7 @@ class Competencia(BaseModel):
     competencia: str
     nivel: int
     repositorio: str
+
+class PersonaLogin(BaseModel):
+    email: str
+    password: str

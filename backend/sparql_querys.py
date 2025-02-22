@@ -124,3 +124,28 @@ def parse_query(graph,query):
     
     # Join matches with underscore and return
     return '_'.join(matches)
+
+def verificar_persona(graph: Graph, email: str, password: str) -> bool:
+    # Buscar la URI de la persona utilizando el correo electrónico
+    query = f"""
+    PREFIX ex: <http://127.0.0.1:8000/>
+    SELECT ?persona
+    WHERE {{
+        ?persona ex:email "{email}" .
+    }}
+    """
+    results = graph.query(query)
+    persona_uri = None
+    for row in results:
+        persona_uri = row.persona
+        break
+
+    if not persona_uri:
+        return False
+
+    # Verificar la contraseña
+    stored_passwords = list(graph.objects(persona_uri, EX.password))
+    if not stored_passwords:
+        return False
+
+    return stored_passwords[0] == Literal(password)
