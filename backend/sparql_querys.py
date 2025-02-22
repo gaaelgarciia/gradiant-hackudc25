@@ -50,4 +50,14 @@ def post_competencia(graph, persona, competencia, nivel):
         graph.add(persona, nivel_formato, competencia)
         graph.serialize('data.ttl', format='ttl')
     
-        
+def post_repositorio(graph, persona, repositorio, nombre_repositorio, lenguaje_repositorio, url_repositorio):
+    # no hay error handeling 
+    persona_tiene_reposito = 'ex:repositories'
+    repositorio_tiene_nombre = 'ex:name'
+    repositorio_tiene_url = 'ex:url'
+    repositorio_tiene_lenguaje = 'ex:lenguaje'
+
+    graph.add(persona, persona_tiene_reposito, repositorio)
+    graph.add(repositorio, repositorio_tiene_nombre, nombre_repositorio)
+    graph.add(repositorio, repositorio_tiene_lenguaje, lenguaje_repositorio)
+    graph.add(repositorio, repositorio_tiene_url, url_repositorio)
