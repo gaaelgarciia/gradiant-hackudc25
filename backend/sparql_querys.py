@@ -11,6 +11,7 @@ def consultar_competencia(graph, competencia):
                    ?rel "{competencia}" .
             ?rel owl:hasValue ?level .
         }}
+        ORDER BY DESC(xsd:integer(?level))
     """
     
     results = []

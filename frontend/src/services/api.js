@@ -19,12 +19,9 @@ export const fetchResults = async (query) => {
                 people: []
             };
         }
-
-        // Sort people by their skill level (descending order)
-        const sortedPeople = [...peopleArray].sort((a, b) => parseInt(b[1]) - parseInt(a[1]));
         
-        // Format the data for display
-        const formattedResults = sortedPeople.map(([name, level]) => ({
+        // Format the data for display (no sorting needed)
+        const formattedResults = peopleArray.map(([name, level]) => ({
             name,
             level: parseInt(level)
         }));
