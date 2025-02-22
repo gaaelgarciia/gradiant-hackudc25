@@ -56,10 +56,10 @@ def get_programming_languages():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/personas/Postcompetencias")
-def post_competencia(persona_id: int, competencia: str, nivel: int):
+@app.put("/personas/PutCompetencia")
+def put_competencia(competencia: Competencia):
     try:
-        sparql_querys.post_competencia(g, persona_id, competencia, nivel)
+        sparql_querys.put_competencia(g, competencia.persona_id, competencia.competencia, competencia.nivel)
         return {"message": "Competencia añadida"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

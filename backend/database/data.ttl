@@ -10,10 +10,10 @@ ex:ProgrammingLanguage a rdfs:Class .
 
 ex:Repositorio a rdfs:Class .
 
-ex:23 ex:know_with_level_3 ex:Python .
-
 ex:Backend a ex:ProgrammingLanguage ;
     rdf:value "Backend" .
+
+ex:C ex:hasLevel ex:know_with_level_5 .
 
 ex:CSharp a ex:ProgrammingLanguage ;
     rdf:value "C#" .
@@ -153,7 +153,7 @@ ex:Person2 a ex:Person ;
     ex:id 2 ;
     ex:know_with_level_1 "JavaScript" ;
     ex:know_with_level_2 "Python" ;
-    ex:know_with_level_3 "React" ;
+    ex:know_with_level_3 "React, Julia" ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "C#" ;
     ex:name "Bob" ;
@@ -186,7 +186,7 @@ ex:Person4 a ex:Person ;
     ex:id 4 ;
     ex:know_with_level_1 "Frontend" ;
     ex:know_with_level_2 "Python" ;
-    ex:know_with_level_3 "React" ;
+    ex:know_with_level_3 "React, C" ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "Java" ;
     ex:name "David" ;
@@ -218,7 +218,7 @@ ex:Person7 a ex:Person ;
     ex:email "grace@example.com" ;
     ex:id 7 ;
     ex:know_with_level_1 "Java" ;
-    ex:know_with_level_2 "Python" ;
+    ex:know_with_level_2 "Python, Python" ;
     ex:know_with_level_3 "React" ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Frontend" ;
@@ -246,6 +246,9 @@ ex:Person9 a ex:Person ;
     ex:know_with_level_5 "JavaScript" ;
     ex:name "Ivy" ;
     ex:repositories ex:Repo9 .
+
+ex:Python a ex:ProgrammingLanguage ;
+    rdf:value "Python" .
 
 ex:React a ex:ProgrammingLanguage ;
     rdf:value "React" .
@@ -278,11 +281,6 @@ ex:know_with_level_4 a rdf:Property ;
     rdfs:range xsd:string ;
     owl:hasValue 4 .
 
-ex:know_with_level_5 a rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string ;
-    owl:hasValue 5 .
-
 ex:lenguaje a rdf:Property,
         rdfs:Property ;
     rdfs:domain ex:Repositorio ;
@@ -301,9 +299,6 @@ ex:repositories a rdf:Property ;
 ex:url a rdf:Property ;
     rdfs:domain ex:Repositorio ;
     rdfs:range xsd:anyURI .
-
-ex:Python a ex:ProgrammingLanguage ;
-    rdf:value "Python" .
 
 ex:Repo1 a ex:Repositorio ;
     ex:lenguaje "Python" ;
@@ -404,4 +399,9 @@ ex:Repo9 a ex:Repositorio ;
     ex:lenguaje "JavaScript" ;
     ex:nombre "Repo9" ;
     ex:url "http://repo9.example.com" .
+
+ex:know_with_level_5 a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 5 .
 

@@ -1,4 +1,5 @@
-from rdflib import Namespace
+from rdflib import Namespace, Graph, Literal
+from rdflib.namespace import RDF
 import numpy as np
 
 EX = Namespace("http://127.0.0.1:8000/")
@@ -50,17 +51,26 @@ def consultar_personas(graph, competencias):
     #return resultado
     return diccionario
 
-def post_competencia(graph, persona_id, competencia, nivel):
+def put_competencia(graph: Graph, persona_id: int, competencia: str, nivel: int):
     if nivel in range(1, 6):
         nivel_formato = EX[f'know_with_level_{nivel}']
     else:
         raise ValueError("El nivel debe estar entre 1 y 5")
 
-    competencia_uri = EX[competencia.replace(" ", "_")]
-    persona_uri = EX[f"{persona_id}"]
+    persona_uri = EX[f"Person{persona_id}"]
 
-    graph.add((persona_uri, nivel_formato, competencia_uri))
-    graph.serialize('database/data.ttl', format='turtle')    
+    # Verificar si la persona ya tiene una habilidad con el mismo nivel
+    existing_skills = list(graph.objects(persona_uri, nivel_formato))
+    if existing_skills:
+        # Añadir la nueva habilidad a la lista de habilidades existentes
+        new_skills = f"{existing_skills[0]}, {competencia}"
+        graph.set((persona_uri, nivel_formato, Literal(new_skills)))
+    else:
+        # Añadir la nueva habilidad como una nueva entrada
+        graph.add((persona_uri, nivel_formato, Literal(competencia)))
+
+    graph.add((persona_uri, RDF.type, EX.Person))
+    graph.serialize('database/data.ttl', format='turtle')
 
 def consultar_lenguajes_programacion(graph):
     query = f"""
