@@ -41,7 +41,7 @@ def consultar_personas(graph, competencias):
 
 competencias = ['Python', 'Backend']
 
-def post_competencia(graph, persona, competencia, nivel):
+def post_competencia(graph, persona, competencia, nivel=2):
     #implementación vainilla pero que funcionar funciona
     
     if nivel in range(1,6):
@@ -49,5 +49,14 @@ def post_competencia(graph, persona, competencia, nivel):
     if competencia in competencias: # esto yo (pepe) no lo haría así, prefeririaconsultarlo en el grafo en vez de hardcodearlo pero bueno poco a poco
         graph.add(persona, nivel_formato, competencia)
         graph.serialize('data.ttl', format='ttl')
+
+def get_persona(graph, id_persona):
+    Persona = graph.subjects('ex:id', id_persona)
+    resultado = {}
+    for verbo en verbos:
+        valor = graph.value(Persona, verbo)
+        if valor :
+            resultado[verbo] = valor 
+    return resultado
     
         
