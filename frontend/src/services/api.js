@@ -96,6 +96,7 @@ export const fetchPerfil = async (personaUri) => {
     }
 };
 
+
 export const fetchProgrammingLanguages = async () => {
     try {
         const response = await fetch('http://127.0.0.1:8000/lenguajes');
@@ -110,5 +111,28 @@ export const fetchProgrammingLanguages = async () => {
     } catch (error) {
         console.error("Error fetching programming languages:", error);
         return [];
+    }
+};
+
+const AUTHENTICATION_API_URL = "http://127.0.0.1:8000/personas/verificar";
+
+export const fetchAutentication = async (email, password) => {
+    try {
+        const response = await fetch(AUTHENTICATION_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        if (response.status === 200) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (error) {
+        console.error("Error fetching authentication information:", error);
+        return false;
     }
 };
