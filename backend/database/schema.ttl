@@ -2,32 +2,43 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 # Define the classes
 ex:Person rdf:type rdfs:Class .
 
 ex:ProgrammingLanguage rdf:type rdfs:Class .
 
+
+ex:has_value rdf:type rdf:Property ;
+	
+
+
 # Define relations with level
 ex:know_with_level_1 rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    owl:hasValue 1.	
 
 ex:know_with_level_2 rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    owl:hasValue 2.	
 
 ex:know_with_level_3 rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    owl:hasValue 3.	
 
 ex:know_with_level_4 rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    owl:hasValue 4.	
 
 ex:know_with_level_5 rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    owl:hasValue 5.	
 
 # Define programming languages
 ex:Python rdf:type xsd:ProgrammingLanguage ;
