@@ -29,7 +29,7 @@ def consultar_competencia(graph, competencia):
         results.append([name, level])
         #results.append(row)
     results = np.array(results)
-    return results[results[:,1].argsort()][::-1]
+    return [list(i) for i in results[results[:,1].argsort()][::-1]]
 
 def consultar_personas(graph, competencias):
     competencias = competencias.split('_')
@@ -38,3 +38,4 @@ def consultar_personas(graph, competencias):
         resultado.append(competencia)
         resultado.append(consultar_competencia(graph, competencia))
     return resultado
+
