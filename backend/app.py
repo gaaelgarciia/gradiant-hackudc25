@@ -69,7 +69,7 @@ def put_competencia(competencia: Competencia):
 def get_respuesta_IA(consulta: str):
     return rag_system(consulta)  
     
-@app.get("/personas/verificar")
+@app.post("/personas/verificar")
 def verificar_persona(persona: PersonaLogin):
     try:
         existe = sparql_querys.verificar_persona(g, persona.email, persona.password)
