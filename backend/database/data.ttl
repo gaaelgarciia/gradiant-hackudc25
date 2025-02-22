@@ -118,13 +118,14 @@ ex:Person16 a ex:Person ;
 ex:Person17 a ex:Person ;
     ex:email "quinn@example.com" ;
     ex:id 17 ;
-    ex:know_with_level_1 "Backend" ;
+    ex:know_with_level_1 "Backend, C, C" ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "C#" ;
     ex:know_with_level_4 "Java" ;
     ex:know_with_level_5 "React" ;
     ex:name "Quinn" ;
-    ex:repositories ex:Repo17 .
+    ex:repositories ex:Repo17,
+        <http://127.0.0.1:8000/github.com/17/Hackaton> .
 
 ex:Person18 a ex:Person ;
     ex:email "rose@example.com" ;

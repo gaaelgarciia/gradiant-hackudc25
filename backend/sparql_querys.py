@@ -51,38 +51,14 @@ def consultar_personas(graph, competencias):
     #return resultado
     return diccionario
 
-def put_repositorio(graph: Graph, persona_id: int, lenguaje: str, nombre: str, url:str):
-    if lenguaje in consultar_lenguajes_programacion(graph):
-        continue
-    else:
-        raise ValueError("El lenguaje no está registrado")
-
-    persona_uri = EX[f"Person{persona_id}"]
-    
-    # cuestiones de error handeling se pueden gestionar después
-    '''
-    # Verificar si la persona ya tiene una habilidad con el mismo nivel
-    existing_skills = list(graph.objects(persona_uri, nivel_formato))
-    if existing_skills:
-        # Añadir la nueva habilidad a la lista de habilidades existentes
-        new_skills = f"{existing_skills[0]}, {competencia}"
-        graph.set((persona_uri, nivel_formato, Literal(new_skills)))
-    else:
-        # Añadir la nueva habilidad como una nueva entrada
-        graph.add((persona_uri, nivel_formato, Literal(competencia)))
-    '''
-
-   # graph.add((persona_uri, RDF.type, EX.Person))
-    graph.add(('ex:'+nombre, rdf:type 'ex:Repositorio'))
-    graph.serialize('database/data.ttl', format='turtle')
-
-def put_competencia(graph: Graph, persona_id: int, competencia: str, nivel: int):
+def put_competencia(graph: Graph, persona_id: int, competencia: str, nivel: int, repositorio: str) :
     if nivel in range(1, 6):
         nivel_formato = EX[f'know_with_level_{nivel}']
     else:
         raise ValueError("El nivel debe estar entre 1 y 5")
 
     persona_uri = EX[f"Person{persona_id}"]
+    repositorio_uri = EX[repositorio]
 
     # Verificar si la persona ya tiene una habilidad con el mismo nivel
     existing_skills = list(graph.objects(persona_uri, nivel_formato))
@@ -93,6 +69,8 @@ def put_competencia(graph: Graph, persona_id: int, competencia: str, nivel: int)
     else:
         # Añadir la nueva habilidad como una nueva entrada
         graph.add((persona_uri, nivel_formato, Literal(competencia)))
+
+    graph.add((persona_uri, EX.repositories, repositorio_uri))    
 
     graph.add((persona_uri, RDF.type, EX.Person))
     graph.serialize('database/data.ttl', format='turtle')

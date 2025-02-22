@@ -59,7 +59,7 @@ def get_programming_languages():
 @app.put("/personas/PutCompetencia")
 def put_competencia(competencia: Competencia):
     try:
-        sparql_querys.put_competencia(g, competencia.persona_id, competencia.competencia, competencia.nivel)
+        sparql_querys.put_competencia(g, competencia.persona_id, competencia.competencia, competencia.nivel, competencia.repositorio)
         return {"message": "Competencia añadida"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
