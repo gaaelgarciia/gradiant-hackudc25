@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from IA.rag import rag_system
 from rdflib import Graph
-from classes import Competencia
+from classes import Competencia, PersonaLogin
 import sparql_querys
 
 app = FastAPI()
@@ -59,7 +60,21 @@ def get_programming_languages():
 @app.put("/personas/PutCompetencia")
 def put_competencia(competencia: Competencia):
     try:
-        sparql_querys.put_competencia(g, competencia.persona_id, competencia.competencia, competencia.nivel)
+        sparql_querys.put_competencia(g, competencia.persona_id, competencia.competencia, competencia.nivel, competencia.repositorio)
         return {"message": "Competencia añadida"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/respuestaIA/{consulta}")
+def get_respuesta_IA(consulta: str):
+    return rag_system(consulta)  
+    
+@app.get("/personas/verificar")
+def verificar_persona(email: str, password: str):
+    try:
+        existe = sparql_querys.verificar_persona(g, email, password)
+        if not existe:
+            raise HTTPException(status_code=404, detail="Persona no encontrada o contraseña incorrecta")
+        return {"message": "Persona verificada"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
