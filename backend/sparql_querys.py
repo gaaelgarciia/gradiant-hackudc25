@@ -7,10 +7,11 @@ EX = Namespace("http://127.0.0.1:8000/")
 def consultar_competencia(graph, competencia):
     query = f"""
         PREFIX ex: <{EX}>
-       select ?name ?puntuacion1 ?puntuacion2
+       select ?id ?name ?puntuacion1 ?puntuacion2
         WHERE {{
             ?person a ex:Person ;
                    ex:name ?name ;
+                   ex:id ?id;
                    ?rel "{competencia}" .
             ?rel owl:hasValue ?puntuacion1 .
             optional {{ ?person a ex:Person ;
@@ -24,9 +25,10 @@ def consultar_competencia(graph, competencia):
     results = []
     for row in graph.query(query):
         print(row)
+        idPersona = str(row.id)
         name = str(row.name)
         level = row.puntuacion1 + row.puntuacion2
-        results.append([name, level])
+        results.append([idPersona, name, level])
         #results.append(row)
     results = np.array(results)
     return [list(i) for i in results[results[:,1].argsort()][::-1]]
@@ -49,14 +51,3 @@ def post_competencia(graph, persona, competencia, nivel=2):
     if competencia in competencias: # esto yo (pepe) no lo haría así, prefeririaconsultarlo en el grafo en vez de hardcodearlo pero bueno poco a poco
         graph.add(persona, nivel_formato, competencia)
         graph.serialize('data.ttl', format='ttl')
-
-def get_persona(graph, id_persona):
-    Persona = graph.subjects('ex:id', id_persona)
-    resultado = {}
-    for verbo en verbos:
-        valor = graph.value(Persona, verbo)
-        if valor :
-            resultado[verbo] = valor 
-    return resultado
-    
-        
