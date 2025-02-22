@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/personas/";
+const API_URL = "http://127.0.0.1:8000/personas/competencias/";
 
 export const fetchResults = async (query) => {
     try {
@@ -8,26 +8,37 @@ export const fetchResults = async (query) => {
         }
         const data = await response.json();
         
-        // Extract the skill name and people array
-        const [skillName, peopleArray] = data.personas;
-        
-        // Make sure peopleArray is iterable
-        if (!Array.isArray(peopleArray)) {
-            console.error("People array is not valid:", peopleArray);
+        // La API devuelve un array con la primera competencia encontrada
+        const skillData = data.personas[0];
+        if (!skillData) {
+            console.error("No data found for query:", query);
             return {
                 skill: query,
                 people: []
             };
         }
         
-        // Format the data for display (no sorting needed)
-        const formattedResults = peopleArray.map(([name, level]) => ({
-            name,
-            level: parseInt(level)
+        // Extraer el array de personas de la competencia
+        const peopleArray = skillData.personas;
+        
+        // Make sure peopleArray is iterable
+        if (!Array.isArray(peopleArray)) {
+            console.error("People array is not valid:", peopleArray);
+            return {
+                skill: skillData.competencia,
+                people: []
+            };
+        }
+        
+        // Format the data for display
+        const formattedResults = peopleArray.map(([id, name, level]) => ({
+            id: parseInt(id),
+            name: name,
+            level: parseFloat(level)
         }));
 
         return {
-            skill: skillName,
+            skill: skillData.competencia,
             people: formattedResults
         };
     } catch (error) {

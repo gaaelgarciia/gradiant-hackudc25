@@ -18,13 +18,14 @@ function App() {
   const [user, setUser] = useState(null);
 
   const handleSearch = async (query) => {
-    const skills = query.split('_');
-    const response = await fetchResults(skills);
+    const formattedQuery = query.replace(/\s+/g, '_');
+    const response = await fetchResults(formattedQuery);
     setResults(response);
   };
 
   const handleResultClick = (result) => {
     setSelectedResult(result);
+    setShowUserInfoPopup(true);
   };
 
   const handleFormSubmit = (data) => {
