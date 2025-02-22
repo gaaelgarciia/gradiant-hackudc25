@@ -4,13 +4,14 @@ import numpy as np
 EX = Namespace("http://127.0.0.1:8000/")
 
         #SELECT  ?name (sum(xsd:integer(coalesce(?level, "0"^^xsd:integer)) + xsd:integer(coalesce(?valor, "0"^^xsd:integer))) AS ?suma) 
-def consultar_competencia(graph, competencia):
+def consultar_competencia(graph, competencia, diccionario):
     query = f"""
         PREFIX ex: <{EX}>
-       select ?id ?name ?puntuacion1 ?puntuacion2
+       select ?id ?name ?email ?puntuacion1 ?puntuacion2
         WHERE {{
             ?person a ex:Person ;
                    ex:name ?name ;
+                   ex:email ?email;
                    ex:id ?id;
                    ?rel "{competencia}" .
             ?rel owl:hasValue ?puntuacion1 .
@@ -24,21 +25,30 @@ def consultar_competencia(graph, competencia):
    
     results = []
     for row in graph.query(query):
-        idPersona = str(row.id)
+        id_persona = str(row.id)
         name = str(row.name)
+        email = str(row.email)
         level = row.puntuacion1 + row.puntuacion2
-        results.append([idPersona, name, level])
+        results.append([id_persona, name, level])
         #results.append(row)
+        if diccionario.get(id_persona) is not None:
+            diccionario[id_persona].append([(competencia, level)])
+        else:
+            diccionario[id_persona] = [(name, email),(competencia, level)]
     results = np.array(results)
-    return [list(i) for i in results[results[:,1].argsort()][::-1]]
+    #return [list(i) for i in results[results[:,1].argsort()][::-1]]
+    return diccionario
 
 def consultar_personas(graph, competencias):
     competencias = competencias.split('_')
     resultado = []
+    diccionario = {}
     for competencia in competencias:
-        personas = consultar_competencia(graph, competencia)
-        resultado.append({"competencia": competencia, "personas": personas})
-    return resultado
+        #personas = consultar_competencia(graph, competencia, diccionario)
+        diccionario = consultar_competencia(graph, competencia, diccionario)
+        #resultado.append({"competencia": competencia, "personas": personas})
+    #return resultado
+    return diccionario
 
 def post_competencia(graph, persona_id, competencia, nivel):
     if nivel in range(1, 6):
