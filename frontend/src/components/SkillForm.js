@@ -12,10 +12,23 @@ const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
     onClose(); // Cerrar el popup al enviar el formulario
   };
 
+  const programmingLanguages = [
+    "Python",
+    "Frontend",
+    "Backend",
+    "React",
+    "JavaScript",
+    "Java",
+    "C#"
+  ];
+
   return (
     <div className="popup-overlay">
       <div className="popup-content">
-        <h2>Add Skill</h2>
+        <div className="popup-header">
+          <h2>Add Skill</h2>
+          <button className="close-button" onClick={onClose}>×</button>
+        </div>
         <form onSubmit={handleSubmit}>
           <div>
             <label>Nombre del Tópico:</label>
@@ -34,10 +47,11 @@ const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
               required
             >
               <option value="">Seleccione un tipo</option>
-              <option value="Frontend">Frontend</option>
-              <option value="Backend">Backend</option>
-              <option value="Fullstack">Fullstack</option>
-              <option value="DevOps">DevOps</option>
+              {programmingLanguages.map((language) => (
+                <option key={language} value={language}>
+                  {language}
+                </option>
+              ))}
             </select>
           </div>
           <div>
@@ -46,6 +60,8 @@ const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
               type="number"
               value={nivel}
               onChange={(e) => setNivel(e.target.value)}
+              min="1"
+              max="5"
               required
             />
           </div>
@@ -57,7 +73,7 @@ const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
               required
             />
           </div>
-          <button type="submit">Enviar</button>
+          <button type="submit" className="add-button">Enviar</button>
         </form>
       </div>
     </div>
