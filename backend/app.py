@@ -9,7 +9,7 @@ app = FastAPI()
 g = Graph()
 g.parse("database/data.ttl", format="turtle")
 
-@app.get("/personas/{competencia}")
-def get_personas(competencia: str):
-    resultado = sparql_querys.consultar_personas(g, competencia)
+@app.get("/personas/{consulta}")
+def get_personas(consulta: str):
+    resultado = sparql_querys.consultar_personas(g, consulta)
     return {"personas": resultado}
