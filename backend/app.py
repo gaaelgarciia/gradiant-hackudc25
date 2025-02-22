@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from rdflib import Graph, Namespace
 from rdflib.namespace import RDF, RDFS
+from fastapi.middleware.cors import CORSMiddleware
 import sparql_querys 
 
 app = FastAPI()
