@@ -66,7 +66,7 @@ const SkillForm = ({ onSubmit, userEmail, onClose }) => {
         </div>
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Competencia:</label>
+            <label>Knowledge:</label>
             <select
               name="competencia"
               value={formData.competencia}
@@ -81,7 +81,7 @@ const SkillForm = ({ onSubmit, userEmail, onClose }) => {
             </select>
           </div>
           <div>
-            <label>Nivel:</label>
+            <label>Level:</label>
             <input
               type="number"
               name="nivel"
@@ -93,7 +93,7 @@ const SkillForm = ({ onSubmit, userEmail, onClose }) => {
             />
           </div>
           <div>
-            <label>Repositorio:</label>
+            <label>Repository:</label>
             <input
               type="text"
               name="repositorio"

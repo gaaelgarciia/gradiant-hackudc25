@@ -117,7 +117,7 @@ function App() {
           
           <div className="actions-container">
             <button onClick={handleAddButtonClick} className="add-button">
-              <span>+</span> Añadir Competencia
+              <span>+</span> Add Skill
             </button>
           </div>
           

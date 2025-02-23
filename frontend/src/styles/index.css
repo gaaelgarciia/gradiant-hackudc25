@@ -541,12 +541,12 @@ body {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 5px;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
   font-size: 1rem;
 }
 
@@ -642,7 +642,7 @@ body {
 .actions-container {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 1rem 0;
   animation: fadeIn 0.5s ease-out;
 }
 

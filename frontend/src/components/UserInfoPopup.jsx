@@ -53,7 +53,7 @@ const UserInfoPopup = ({ user, onClose, onLogout }) => {
     <div className="popup-overlay">
       <div className="popup-content">
         <div className="popup-header">
-          <h2>Información del Usuario</h2>
+          <h2>User info</h2>
           <button className="close-button" onClick={onClose}>×</button>
         </div>
         <div className="user-info-content">
