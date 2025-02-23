@@ -1,6 +1,7 @@
 from rdflib import Namespace, Graph, Literal
 from rdflib.namespace import RDF
 import numpy as np
+import re
 
 EX = Namespace("http://127.0.0.1:8000/")
 
@@ -118,15 +119,20 @@ def parse_query(graph, query):
     # Normalize the query to lowercase for case insensitivity
     query = query.lower()
     
+    # Ensure underscores are included at the boundaries
+    query = '_' + query + '_'
+
     # Find all matches in the query
     matches = []
     for term in programming_terms:
-        # Create a regex pattern that matches the whole word
-        pattern = r'\b' + re.escape(term.lower()) + r'\b'
+        # Create a regex pattern that matches the term bounded by underscores or start/end of string
+        pattern = r'_' + re.escape(term.lower()) + r'_'
         if re.search(pattern, query):
             matches.append(term.capitalize())
     
     # Join matches with underscore and return
+    if len(matches) == 0:
+        return None
     return '_'.join(matches)
 
 def verificar_persona(graph: Graph, email: str, password: str) -> bool:
