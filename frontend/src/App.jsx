@@ -42,14 +42,16 @@ function App() {
     setShowForm(false);
   };
 
-  const handleLogin = (userData) => {
-    setIsLoggedIn(true);
-    setUser({
-      ...userData,
-      skills: ["Python", "React", "JavaScript"], // Example skills, replace with actual data
-      repositories: ["Repo1", "Repo2"] // Example repositories, replace with actual data
-    });
-    console.log('User logged in:', userData);
+  const handleLogin = async (userData) => {
+    try {
+      setIsLoggedIn(true);
+      setShowLoginPopup(false);
+      // Asumiendo que userData ya tiene el id del backend
+      setUser(userData);
+      console.log('User logged in:', userData);
+    } catch (error) {
+      console.error('Error setting user data:', error);
+    }
   };
 
   const handleOpenLoginPopup = () => {
@@ -85,21 +87,42 @@ function App() {
         </>
       ) : (
         <>
-          <button onClick={handleOpenUserInfoPopup} className="user-info-button">
-            Información del Usuario
-          </button>
-          <h1>Person Skills Search</h1>
+          <div className="header">
+            <h1 className="main-title">Gradiant HackUDC</h1>
+            <button onClick={handleOpenUserInfoPopup} className="user-info-button">
+              {user?.email || 'Usuario'}
+            </button>
+          </div>
+          
           <SearchBar onSearch={handleSearch} />
-          <button onClick={handleAddButtonClick} className="add-button">
-            <span>+</span> Add Skill
-          </button>
-          {showForm ? (
-            <SkillForm onSubmit={handleFormSubmit} selectedResult={selectedResult} onClose={handleCloseForm} />
-          ) : (
-            <SearchResults results={results} onResultClick={handleResultClick} />
+          
+          <div className="actions-container">
+            <button onClick={handleAddButtonClick} className="add-button">
+              <span>+</span> Añadir Competencia
+            </button>
+          </div>
+          
+          {Object.keys(results).length > 0 && (
+            <SearchResults 
+              results={results} 
+              onResultClick={handleResultClick}
+            />
           )}
+
+          {showForm && (
+            <SkillForm 
+              onSubmit={handleFormSubmit} 
+              onClose={handleCloseForm}
+              userId={user?.id}
+            />
+          )}
+
           {showUserInfoPopup && user && (
-            <UserInfoPopup userId={user.id} onClose={handleCloseUserInfoPopup} onLogout={handleLogout} />
+            <UserInfoPopup 
+              user={user} 
+              onClose={handleCloseUserInfoPopup} 
+              onLogout={handleLogout}
+            />
           )}
         </>
       )}
