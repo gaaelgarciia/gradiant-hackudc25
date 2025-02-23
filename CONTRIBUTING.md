@@ -85,20 +85,6 @@ Seguimos la convención de Conventional Commits:
 - `refactor:` refactorización de código
 - `test:` añadir o modificar tests
 
-## Testing
-
-### Backend
-```bash
-cd backend
-python -m pytest
-```
-
-### Frontend
-```bash
-cd frontend
-npm test
-```
-
 ## Pull Requests
 
 1. Actualiza tu rama con main:
