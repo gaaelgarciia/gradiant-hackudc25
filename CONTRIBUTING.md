@@ -111,8 +111,11 @@ Al reportar bugs, incluye:
 
 Para preguntas o problemas:
 - Abre un issue
-- Contacta con los mantenedores:
-  - [Nombre del mantenedor](mailto:email@example.com)
+- Contacta con uno de los mantenedores:
+  - [Gael Garcia Arias](mailto:gael.garciaa@udc.es)
+  - [Ivan Afonso Cerdeira](mailto:ivan.afonso@udc.es)
+  - [Brais Bemposta Oubiña](mailto:brais.bemposta@udc.es)
+  - [Jose Romero Conde](mailto:j.rconde@udc.es)
 
 ## Licencia
 
