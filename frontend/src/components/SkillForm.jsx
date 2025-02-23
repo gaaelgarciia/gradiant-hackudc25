@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
-import { addSkill } from '../services/api';
+import React, { useState, useEffect } from 'react';
+import { addSkill, fetchProgrammingLanguages } from '../services/api';
 
-const SkillForm = ({ onSubmit, userEmail, onClose }) => { // Change userId to userEmail
+const SkillForm = ({ onSubmit, userEmail, onClose }) => {
   const [formData, setFormData] = useState({
-    email: userEmail, // Change persona_id to email
+    email: userEmail,
     competencia: '',
     nivel: '',
     repositorio: ''
   });
+  const [languages, setLanguages] = useState([]);
+
+  useEffect(() => {
+    const loadLanguages = async () => {
+      try {
+        const programmingLanguages = await fetchProgrammingLanguages();
+        setLanguages(programmingLanguages);
+        // Set first language as default if available
+        if (programmingLanguages.length > 0) {
+          setFormData(prev => ({
+            ...prev,
+            competencia: programmingLanguages[0]
+          }));
+        }
+      } catch (error) {
+        console.error('Error loading programming languages:', error);
+      }
+    };
+
+    loadLanguages();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,13 +67,18 @@ const SkillForm = ({ onSubmit, userEmail, onClose }) => { // Change userId to us
         <form onSubmit={handleSubmit}>
           <div>
             <label>Competencia:</label>
-            <input
-              type="text"
+            <select
               name="competencia"
               value={formData.competencia}
               onChange={handleChange}
               required
-            />
+            >
+              {languages.map((language) => (
+                <option key={language} value={language}>
+                  {language}
+                </option>
+              ))}
+            </select>
           </div>
           <div>
             <label>Nivel:</label>

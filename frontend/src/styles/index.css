@@ -53,11 +53,17 @@ body {
   }
   
   .result-item {
-    background-color: #2d2d2d;
-    padding: 1rem;
-    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;  /* Change to column layout */
+    align-items: center;     /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 16px;
+    margin: 8px 0;
     border-radius: 8px;
+    cursor: pointer;
     transition: transform 0.2s ease;
+    background-color: #2d2d2d;
+    width: 100%;
   }
   
   .result-item:hover {
@@ -177,30 +183,42 @@ body {
     gap: 10px;
   }
   
-  .result-item {
+  .person-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #2d2d2d;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
+    flex-direction: column;
+    align-items: center;    /* Center content horizontally */
+    width: 100%;
+    gap: 12px;             /* Space between name and skills */
   }
-  
-  .result-item:hover {
-    transform: translateY(-2px);
-    background-color: #333333;
-  }
-  
+
   .person-name {
     font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    text-align: center;    /* Center text */
   }
   
+  .skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center; /* Center skills horizontally */
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+
   .skill-level {
-    background-color: #444;
-    padding: 4px 8px;
-    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center text within skill badge */
+    background: var(--primary-lighter);
+    padding: 4px 12px;
+    border-radius: 20px;
     font-size: 0.9em;
+    transition: transform 0.2s ease;
+    text-align: center;
   }
 
   .login-screen {
@@ -400,18 +418,38 @@ body {
   background-color: #333333;
 }
 .skills-list {
-  display: flex;
+  display: flex;  /* Changed from block to flex */
+  flex-direction: row;  /* Ensure horizontal layout */
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 8px;
+  align-items: center;  /* Center items vertically */
 }
 
 .skill-level {
+  display: inline-flex;  /* Changed to inline-flex */
+  align-items: center;
+  background: var(--primary-lighter);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
   transition: transform 0.2s ease;
+  margin-right: 8px;  /* Add space between items */
+  color: #fff;
 }
 
 .skill-level:hover {
   transform: translateY(-2px);
+  background: var(--primary-color);
+}
+
+/* Optional: Add scroll for overflow */
+@media (max-width: 768px) {
+  .skills-list {
+    overflow-x: auto;
+    padding-bottom: 8px;  /* Space for potential scrollbar */
+    -webkit-overflow-scrolling: touch;  /* Smooth scroll on iOS */
+  }
 }
 
 .popup-content ul {
@@ -615,10 +653,12 @@ body {
 
 /* Skills list moderna */
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  display: flex;  /* Changed from block to flex */
+  flex-direction: row;  /* Ensure horizontal layout */
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  align-items: center;  /* Center items vertically */
 }
 
 .skill-item {
@@ -694,4 +734,108 @@ body {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+select:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+/* Primary color variables */
+:root {
+  --primary-color: #EC1F27;
+  --primary-dark: #c81820;
+  --primary-light: #ff3b43;
+  --primary-lighter: rgba(236, 31, 39, 0.1);
+  --primary-shadow: rgba(236, 31, 39, 0.2);
+}
+
+/* Update existing color references */
+.login-button {
+  background-color: var(--primary-color);
+  /* ... rest of the properties ... */
+}
+
+.login-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.user-info-button {
+  background-color: var(--primary-color);
+  /* ... rest of the properties ... */
+}
+
+.user-info-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Update gradient styles */
+.add-button, .user-info-button {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  box-shadow: 0 4px 16px var(--primary-shadow);
+}
+
+.add-button:hover, .user-info-button:hover {
+  box-shadow: 0 8px 24px var(--primary-shadow);
+}
+
+/* Update loading animation */
+.loading::after {
+  border: 4px solid var(--primary-color);
+  border-top-color: transparent;
+}
+
+/* Update focus states */
+.search-container input:focus {
+  border-color: var(--primary-color);
+}
+
+select:focus {
+  border-color: var(--primary-color);
+}
+
+/* Update close button hover state */
+.close-button:hover {
+  color: var(--primary-color);
+}
+
+/* Update skill item hover */
+.skill-item:hover {
+  background: var(--primary-lighter);
+  border: 1px solid var(--primary-color);
+}
+
+/* Gradient background update */
+.container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Button states */
+.add-button:hover, .user-info-button:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--primary-shadow);
+}
+
+/* Popup styles update */
+.popup-content {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid var(--primary-lighter);
+}
+
+/* Form elements focus states */
+.popup-content input:focus,
+.popup-content select:focus,
+.popup-content textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-lighter);
 }

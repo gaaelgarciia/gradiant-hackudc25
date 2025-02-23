@@ -34,7 +34,6 @@ const SearchResults = ({ results }) => {
 
   return (
     <div className="search-results">
-      <h2>{results.skills.join(' & ')} Skills</h2>
       <div className="results-list">
         {results.people.map((person, index) => (
           <div key={index} className="result-item" onClick={() => handleResultClick(person)}>
@@ -50,7 +49,7 @@ const SearchResults = ({ results }) => {
                       color:'#000',
                       padding: '4px 8px',
                       borderRadius: '4px',
-                      margin: '0 4px',
+                      margin: '0 5px',
                       fontWeight: '500'
                     }}
                   >
