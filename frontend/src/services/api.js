@@ -165,3 +165,17 @@ export const addSkill = async (skillData) => {
         throw error;
     }
 };
+
+export const fetchIAResponse = async (query) => {
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/respuestaIA/${query}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data; // Asumiendo que el backend devuelve { response: "texto respuesta" }
+    } catch (error) {
+        console.error("Error fetching IA response:", error);
+        throw error;
+    }
+};

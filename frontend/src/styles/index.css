@@ -879,3 +879,62 @@ select:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 2px var(--primary-lighter);
 }
+
+.ia-response {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ia-response {
+  margin: 2rem auto;
+  max-width: 800px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ia-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ia-content h3 {
+  color: #EC1F27;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.ia-content p {
+  color: white;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin: 0;
+  white-space: pre-wrap;
+  font-weight: 300;
+}
+
+/* Animación de entrada */
+.ia-response {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

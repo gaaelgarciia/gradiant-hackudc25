@@ -5,7 +5,7 @@ import SkillForm from './components/SkillForm';
 import LoginScreen from './components/LoginScreen';
 import LoginPopup from './components/LoginPopup';
 import UserInfoPopup from './components/UserInfoPopup';
-import { fetchResults } from './services/api';
+import { fetchResults, fetchIAResponse } from './services/api';
 import './styles/index.css';
 
 function App() {
@@ -16,11 +16,25 @@ function App() {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [showUserInfoPopup, setShowUserInfoPopup] = useState(false);
   const [user, setUser] = useState(null);
+  const [iaResponse, setIaResponse] = useState(null);
 
   const handleSearch = async (query) => {
     const formattedQuery = query.replace(/\s+/g, '_');
-    const response = await fetchResults(formattedQuery);
-    setResults(response);
+    try {
+      const response = await fetchResults(formattedQuery);
+      
+      if (!response.people || response.people.length === 0) {
+        // Si no hay resultados de programación, intentar con IA
+        const iaResponseData = await fetchIAResponse(formattedQuery);
+        setIaResponse(iaResponseData); // Modificado para usar directamente la respuesta
+        setResults({});
+      } else {
+        setResults(response);
+        setIaResponse(null);
+      }
+    } catch (error) {
+      console.error('Error in search:', error);
+    }
   };
 
   const handleResultClick = (result) => {
@@ -107,12 +121,11 @@ function App() {
             </button>
           </div>
           
-          {Object.keys(results).length > 0 && (
-            <SearchResults 
-              results={results} 
-              onResultClick={handleResultClick}
-            />
-          )}
+          <SearchResults 
+            results={results}
+            iaResponse={iaResponse}
+            onResultClick={handleResultClick}
+          />
 
           {showForm && (
             <SkillForm 

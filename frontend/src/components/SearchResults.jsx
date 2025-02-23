@@ -17,7 +17,7 @@ const getSkillLevelColor = (level) => {
   }
 };
 
-const SearchResults = ({ results }) => {
+const SearchResults = ({ results, iaResponse }) => {
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   const handleResultClick = (person) => {
@@ -28,6 +28,21 @@ const SearchResults = ({ results }) => {
     setSelectedPerson(null);
   };
 
+  // Check for IA response first
+  if (iaResponse) {
+    return (
+      <div className="search-results">
+        <div className="ia-response">
+          <div className="ia-content">
+            <h3>AI Response</h3>
+            <p>{iaResponse}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Then check for empty results
   if (!results || !results.people || results.people.length === 0) {
     return <div className="search-results">No results found</div>;
   }
