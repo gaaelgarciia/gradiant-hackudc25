@@ -46,3 +46,1099 @@ The operating system (OS) is system software that manages hardware and software 
 
 Virtual reality (VR) is a simulated experience that can be similar to or completely different from the real world. It is achieved through the use of hardware such as VR headsets, which provide immersive visual and auditory experiences. VR is used in a wide range of fields, from gaming and entertainment to education and healthcare. It allows users to interact with computer-generated environments in real time.
 
+DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle while delivering features, fixes, and updates frequently in close alignment with business objectives. DevOps emphasizes automation, continuous integration, continuous delivery, and monitoring throughout the software development lifecycle.
+
+Docker is a platform for developing, shipping, and running applications in containers. Containers are lightweight, standalone packages that include everything needed to run a piece of software, including the code, runtime, system tools, and libraries. Docker helps ensure that applications work consistently across different environments and simplifies deployment and scaling.
+
+Microservices architecture is an approach to building applications as a collection of small, independent services that communicate over well-defined APIs. Each service is focused on a specific business capability and can be developed, deployed, and scaled independently. This architecture provides better scalability, flexibility, and maintainability compared to monolithic applications.
+
+RESTful APIs (Representational State Transfer) are a standard architectural style for designing networked applications. They use HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. REST APIs are stateless, meaning each request contains all the information needed to complete it, and they typically return data in JSON or XML format.
+
+Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to work on the same codebase simultaneously and manages different versions of files. Key concepts include repositories, commits, branches, merging, and pull requests. Git is essential for collaborative software development and is widely used with platforms like GitHub and GitLab.
+
+Agile software development is an approach that emphasizes iterative development, team collaboration, and customer feedback. It breaks projects into small increments that minimize overall risk and allows the project to adapt to changes quickly. Scrum and Kanban are popular Agile frameworks that help teams organize and manage their work effectively.
+
+Test-Driven Development (TDD) is a software development approach where tests are written before the actual code. The process follows three steps: write a failing test, write code to make the test pass, and then refactor the code while maintaining the passing test. This approach helps ensure code quality and maintainability.
+
+Continuous Integration and Continuous Deployment (CI/CD) are software development practices where code changes are automatically built, tested, and deployed to production. CI ensures that new code integrates well with existing code by running automated tests. CD automates the deployment process, allowing for frequent and reliable software releases.
+
+JavaScript frameworks like React, Angular, and Vue.js are essential tools for modern web development. React, developed by Facebook, uses a virtual DOM for efficient updates and component-based architecture. Angular, from Google, is a full-featured framework with dependency injection and powerful templating. Vue.js combines the best aspects of both while remaining lightweight and easy to learn.
+
+Python frameworks such as Django and Flask are popular for web backend development. Django is a high-level framework that follows the "batteries included" philosophy, providing many built-in features. Flask is a lightweight framework that gives developers more flexibility in choosing their tools and architecture.
+
+Cybersecurity is crucial in modern software development. Common security concerns include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and authentication vulnerabilities. Best practices include input validation, encryption, secure password storage, and regular security audits.
+
+Software design patterns are reusable solutions to common problems in software design. Common patterns include Singleton (ensuring a class has only one instance), Factory (creating objects without specifying the exact class), Observer (defining one-to-many dependencies between objects), and MVC (Model-View-Controller architecture).
+
+Clean code principles focus on writing code that is easy to understand, maintain, and modify. Key concepts include meaningful names, small functions with single responsibilities, consistent formatting, proper comments, and error handling. Following these principles helps reduce technical debt and improve code quality.
+
+System design involves creating architecture for large-scale systems. Important concepts include load balancing, caching, database sharding, message queues, and service discovery. Successful system design requires consideration of scalability, reliability, availability, and maintainability.
+
+Frontend development best practices include responsive design, progressive enhancement, cross-browser compatibility, and performance optimization. Tools like Webpack, Babel, and PostCSS help manage modern JavaScript and CSS. Web accessibility (a11y) ensures applications are usable by people with disabilities.
+
+Software testing encompasses various levels and types of testing. Unit testing focuses on individual components, integration testing verifies component interactions, and end-to-end testing validates complete workflows. Testing types include functional testing, performance testing, security testing, and usability testing. Tools like Jest, Selenium, and JUnit are commonly used for automated testing.
+
+GraphQL is a query language for APIs that enables clients to request specific data. Unlike REST APIs, GraphQL allows clients to define the structure of the response, reducing over-fetching and under-fetching of data. It provides a single endpoint that can handle multiple resource types and relationships. Features include real-time updates with subscriptions and strong typing with a schema definition language.
+
+Kubernetes (K8s) is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It groups containers into pods, manages service discovery and load balancing, and provides self-healing capabilities. Key concepts include nodes, pods, services, deployments, and persistent volumes.
+
+TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It adds optional static types, classes, and modules to JavaScript, making it easier to develop and maintain large applications. TypeScript provides better tooling support, catches errors early in development, and improves code documentation through type definitions.
+
+Progressive Web Apps (PWAs) combine the best of web and mobile apps. They are web applications that can be installed on devices, work offline, and provide native-like experiences. Key features include service workers for offline functionality, web app manifests for installation, and push notifications for engagement.
+
+Domain-Driven Design (DDD) is an approach to software development that focuses on modeling software to match a domain according to input from domain experts. It includes concepts like bounded contexts, aggregates, entities, value objects, and domain events. DDD helps manage complex domains by creating a shared language between developers and domain experts.
+
+Event-driven architecture (EDA) is a software design pattern where the flow of the program is determined by events such as user actions, sensor outputs, or messages from other programs. Components communicate through events, promoting loose coupling and scalability. Common patterns include publish-subscribe and event sourcing.
+
+SOLID principles are five design principles intended to make object-oriented designs more understandable, flexible, and maintainable. They include Single Responsibility Principle (SRP), Open-Closed Principle (OCP), Liskov Substitution Principle (LSP), Interface Segregation Principle (ISP), and Dependency Inversion Principle (DIP).
+
+Infrastructure as Code (IaC) is the practice of managing and provisioning computing infrastructure through machine-readable definition files rather than physical hardware configuration or interactive configuration tools. Tools like Terraform, Ansible, and CloudFormation enable version control, automated deployment, and consistent environments.
+
+Serverless computing is a cloud computing execution model where the cloud provider manages the infrastructure and automatically allocates resources. Developers focus on writing code in the form of functions that are triggered by events. AWS Lambda, Azure Functions, and Google Cloud Functions are popular serverless platforms.
+
+WebAssembly (Wasm) is a binary instruction format for stack-based virtual machines. It enables high-performance execution of code written in languages like C++, Rust, and Go in web browsers. WebAssembly complements JavaScript and allows CPU-intensive tasks to run at near-native speed in the browser.
+
+OAuth 2.0 and OpenID Connect are standard protocols for authorization and authentication. OAuth 2.0 provides secure delegated access to resources, while OpenID Connect adds an identity layer on top of OAuth 2.0. These protocols are fundamental for implementing secure user authentication and authorization in modern applications.
+
+Message queues and event buses facilitate asynchronous communication between services. Technologies like RabbitMQ, Apache Kafka, and Redis provide reliable message delivery, scalability, and fault tolerance. They are essential in distributed systems for decoupling services and handling high-throughput scenarios.
+
+Site Reliability Engineering (SRE) is a discipline that incorporates aspects of software engineering and applies them to infrastructure and operations problems. SRE focuses on creating scalable and reliable software systems through monitoring, error budgets, and automation. Key metrics include Service Level Objectives (SLOs) and Service Level Indicators (SLIs).
+
+Web Components are a set of web platform APIs that allow you to create reusable custom elements. They include Custom Elements, Shadow DOM, and HTML Templates. Web Components enable encapsulation and interoperability across different frameworks and libraries.
+
+JAMstack (JavaScript, APIs, and Markup) is a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. It enables better performance, higher security, easier scaling, and better developer experience. Popular static site generators include Gatsby, Next.js, and HugoProgramming paradigm
+A programming paradigm is a relatively high-level way to conceptualize and structure the implementation of a computer program. A programming language can be classified as supporting one or more paradigms.
+Paradigms are separated along and described by different dimensions of programming. Some paradigms are about implications of the execution model, such as allowing side effects, or whether the sequence of operations is defined by the execution model. Other paradigms are about the way code is organized, such as grouping into units that include both state and behavior. Yet others are about syntax and grammar.
+Some common programming paradigms include (shown in hierarchical relationship):
+
+Imperative – code directly controls execution flow and state change, explicit statements that change a program state
+procedural – organized as procedures that call each other
+object-oriented – organized as objects that contain both data structure and associated behavior, uses data structures consisting of data fields and methods together with their interactions (objects) to design programs
+Class-based – object-oriented programming in which inheritance is achieved by defining classes of objects, versus the objects themselves
+Prototype-based – object-oriented programming that avoids classes and implements inheritance via cloning of instances
+Declarative – code declares properties of the desired result, but not how to compute it, describes what computation should perform, without specifying detailed state changes
+functional – a desired result is declared as the value of a series of function evaluations, uses evaluation of mathematical functions and avoids state and mutable data
+logic – a desired result is declared as the answer to a question about a system of facts and rules, uses explicit mathematical logic for programming
+reactive – a desired result is declared with data streams and the propagation of change
+Concurrent programming – has language constructs for concurrency, these may involve multi-threading, support for distributed computing, message passing, shared resources (including shared memory), or futures
+Actor programming – concurrent computation with actors that make local decisions in response to the environment (capable of selfish or competitive behaviour)
+Constraint programming – relations between variables are expressed as constraints (or constraint networks), directing allowable solutions (uses constraint satisfaction or simplex algorithm)
+Dataflow programming – forced recalculation of formulas when data values change (e.g. spreadsheets)
+Distributed programming – has support for multiple autonomous computers that communicate via computer networks
+Generic programming – uses algorithms written in terms of to-be-specified-later types that are then instantiated as needed for specific types provided as parameters
+Metaprogramming – writing programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime
+Template metaprogramming – metaprogramming methods in which a compiler uses templates to generate temporary source code, which is merged by the compiler with the rest of the source code and then compiled
+Reflective programming – metaprogramming methods in which a program modifies or extends itself
+Pipeline programming – a simple syntax change to add syntax to nest function calls to language originally designed with none
+Rule-based programming – a network of rules of thumb that comprise a knowledge base and can be used for expert systems and problem deduction & resolution
+Visual programming – manipulating program elements graphically rather than by specifying them textually (e.g. Simulink); also termed diagrammatic programming
+
+
+== Overview ==
+
+Programming paradigms come from computer science research into existing practices of software development. The findings allow for describing and comparing programming practices and the languages used to code programs. For perspective, other fields of research study 
+software engineering processes and describe various methodologies to describe and compare them.
+A programming language can be described in terms of paradigms. Some languages support only one paradigm. For example, Smalltalk supports object-oriented and Haskell supports functional. Most languages support multiple paradigms. For example, a program written in C++, Object Pascal, or PHP can be purely procedural, purely object-oriented, or can contain aspects of both paradigms, or others. 
+When using a language that supports multiple paradigms, the developer chooses which paradigm elements to use. But, this choice may not involve considering paradigms per se. The developer often uses the features of a language as the language provides them and to the extent that the developer knows them. Categorizing the resulting code by paradigm is often an academic activity done in retrospect.
+Languages categorized as imperative paradigm have two main features: they state the order in which operations occur, with constructs that explicitly control that order, and they allow side effects, in which state can be modified at one point in time, within one unit of code, and then later read at a different point in time inside a different unit of code.  The communication between the units of code is not explicit.
+In contrast, languages in the declarative paradigm do not state the order in which to execute operations. Instead, they supply a number of available operations in the system, along with the conditions under which each is allowed to execute.  The implementation of the language's execution model tracks which operations are free to execute and chooses the order independently. More at  Comparison of multi-paradigm programming languages.
+In object-oriented programming, code is organized into objects that contain state that is owned by and (usually) controlled by the code of the object.  Most object-oriented languages are also imperative languages.
+In object-oriented programming, programs are treated as a set of interacting objects. In functional programming, programs are treated as a sequence of stateless function evaluations. When programming computers or systems with many processors, in process-oriented programming, programs are treated as sets of concurrent processes that act on a logical shared data structures.
+Many programming paradigms are as well known for the techniques they forbid as for those they support. For instance, pure functional programming disallows side-effects, while structured programming disallows the goto construct. Partly for this reason, new paradigms are often regarded as doctrinaire or overly rigid by those accustomed to older ones. Yet, avoiding certain techniques can make it easier to understand program behavior, and to prove theorems about program correctness.
+Programming paradigms can also be compared with programming models, which allows invoking an execution model by using only an API. Programming models can also be classified into paradigms based on features of the execution model.
+For parallel computing, using a programming model instead of a language is common.  The reason is that details of the parallel hardware leak into the abstractions used to program the hardware.  This causes the programmer to have to map patterns in the algorithm onto patterns in the execution model (which have been inserted due to leakage of hardware into the abstraction).  As a consequence, no one parallel programming language maps well to all computation problems.  Thus, it is more convenient to use a base sequential language and insert API calls to parallel execution models via a programming model.  Such parallel programming models can be classified according to abstractions that reflect the hardware, such as shared memory, distributed memory with message passing, notions of place visible in the code, and so forth.  These can be considered flavors of programming paradigm that apply to only parallel languages and programming models.
+
+
+== Criticism ==
+Some programming language researchers criticise the notion of paradigms as a classification of programming languages, e.g. Harper, and Krishnamurthi.  They argue that many programming languages cannot be strictly classified into one paradigm, but rather include features from several paradigms. See Comparison of multi-paradigm programming languages.
+
+
+== History ==
+Different approaches to programming have developed over time. Classification of each approach was either described at the time the approach was first developed, but often not until some time later, retrospectively. An early approach consciously identified as such is structured programming, advocated since the mid 1960s. The concept of a programming paradigm as such dates at least to 1978, in the Turing Award lecture of Robert W. Floyd, entitled The Paradigms of Programming, which cites the notion of paradigm as used by Thomas Kuhn in his The Structure of Scientific Revolutions (1962). Early programming languages did not have clearly defined programming paradigms and sometimes programs made extensive use of goto statements. Liberal use of which lead to spaghetti code which is difficult to understand and maintain. This led to the development of structured programming paradigms that disallowed the use of goto statements; only allowing the use of more structured programming constructs.
+
+
+== Languages and paradigms ==
+
+
+=== Machine code ===
+Machine code is the lowest-level of computer programming as it is machine instructions that define behavior at the lowest level of abstract possible for a computer. As it is the most prescriptive way to code it is classified as imperative.
+It is sometimes called the first-generation programming language.
+
+
+=== Assembly ===
+Assembly language introduced mnemonics for machine instructions and memory addresses. Assembly is classified as imperative and is sometimes called the second-generation programming language.
+In the 1960s, assembly languages were developed to support library COPY and quite sophisticated conditional macro generation and preprocessing abilities, CALL to subroutine, external variables and common sections (globals), enabling significant code re-use and isolation from hardware specifics via the use of logical operators such as READ/WRITE/GET/PUT. Assembly was, and still is, used for time-critical systems and often in embedded systems as it gives the most control of what the machine does.
+
+
+=== Procedural languages ===
+Procedural languages, also called the third-generation programming languages are the first described as high-level languages. They support vocabulary related to the problem being solved. For example,
+
+COmmon Business Oriented Language (COBOL) –  uses terms like file, move and copy.
+FORmula TRANslation (FORTRAN) –  using mathematical language terminology, it was developed mainly for scientific and engineering problems.
+ALGOrithmic Language (ALGOL) –  focused on being an appropriate language to define algorithms, while using mathematical language terminology, targeting scientific and engineering problems, just like FORTRAN.
+Programming Language One (PL/I) –  a hybrid commercial-scientific general purpose language supporting pointers.
+Beginners All purpose Symbolic Instruction Code (BASIC) –  it was developed to enable more people to write programs.
+C –  a general-purpose programming language, initially developed by Dennis Ritchie between 1969 and 1973 at AT&T Bell Labs.
+These languages are classified as procedural paradigm. They directly control the step by step process that a computer program follows. The efficacy and efficiency of such a program is therefore highly dependent on the programmer's skill.
+
+
+=== Object-oriented programming ===
+
+In attempt to improve on procedural languages, object-oriented programming (OOP) languages were created, such as Simula, Smalltalk, C++, Eiffel, Python, PHP, Java, and C#. In these languages, data and methods to manipulate the data are in the same code unit called an object. This encapsulation ensures that the only way that an object can access data is via methods of the object that contains the data. Thus, an object's inner workings may be changed without affecting code that uses the object. 
+There is controversy raised by Alexander Stepanov, Richard Stallman and other programmers, concerning the efficacy of the OOP paradigm versus the procedural paradigm. The need for every object to have associative methods leads some skeptics to associate OOP with software bloat; an attempt to resolve this dilemma came through polymorphism.
+Although most OOP languages are third-generation, it is possible to create an object-oriented assembler language. High Level Assembly (HLA) is an example of this that fully supports advanced data types and object-oriented assembly language programming –  despite its early origins. Thus, differing programming paradigms can be seen rather like motivational memes of their advocates, rather than necessarily representing progress from one level to the next. Precise comparisons of competing paradigms' efficacy are frequently made more difficult because of new and differing terminology applied to similar entities and processes together with numerous implementation distinctions across languages.
+
+
+=== Declarative languages ===
+A declarative programming program describes what the problem is, not how to solve it. The program is structured as a set of properties to find in the expected result, not as a procedure to follow. Given a database or a set of rules, the computer tries to find a solution matching all the desired properties. An archetype of a declarative language is the fourth generation language SQL, and the family of functional languages and logic programming.
+Functional programming is a subset of declarative programming. Programs written using this paradigm use functions, blocks of code intended to behave like mathematical functions. Functional languages discourage changes in the value of variables through assignment, making a great deal of use of recursion instead.
+The logic programming paradigm views computation as automated reasoning over a body of knowledge. Facts about the problem domain are expressed as logic formulas, and programs are executed by applying inference rules over them until an answer to the problem is found, or the set of formulas is proved inconsistent.
+
+
+=== Other paradigms ===
+Symbolic programming is a paradigm that describes programs able to manipulate formulas and program components as data. Programs can thus effectively modify themselves, and appear to "learn", making them suited for applications such as artificial intelligence, expert systems, natural-language processing and computer games. Languages that support this paradigm include Lisp and Prolog.
+Differentiable programming structures programs so that they can be differentiated throughout, usually via automatic differentiation.
+Literate programming, as a form of imperative programming, structures programs as a human-centered web, as in a hypertext essay: documentation is integral to the program, and the program is structured following the logic of prose exposition, rather than compiler convenience.
+Symbolic programming techniques such as reflective programming (reflection), which allow a program to refer to itself, might also be considered as a programming paradigm. However, this is compatible with the major paradigms and thus is not a real paradigm in its own right.
+
+
+== See also ==
+
+
+== References ==
+
+
+== External links ==
+
+Classification of the principal programming paradigms
+How programming paradigms evolve and get adopted?
+
+Software design pattern
+In software engineering, a software design pattern or design pattern is a general, reusable solution to a commonly occurring problem in many contexts in software design. A design pattern is not a rigid structure to be transplanted directly into source code. Rather, it is a description or a template for solving a particular type of problem that can be deployed in many different situations. Design patterns can be viewed as formalized best practices that the programmer may use to solve common problems when designing a software application or system.
+Object-oriented design patterns typically show relationships and interactions between classes or objects, without specifying the final application classes or objects that are involved. Patterns that imply mutable state may be unsuited for functional programming languages. Some patterns can be rendered unnecessary in languages that have built-in support for solving the problem they are trying to solve, and object-oriented patterns are not necessarily suitable for non-object-oriented languages.
+Design patterns may be viewed as a structured approach to computer programming intermediate between the levels of a programming paradigm and a concrete algorithm.
+
+
+== History ==
+Patterns originated as an architectural concept by Christopher Alexander as early as 1977 in A Pattern Language (c.f. his article, "The Pattern of Streets," JOURNAL OF THE AIP, September, 1966, Vol. 32, No. 5, pp. 273–278). In 1987, Kent Beck and Ward Cunningham began experimenting with the idea of applying patterns to programming – specifically pattern languages – and presented their results at the OOPSLA conference that year. In the following years, Beck, Cunningham and others followed up on this work.
+Design patterns gained popularity in computer science after the book Design Patterns: Elements of Reusable Object-Oriented Software was published in 1994  by the so-called "Gang of Four" (Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides), which is frequently abbreviated as "GoF". That same year, the first Pattern Languages of Programming Conference was held, and the following year the Portland Pattern Repository was set up for documentation of design patterns. The scope of the term remains a matter of dispute. Notable books in the design pattern genre include:
+
+Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. ISBN 978-0-201-63361-0.
+Brinch Hansen, Per (1995). Studies in Computational Science: Parallel Programming Paradigms. Prentice Hall. ISBN 978-0-13-439324-7.
+Buschmann, Frank; Meunier, Regine; Rohnert, Hans; Sommerlad, Peter (1996). Pattern-Oriented Software Architecture, Volume 1: A System of Patterns. John Wiley & Sons. ISBN 978-0-471-95869-7.
+Beck, Kent (1997). Smalltalk Best Practice Patterns. Prentice Hall. ISBN 978-0134769042.
+Schmidt, Douglas C.; Stal, Michael; Rohnert, Hans; Buschmann, Frank (2000). Pattern-Oriented Software Architecture, Volume 2: Patterns for Concurrent and Networked Objects. John Wiley & Sons. ISBN 978-0-471-60695-6.
+Fowler, Martin (2002). Patterns of Enterprise Application Architecture. Addison-Wesley. ISBN 978-0-321-12742-6.
+Hohpe, Gregor; Woolf, Bobby (2003). Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions. Addison-Wesley. ISBN 978-0-321-20068-6.
+Freeman, Eric T.; Robson, Elisabeth; Bates, Bert; Sierra, Kathy (2004). Head First Design Patterns. O'Reilly Media. ISBN 978-0-596-00712-6.
+Larman, Craig (2004). Applying UML and Patterns (3rd Ed, 1st Ed 1995). Pearson. ISBN 978-0131489066.
+Although design patterns have been applied practically for a long time, formalization of the concept of design patterns languished for several years.
+
+
+== Practice ==
+Design patterns can speed up the development process by providing proven development paradigms. Effective software design requires considering issues that may not become apparent until later in the implementation. Freshly written code can often have hidden, subtle issues that take time to be detected; issues that sometimes can cause major problems down the road. Reusing design patterns can help to prevent such issues, and enhance code readability for those familiar with the patterns.
+Software design techniques are difficult to apply to a broader range of problems. Design patterns provide general solutions, documented in a format that does not require specifics tied to a particular problem.
+In 1996, Christopher Alexander was invited to give a Keynote Speech to the 1996 OOPSLA Convention.  Here he reflected on how his work on Patterns in Architecture had developed and his hopes for how the Software Design community could help Architecture extend Patterns to create living structures that use generative schemes that are more like computer code.
+
+
+== Motif ==
+A pattern describes a design motif, a.k.a. prototypical micro-architecture, as a set of program constituents (e.g., classes, methods...) and their relationships. A developer adapts the motif to their codebase to solve the problem described by the pattern. The resulting code has structure and organization similar to the chosen motif.
+
+
+== Domain-specific patterns ==
+Efforts have also been made to codify design patterns in particular domains, including the use of existing design patterns as well as domain-specific design patterns. Examples include user interface design patterns, information visualization, secure design, "secure usability", Web design  and business model design.
+The annual Pattern Languages of Programming Conference proceedings  include many examples of domain-specific patterns.
+
+
+== Object-oriented programming ==
+Object-oriented design patterns typically show relationships and interactions between classes or objects, without specifying the final application classes or objects that are involved. Patterns that imply mutable state may be unsuited for functional programming languages. Some patterns can be rendered unnecessary in languages that have built-in support for solving the problem they are trying to solve, and object-oriented patterns are not necessarily suitable for non-object-oriented languages.
+
+
+== Examples ==
+Design patterns can be organized into groups based on what kind of problem they solve. Creational patterns create objects. Structural patterns organize classes and objects to form larger structures that provide new functionality. Behavioral patterns provide communication between objects and realizing these patterns.
+
+
+=== Creational patterns ===
+
+
+=== Structural patterns ===
+
+
+=== Behavioral patterns ===
+
+
+=== Concurrency patterns ===
+
+
+== Documentation ==
+The documentation for a design pattern describes the context in which the pattern is used, the forces within the context that the pattern seeks to resolve, and the suggested solution. There is no single, standard format for documenting design patterns. Rather, a variety of different formats have been used by different pattern authors. However, according to Martin Fowler, certain pattern forms have become more well-known than others, and consequently become common starting points for new pattern-writing efforts. One example of a commonly used documentation format is the one used by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides in their book Design Patterns. It contains the following sections:
+
+Pattern Name and Classification: A descriptive and unique name that helps in identifying and referring to the pattern.
+Intent: A description of the goal behind the pattern and the reason for using it.
+Also Known As: Other names for the pattern.
+Motivation (Forces): A scenario consisting of a problem and a context in which this pattern can be used.
+Applicability: Situations in which this pattern is usable; the context for the pattern.
+Structure: A graphical representation of the pattern. Class diagrams and Interaction diagrams may be used for this purpose.
+Participants: A listing of the classes and objects used in the pattern and their roles in the design.
+Collaboration: A description of how classes and objects used in the pattern interact with each other.
+Consequences: A description of the results, side effects, and trade offs caused by using the pattern.
+Implementation: A description of an implementation of the pattern; the solution part of the pattern.
+Sample Code: An illustration of how the pattern can be used in a programming language.
+Known Uses: Examples of real usages of the pattern.
+Related Patterns: Other patterns that have some relationship with the pattern; discussion of the differences between the pattern and similar patterns.
+
+
+== Criticism ==
+Some suggest that design patterns may be a sign that features are missing in a given programming language (Java or C++ for instance). Peter Norvig demonstrates that 16 out of the 23 patterns in the Design Patterns book (which is primarily focused on C++) are simplified or eliminated (via direct language support) in Lisp or Dylan. Related observations were made by Hannemann and Kiczales who implemented several of the 23 design patterns using an aspect-oriented programming language (AspectJ) and showed that code-level dependencies were removed from the implementations of 17 of the 23 design patterns and that aspect-oriented programming could simplify the implementations of design patterns.
+See also Paul Graham's essay "Revenge of the Nerds".
+Inappropriate use of patterns may unnecessarily increase complexity. FizzBuzzEnterpriseEdition offers a humorous example of over-complexity introduced by design patterns.
+By definition, a pattern must be programmed anew into each application that uses it. Since some authors see this as a step backward from software reuse as provided by components, researchers have worked to turn patterns into components. Meyer and Arnout were able to provide full or partial componentization of two-thirds of the patterns they attempted.
+In order to achieve flexibility, design patterns may introduce additional levels of indirection, which may complicate the resulting design and decrease runtime performance.
+
+
+== Relationship to other topics ==
+Software design patterns offer finer granularity compared to software architecture patterns and software architecture styles, as design patterns focus on solving detailed, low-level design problems within individual components or subsystems. Examples include Singleton, Factory Method, and Observer. 
+Software Architecture Pattern refers to a reusable, proven solution to a recurring problem at the system level, addressing concerns related to the overall structure, component interactions, and quality attributes of the system. Software architecture patterns operate at a higher level of abstraction than design patterns, solving broader system-level challenges. While these patterns typically affect system-level concerns, the distinction between architectural patterns and architectural styles can sometimes be blurry. Examples include Circuit Breaker. 
+Software Architecture Style refers to a high-level structural organization that defines the overall system organization, specifying how components are organized, how they interact, and the constraints on those interactions. Architecture styles typically include a vocabulary of component and connector types, as well as semantic models for interpreting the system's properties. These styles represent the most coarse-grained level of system organization. Examples include Layered Architecture, Microservices, and Event-Driven Architecture. 
+
+
+== See also ==
+
+
+== References ==
+
+
+== Further reading ==
+
+Data structure
+In computer science, a data structure is a data organization and storage format that is usually chosen for efficient access to data. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data.
+
+
+== Usage ==
+Data structures serve as the basis for abstract data types (ADT). The ADT defines the logical form of the data type. The data structure implements the physical form of the data type.
+Different types of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. For example, relational databases commonly use B-tree indexes for data retrieval, while compiler implementations usually use hash tables to look up identifiers.
+Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms. Some formal design methods and programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design. Data structures can be used to organize the storage and retrieval of information stored in both main memory and secondary memory.
+
+
+== Implementation ==
+Data structures can be implemented using a variety of programming languages and techniques, but they all share the common goal of efficiently organizing and storing data. Data structures are generally based on the ability of a computer to fetch and store data at any place in its memory, specified by a pointer—a bit string, representing a memory address, that can be itself stored in memory and manipulated by the program. Thus, the array and record data structures are based on computing the addresses of data items with arithmetic operations, while the linked data structures are based on storing addresses of data items within the structure itself. This approach to data structuring has profound implications for the efficiency and scalability of algorithms. For instance, the contiguous memory allocation in arrays facilitates rapid access and modification operations, leading to optimized performance in sequential data processing scenarios. 
+The implementation of a data structure usually requires writing a set of procedures that create and manipulate instances of that structure. The efficiency of a data structure cannot be analyzed separately from those operations. This observation motivates the theoretical concept of an abstract data type, a data structure that is defined indirectly by the operations that may be performed on it, and the mathematical properties of those operations (including their space and time cost).
+
+
+== Examples ==
+
+There are numerous types of data structures, generally built upon simpler primitive data types. Well known examples are:
+
+An array is a number of elements in a specific order, typically all of the same type (depending on the language, individual elements may either all be forced to be the same type, or may be of almost any type). Elements are accessed using an integer index to specify which element is required. Typical implementations allocate contiguous memory words for the elements of arrays (but this is not always a necessity). Arrays may be fixed-length or resizable.
+A linked list (also just called list) is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays.
+A record (also called tuple or struct) is an aggregate data structure. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects.
+Hash tables, also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions.
+Graphs are collections of nodes connected by edges, representing relationships between entities. Graphs can be used to model social networks, computer networks, and transportation networks, among other things. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic. Graph traversal algorithms include breadth-first search and depth-first search.
+Stacks and queues are abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle.
+Trees represent a hierarchical organization of elements. A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. Trees are widely used in various algorithms and data storage scenarios. Binary trees (particularly heaps), AVL trees, and B-trees are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data.
+A trie, or prefix tree, is a special type of tree used to efficiently retrieve strings. In a trie, each node represents a character of a string, and the edges between nodes represent the characters that connect them. This structure is especially useful for tasks like autocomplete, spell-checking, and creating dictionaries. Tries allow for quick searches and operations based on string prefixes.
+
+
+== Language support ==
+Most assembly languages and some low-level languages, such as BCPL (Basic Combined Programming Language), lack built-in support for data structures. On the other hand, many high-level programming languages and some higher-level assembly languages, such as MASM, have special syntax or other built-in support for certain data structures, such as records and arrays. For example, the C (a direct descendant of BCPL) and Pascal languages support structs and records, respectively, in addition to vectors (one-dimensional arrays) and multi-dimensional arrays.
+Most programming languages feature some sort of library mechanism that allows data structure implementations to be reused by different programs. Modern languages usually come with standard libraries that implement the most common data structures. Examples are the C++ Standard Template Library, the Java Collections Framework, and the Microsoft .NET Framework.
+Modern languages also generally support modular programming, the separation between the interface of a library module and its implementation. Some provide opaque data types that allow clients to hide implementation details. Object-oriented programming languages, such as C++, Java, and Smalltalk, typically use classes for this purpose.
+Many known data structures have concurrent versions which allow multiple computing threads to access a single concrete instance of a data structure simultaneously.
+
+
+== See also ==
+
+
+== References ==
+
+
+== Bibliography ==
+Peter Brass, Advanced Data Structures, Cambridge University Press, 2008, ISBN 978-0521880374
+Donald Knuth, The Art of Computer Programming, vol. 1. Addison-Wesley, 3rd edition, 1997, ISBN 978-0201896831
+Dinesh Mehta and Sartaj Sahni, Handbook of Data Structures and Applications, Chapman and Hall/CRC Press, 2004, ISBN 1584884355
+Niklaus Wirth, Algorithms and Data Structures, Prentice Hall, 1985, ISBN 978-0130220059
+
+
+== Further reading ==
+Open Data Structures by Pat Morin
+G. H. Gonnet and R. Baeza-Yates, Handbook of Algorithms and Data Structures - in Pascal and C, second edition, Addison-Wesley, 1991, ISBN 0-201-41607-7
+Ellis Horowitz and Sartaj Sahni, Fundamentals of Data Structures in Pascal, Computer Science Press, 1984, ISBN 0-914894-94-3
+
+
+== External links ==
+
+Descriptions from the Dictionary of Algorithms and Data Structures
+Data structures course
+An Examination of Data Structures from .NET perspective
+Schaffer, C. Data Structures and Algorithm Analysis
+
+Algorithm
+In mathematics and computer science, an algorithm ( ) is a finite sequence of mathematically rigorous instructions, typically used to solve a class of specific problems or to perform a computation. Algorithms are used as specifications for performing calculations and data processing. More advanced algorithms can use conditionals to divert the code execution through various routes (referred to as automated decision-making) and deduce valid inferences (referred to as automated reasoning).
+In contrast, a heuristic is an approach to solving problems that do not have well-defined correct or optimal results. For example, although social media recommender systems are commonly called "algorithms", they actually rely on heuristics as there is no truly "correct" recommendation.
+As an effective method, an algorithm can be expressed within a finite amount of space and time and in a well-defined formal language for calculating a function. Starting from an initial state and initial input (perhaps empty), the instructions describe a computation that, when executed, proceeds through a finite number of well-defined successive states, eventually producing "output" and terminating at a final ending state. The transition from one state to the next is not necessarily deterministic; some algorithms, known as randomized algorithms, incorporate random input.
+
+
+== Etymology ==
+Around 825 AD, Persian scientist and polymath Muḥammad ibn Mūsā al-Khwārizmī wrote kitāb al-ḥisāb al-hindī ("Book of Indian computation") and kitab al-jam' wa'l-tafriq al-ḥisāb al-hindī ("Addition and subtraction in Indian arithmetic"). In the early 12th century, Latin translations of said al-Khwarizmi texts involving the Hindu–Arabic numeral system and arithmetic appeared, for example Liber Alghoarismi de practica arismetrice, attributed to John of Seville, and Liber Algorismi de numero Indorum, attributed to Adelard of Bath. Hereby, alghoarismi or algorismi is the Latinization of Al-Khwarizmi's name; the text starts with the phrase Dixit Algorismi, or "Thus spoke Al-Khwarizmi". Around 1230, the English word algorism is attested and then by Chaucer in 1391, English adopted the French term. In the 15th century, under the influence of the Greek word ἀριθμός (arithmos, "number"; cf. "arithmetic"), the Latin word was altered to algorithmus.
+
+
+== Definition ==
+
+One informal definition is "a set of rules that precisely defines a sequence of operations", which would include all computer programs (including programs that do not perform numeric calculations), and any prescribed bureaucratic procedure
+or cook-book recipe. In general, a program is an algorithm only if it stops eventually—even though infinite loops may sometimes prove desirable. Boolos, Jeffrey & 1974, 1999 define an algorithm to be an explicit set of instructions for determining an output, that can be followed by a computing machine or a human who could only carry out specific elementary operations on symbols.
+Most algorithms are intended to be implemented as computer programs. However, algorithms are also implemented by other means, such as in a biological neural network (for example, the human brain performing arithmetic or an insect looking for food), in an electrical circuit, or a mechanical device.
+
+
+== History ==
+
+
+=== Ancient algorithms ===
+Step-by-step procedures for solving mathematical problems have been recorded since antiquity. This includes in Babylonian mathematics (around 2500 BC), Egyptian mathematics (around 1550 BC), Indian mathematics (around 800 BC and later), the Ifa Oracle (around 500 BC), Greek mathematics (around 240 BC), Chinese mathematics (around 200 BC and later), and Arabic mathematics (around 800 AD).
+The earliest evidence of algorithms is found in ancient Mesopotamian mathematics. A Sumerian clay tablet found in Shuruppak near Baghdad and dated to c. 2500 BC describes the earliest division algorithm. During the Hammurabi dynasty c. 1800 – c. 1600 BC, Babylonian clay tablets described algorithms for computing formulas. Algorithms were also used in Babylonian astronomy. Babylonian clay tablets describe and employ algorithmic procedures to compute the time and place of significant astronomical events.
+Algorithms for arithmetic are also found in ancient Egyptian mathematics, dating back to the Rhind Mathematical Papyrus c. 1550 BC. Algorithms were later used in ancient Hellenistic mathematics. Two examples are the Sieve of Eratosthenes, which was described in the Introduction to Arithmetic by Nicomachus,: Ch 9.2  and the Euclidean algorithm, which was first described in Euclid's Elements (c. 300 BC).: Ch 9.1 Examples of ancient Indian mathematics included the Shulba Sutras, the Kerala School, and the Brāhmasphuṭasiddhānta.
+The first cryptographic algorithm for deciphering encrypted code was developed by Al-Kindi, a 9th-century Arab mathematician, in A Manuscript On Deciphering Cryptographic Messages. He gave the first description of cryptanalysis by frequency analysis, the earliest codebreaking algorithm.
+
+
+=== Computers ===
+
+
+==== Weight-driven clocks ====
+Bolter credits the invention of the weight-driven clock as "the key invention [of Europe in the Middle Ages]," specifically the verge escapement mechanism producing the tick and tock of a mechanical clock. "The accurate automatic machine" led immediately to "mechanical automata" in the 13th century and "computational machines"—the difference and analytical engines of Charles Babbage and Ada Lovelace in the mid-19th century. Lovelace designed the first algorithm intended for processing on a computer, Babbage's analytical engine, which is the first device considered a real Turing-complete computer instead of just a calculator. Although the full implementation of Babbage's second device was not realized for decades after her lifetime, Lovelace has been called "history's first programmer".
+
+
+==== Electromechanical relay ====
+Bell and Newell (1971) write that the Jacquard loom, a precursor to Hollerith cards (punch cards), and "telephone switching technologies" led to the development of the first computers. By the mid-19th century, the telegraph, the precursor of the telephone, was in use throughout the world. By the late 19th century, the ticker tape (c. 1870s) was in use, as were Hollerith cards (c. 1890). Then came the teleprinter (c. 1910) with its punched-paper use of Baudot code on tape.
+Telephone-switching networks of electromechanical relays were invented in 1835. These led to the invention of the digital adding device by George Stibitz in 1937. While working in Bell Laboratories, he observed the "burdensome" use of mechanical calculators with gears. "He went home one evening in 1937 intending to test his idea... When the tinkering was over, Stibitz had constructed a binary adding device".
+
+
+=== Formalization ===
+
+In 1928, a partial formalization of the modern concept of algorithms began with attempts to solve the Entscheidungsproblem (decision problem) posed by David Hilbert. Later formalizations were framed as attempts to define "effective calculability" or "effective method". Those formalizations included the Gödel–Herbrand–Kleene recursive functions of 1930, 1934 and 1935, Alonzo Church's lambda calculus of 1936, Emil Post's Formulation 1 of 1936, and Alan Turing's Turing machines of 1936–37 and 1939.
+
+
+== Representations ==
+Algorithms can be expressed in many kinds of notation, including natural languages, pseudocode, flowcharts, drakon-charts, programming languages or control tables (processed by interpreters). Natural language expressions of algorithms tend to be verbose and ambiguous and are rarely used for complex or technical algorithms. Pseudocode, flowcharts, drakon-charts, and control tables are structured expressions of algorithms that avoid common ambiguities of natural language. Programming languages are primarily for expressing algorithms in a computer-executable form but are also used to define or document algorithms.
+
+
+=== Turing machines ===
+There are many possible representations and Turing machine programs can be expressed as a sequence of machine tables (see finite-state machine, state-transition table, and control table for more), as flowcharts and drakon-charts (see state diagram for more), as a form of rudimentary machine code or assembly code called "sets of quadruples", and more. Algorithm representations can also be classified into three accepted levels of Turing machine description: high-level description, implementation description, and formal description. A high-level description describes the qualities of the algorithm itself, ignoring how it is implemented on the Turing machine. An implementation description describes the general manner in which the machine moves its head and stores data to carry out the algorithm, but does not give exact states. In the most detail, a formal description gives the exact state table and list of transitions of the Turing machine.
+
+
+=== Flowchart representation ===
+The graphical aid called a flowchart offers a way to describe and document an algorithm (and a computer program corresponding to it). It has four primary symbols: arrows showing program flow, rectangles (SEQUENCE, GOTO), diamonds (IF-THEN-ELSE), and dots (OR-tie). Sub-structures can "nest" in rectangles, but only if a single exit occurs from the superstructure.
+
+
+== Algorithmic analysis ==
+
+It is often important to know how much time, storage, or other cost an algorithm may require. Methods have been developed for the analysis of algorithms to obtain such quantitative answers (estimates); for example, an algorithm that adds up the elements of a list of n numbers would have a time requirement of ⁠
+  
+    
+      
+        O
+        (
+        n
+        )
+      
+    
+    {\displaystyle O(n)}
+  
+⁠, using big O notation. The algorithm only needs to remember two values: the sum of all the elements so far, and its current position in the input list. If the space required to store the input numbers is not counted, it has a space requirement of ⁠
+  
+    
+      
+        O
+        (
+        1
+        )
+      
+    
+    {\displaystyle O(1)}
+  
+⁠, otherwise ⁠
+  
+    
+      
+        O
+        (
+        n
+        )
+      
+    
+    {\displaystyle O(n)}
+  
+⁠ is required.
+Different algorithms may complete the same task with a different set of instructions in less or more time, space, or 'effort' than others. For example, a binary search algorithm (with cost ⁠
+  
+    
+      
+        O
+        (
+        log
+        ⁡
+        n
+        )
+      
+    
+    {\displaystyle O(\log n)}
+  
+⁠) outperforms a sequential search (cost ⁠
+  
+    
+      
+        O
+        (
+        n
+        )
+      
+    
+    {\displaystyle O(n)}
+  
+⁠ ) when used for table lookups on sorted lists or arrays.
+
+
+=== Formal versus empirical ===
+
+The analysis, and study of algorithms is a discipline of computer science. Algorithms are often studied abstractly, without referencing any specific programming language or implementation. Algorithm analysis resembles other mathematical disciplines as it focuses on the algorithm's properties, not implementation. Pseudocode is typical for analysis as it is a simple and general representation. Most algorithms are implemented on particular hardware/software platforms and their algorithmic efficiency is tested using real code. The efficiency of a particular algorithm may be insignificant for many "one-off" problems but it may be critical for algorithms designed for fast interactive, commercial, or long-life scientific usage. Scaling from small n to large n frequently exposes inefficient algorithms that are otherwise benign.
+Empirical testing is useful for uncovering unexpected interactions that affect performance. Benchmarks may be used to compare before/after potential improvements to an algorithm after program optimization.
+Empirical tests cannot replace formal analysis, though, and are non-trivial to perform fairly.
+
+
+=== Execution efficiency ===
+
+To illustrate the potential improvements possible even in well-established algorithms, a recent significant innovation, relating to FFT algorithms (used heavily in the field of image processing), can decrease processing time up to 1,000 times for applications like medical imaging. In general, speed improvements depend on special properties of the problem, which are very common in practical applications. Speedups of this magnitude enable computing devices that make extensive use of image processing (like digital cameras and medical equipment) to consume less power.
+
+
+== Design ==
+
+Algorithm design is a method or mathematical process for problem-solving and engineering algorithms. The design of algorithms is part of many solution theories, such as divide-and-conquer or dynamic programming within operation research. Techniques for designing and implementing algorithm designs are also called algorithm design patterns, with examples including the template method pattern and the decorator pattern. One of the most important aspects of algorithm design is resource (run-time, memory usage) efficiency; the big O notation is used to describe e.g., an algorithm's run-time growth as the size of its input increases.
+
+
+=== Structured programming ===
+Per the Church–Turing thesis, any algorithm can be computed by any Turing complete model. Turing completeness only requires four instruction types—conditional GOTO, unconditional GOTO, assignment, HALT. However, Kemeny and Kurtz observe that, while "undisciplined" use of unconditional GOTOs and conditional IF-THEN GOTOs can result in "spaghetti code", a programmer can write structured programs using only these instructions; on the other hand "it is also possible, and not too hard, to write badly structured programs in a structured language". Tausworthe augments the three Böhm-Jacopini canonical structures: SEQUENCE, IF-THEN-ELSE, and WHILE-DO, with two more: DO-WHILE and CASE. An additional benefit of a structured program is that it lends itself to proofs of correctness using mathematical induction.
+
+
+== Legal status ==
+
+By themselves, algorithms are not usually patentable. In the United States, a claim consisting solely of simple manipulations of abstract concepts, numbers, or signals does not constitute "processes" (USPTO 2006), so algorithms are not patentable (as in Gottschalk v. Benson). However practical applications of algorithms are sometimes patentable. For example, in Diamond v. Diehr, the application of a simple feedback algorithm to aid in the curing of synthetic rubber was deemed patentable. The patenting of software is controversial, and there are criticized patents involving algorithms, especially data compression algorithms, such as Unisys's LZW patent. Additionally, some cryptographic algorithms have export restrictions (see export of cryptography).
+
+
+== Classification ==
+
+
+=== By implementation ===
+Recursion
+A recursive algorithm invokes itself repeatedly until meeting a termination condition and is a common functional programming method. Iterative algorithms use repetitions such as loops or data structures like stacks to solve problems. Problems may be suited for one implementation or the other. The Tower of Hanoi is a puzzle commonly solved using recursive implementation. Every recursive version has an equivalent (but possibly more or less complex) iterative version, and vice versa.
+Serial, parallel or distributed
+Algorithms are usually discussed with the assumption that computers execute one instruction of an algorithm at a time on serial computers. Serial algorithms are designed for these environments, unlike parallel or distributed algorithms. Parallel algorithms take advantage of computer architectures where multiple processors can work on a problem at the same time. Distributed algorithms use multiple machines connected via a computer network. Parallel and distributed algorithms divide the problem into subproblems and collect the results back together. Resource consumption in these algorithms is not only processor cycles on each processor but also the communication overhead between the processors. Some sorting algorithms can be parallelized efficiently, but their communication overhead is expensive. Iterative algorithms are generally parallelizable, but some problems have no parallel algorithms and are called inherently serial problems.
+Deterministic or non-deterministic
+Deterministic algorithms solve the problem with exact decisions at every step; whereas non-deterministic algorithms solve problems via guessing. Guesses are typically made more accurate through the use of heuristics.
+Exact or approximate
+While many algorithms reach an exact solution, approximation algorithms seek an approximation that is close to the true solution. Such algorithms have practical value for many hard problems. For example, the Knapsack problem, where there is a set of items, and the goal is to pack the knapsack to get the maximum total value. Each item has some weight and some value. The total weight that can be carried is no more than some fixed number X. So, the solution must consider the weights of items as well as their value.
+Quantum algorithm
+Quantum algorithms run on a realistic model of quantum computation. The term is usually used for those algorithms that seem inherently quantum or use some essential feature of Quantum computing such as quantum superposition or quantum entanglement.
+
+
+=== By design paradigm ===
+Another way of classifying algorithms is by their design methodology or paradigm. Some common paradigms are:
+
+Brute-force or exhaustive search
+Brute force is a problem-solving method of systematically trying every possible option until the optimal solution is found. This approach can be very time-consuming, testing every possible combination of variables. It is often used when other methods are unavailable or too complex. Brute force can solve a variety of problems, including finding the shortest path between two points and cracking passwords.
+Divide and conquer
+A divide-and-conquer algorithm repeatedly reduces a problem to one or more smaller instances of itself (usually recursively) until the instances are small enough to solve easily. Merge sorting is an example of divide and conquer, where an unordered list can be divided into segments containing one item and sorting of the entire list can be obtained by merging the segments. A simpler variant of divide and conquer is called a decrease-and-conquer algorithm, which solves one smaller instance of itself, and uses the solution to solve the bigger problem. Divide and conquer divides the problem into multiple subproblems and so the conquer stage is more complex than decrease and conquer algorithms. An example of a decrease and conquer algorithm is the binary search algorithm.
+Search and enumeration
+Many problems (such as playing chess) can be modelled as problems on graphs. A graph exploration algorithm specifies rules for moving around a graph and is useful for such problems. This category also includes search algorithms, branch and bound enumeration, and backtracking.
+Randomized algorithm
+Such algorithms make some choices randomly (or pseudo-randomly). They find approximate solutions when finding exact solutions may be impractical (see heuristic method below). For some problems, the fastest approximations must involve some randomness. Whether randomized algorithms with polynomial time complexity can be the fastest algorithm for some problems is an open question known as the P versus NP problem. There are two large classes of such algorithms:
+Monte Carlo algorithms return a correct answer with high probability. E.g. RP is the subclass of these that run in polynomial time.
+Las Vegas algorithms always return the correct answer, but their running time is only probabilistically bound, e.g. ZPP.
+Reduction of complexity
+This technique transforms difficult problems into better-known problems solvable with (hopefully) asymptotically optimal algorithms. The goal is to find a reducing algorithm whose complexity is not dominated by the resulting reduced algorithms. For example, one selection algorithm finds the median of an unsorted list by first sorting the list (the expensive portion), and then pulling out the middle element in the sorted list (the cheap portion). This technique is also known as transform and conquer.
+Back tracking
+In this approach, multiple solutions are built incrementally and abandoned when it is determined that they cannot lead to a valid full solution.
+
+
+=== Optimization problems ===
+For optimization problems there is a more specific classification of algorithms; an algorithm for such problems may fall into one or more of the general categories described above as well as into one of the following:
+
+Linear programming
+When searching for optimal solutions to a linear function bound by linear equality and inequality constraints, the constraints can be used directly to produce optimal solutions. There are algorithms that can solve any problem in this category, such as the popular simplex algorithm. Problems that can be solved with linear programming include the maximum flow problem for directed graphs. If a problem also requires that any of the unknowns be integers, then it is classified in integer programming. A linear programming algorithm can solve such a problem if it can be proved that all restrictions for integer values are superficial, i.e., the solutions satisfy these restrictions anyway. In the general case, a specialized algorithm or an algorithm that finds approximate solutions is used, depending on the difficulty of the problem.
+Dynamic programming
+When a problem shows optimal substructures—meaning the optimal solution can be constructed from optimal solutions to subproblems—and overlapping subproblems, meaning the same subproblems are used to solve many different problem instances, a quicker approach called dynamic programming avoids recomputing solutions. For example, Floyd–Warshall algorithm, the shortest path between a start and goal vertex in a weighted graph can be found using the shortest path to the goal from all adjacent vertices. Dynamic programming and memoization go together. Unlike divide and conquer, dynamic programming subproblems often overlap. The difference between dynamic programming and simple recursion is the caching or memoization of recursive calls. When subproblems are independent and do not repeat, memoization does not help; hence dynamic programming is not applicable to all complex problems. Using memoization dynamic programming reduces the complexity of many problems from exponential to polynomial.
+The greedy method
+Greedy algorithms, similarly to a dynamic programming, work by examining substructures, in this case not of the problem but of a given solution. Such algorithms start with some solution and improve it by making small modifications. For some problems, they always find the optimal solution but for others they may stop at local optima. The most popular use of greedy algorithms is finding minimal spanning trees of graphs without negative cycles. Huffman Tree, Kruskal, Prim, Sollin are greedy algorithms that can solve this optimization problem.
+The heuristic method
+In optimization problems, heuristic algorithms find solutions close to the optimal solution when finding the optimal solution is impractical. These algorithms get closer and closer to the optimal solution as they progress. In principle, if run for an infinite amount of time, they will find the optimal solution. They can ideally find a solution very close to the optimal solution in a relatively short time. These algorithms include local search, tabu search, simulated annealing, and genetic algorithms. Some, like simulated annealing, are non-deterministic algorithms while others, like tabu search, are deterministic. When a bound on the error of the non-optimal solution is known, the algorithm is further categorized as an approximation algorithm.
+
+
+== Examples ==
+
+One of the simplest algorithms finds the largest number in a list of numbers of random order. Finding the solution requires looking at every number in the list. From this follows a simple algorithm, which can be described in plain English as:
+High-level description:
+
+If a set of numbers is empty, then there is no highest number.
+Assume the first number in the set is the largest.
+For each remaining number in the set: if this number is greater than the current largest, it becomes the new largest.
+When there are no unchecked numbers left in the set, consider the current largest number to be the largest in the set.
+(Quasi-)formal description:
+Written in prose but much closer to the high-level language of a computer program, the following is the more formal coding of the algorithm in pseudocode or pidgin code:
+
+
+== See also ==
+
+
+== Notes ==
+
+
+== Bibliography ==
+
+Zaslavsky, C. (1970). Mathematics of the Yoruba People and of Their Neighbors in Southern Nigeria. The Two-Year College Mathematics Journal, 1(2), 76–99. 
+
+
+== Further reading ==
+
+
+== External links ==
+
+"Algorithm". Encyclopedia of Mathematics. EMS Press. 2001 .
+Weisstein, Eric W. "Algorithm". MathWorld.
+Dictionary of Algorithms and Data Structures – National Institute of Standards and Technology
+Algorithm repositories
+The Stony Brook Algorithm Repository – State University of New York at Stony Brook
+Collected Algorithms of the ACM – Associations for Computing Machinery
+The Stanford GraphBase Archived December 6, 2015, at the Wayback Machine – Stanford University
+
+Database
+In computing, a database is an organized collection of data or a type of data store based on the use of a database management system (DBMS), the software that interacts with end users, applications, and the database itself to capture and analyze the data. The DBMS additionally encompasses the core facilities provided to administer the database. The sum total of the database, the DBMS and the associated applications can be referred to as a database system. Often the term "database" is also used loosely to refer to any of the DBMS, the database system or an application associated with the database.
+Small databases can be stored on a file system, while large databases are hosted on computer clusters or cloud storage. The design of databases spans formal techniques and practical considerations, including data modeling, efficient data representation and storage, query languages, security and privacy of sensitive data, and distributed computing issues, including supporting concurrent access and fault tolerance.
+Computer scientists may classify database management systems according to the database models that they support. Relational databases became dominant in the 1980s. These model data as rows and columns in a series of tables, and the vast majority use SQL for writing and querying data. In the 2000s, non-relational databases became popular, collectively referred to as NoSQL, because they use different query languages.
+
+
+== Terminology and overview ==
+Formally, a "database" refers to a set of related data accessed through the use of a "database management system" (DBMS), which is an integrated set of computer software that allows users to interact with one or more databases and provides access to all of the data contained in the database (although restrictions may exist that limit access to particular data). The DBMS provides various functions that allow entry, storage and retrieval of large quantities of information and provides ways to manage how that information is organized.
+Because of the close relationship between them, the term "database" is often used casually to refer to both a database and the DBMS used to manipulate it.
+Outside the world of professional information technology, the term database is often used to refer to any collection of related data (such as a spreadsheet or a card index) as size and usage requirements typically necessitate use of a database management system.
+Existing DBMSs provide various functions that allow management of a database and its data which can be classified into four main functional groups:
+
+Data definition – Creation, modification and removal of definitions that detail how the data is to be organized.
+Update – Insertion, modification, and deletion of the data itself.
+Retrieval – Selecting data according to specified criteria (e.g., a query, a position in a hierarchy, or a position in relation to other data) and providing that data either directly to the user, or making it available for further processing by the database itself or by other applications. The retrieved data may be made available in a more or less direct form without modification, as it is stored in the database, or in a new form obtained by altering it or combining it with existing data from the database.
+Administration – Registering and monitoring users, enforcing data security, monitoring performance, maintaining data integrity, dealing with concurrency control, and recovering information that has been corrupted by some event such as an unexpected system failure.
+Both a database and its DBMS conform to the principles of a particular database model. "Database system" refers collectively to the database model, database management system, and database.
+Physically, database servers are dedicated computers that hold the actual databases and run only the DBMS and related software. Database servers are usually multiprocessor computers, with generous memory and RAID disk arrays used for stable storage. Hardware database accelerators, connected to one or more servers via a high-speed channel, are also used in large-volume transaction processing environments. DBMSs are found at the heart of most database applications. DBMSs may be built around a custom multitasking kernel with built-in networking support, but modern DBMSs typically rely on a standard operating system to provide these functions.
+Since DBMSs comprise a significant market, computer and storage vendors often take into account DBMS requirements in their own development plans.
+Databases and DBMSs can be categorized according to the database model(s) that they support (such as relational or XML), the type(s) of computer they run on (from a server cluster to a mobile phone), the query language(s) used to access the database (such as SQL or XQuery), and their internal engineering, which affects performance, scalability, resilience, and security.
+
+
+== History ==
+The sizes, capabilities, and performance of databases and their respective DBMSs have grown in orders of magnitude. These performance increases were enabled by the technology progress in the areas of processors, computer memory, computer storage, and computer networks. The concept of a database was made possible by the emergence of direct access storage media such as magnetic disks, which became widely available in the mid-1960s; earlier systems relied on sequential storage of data on magnetic tape. The subsequent development of database technology can be divided into three eras based on data model or structure: navigational, SQL/relational, and post-relational.
+The two main early navigational data models were the hierarchical model and the CODASYL model (network model). These were characterized by the use of pointers (often physical disk addresses) to follow relationships from one record to another.
+The relational model, first proposed in 1970 by Edgar F. Codd, departed from this tradition by insisting that applications should search for data by content, rather than by following links. The relational model employs sets of ledger-style tables, each used for a different type of entity. Only in the mid-1980s did computing hardware become powerful enough to allow the wide deployment of relational systems (DBMSs plus applications). By the early 1990s, however, relational systems dominated in all large-scale data processing applications, and as of 2018 they remain dominant: IBM Db2, Oracle, MySQL, and Microsoft SQL Server are the most searched DBMS. The dominant database language, standardized SQL for the relational model, has influenced database languages for other data models.
+Object databases were developed in the 1980s to overcome the inconvenience of object–relational impedance mismatch, which led to the coining of the term "post-relational" and also the development of hybrid object–relational databases.
+The next generation of post-relational databases in the late 2000s became known as NoSQL databases, introducing fast key–value stores and document-oriented databases. A competing "next generation" known as NewSQL databases attempted new implementations that retained the relational/SQL model while aiming to match the high performance of NoSQL compared to commercially available relational DBMSs.
+
+
+=== 1960s, navigational DBMS ===
+
+The introduction of the term database coincided with the availability of direct-access storage (disks and drums) from the mid-1960s onwards. The term represented a contrast with the tape-based systems of the past, allowing shared interactive use rather than daily batch processing. The Oxford English Dictionary cites a 1962 report by the System Development Corporation of California as the first to use the term "data-base" in a specific technical sense.
+As computers grew in speed and capability, a number of general-purpose database systems emerged; by the mid-1960s a number of such systems had come into commercial use. Interest in a standard began to grow, and Charles Bachman, author of one such product, the Integrated Data Store (IDS), founded the Database Task Group within CODASYL, the group responsible for the creation and standardization of COBOL. In 1971, the Database Task Group delivered their standard, which generally became known as the CODASYL approach, and soon a number of commercial products based on this approach entered the market.
+The CODASYL approach offered applications the ability to navigate around a linked data set which was formed into a large network. Applications could find records by one of three methods:
+
+Use of a primary key (known as a CALC key, typically implemented by hashing)
+Navigating relationships (called sets) from one record to another
+Scanning all the records in a sequential order
+Later systems added B-trees to provide alternate access paths. Many CODASYL databases also added a declarative query language for end users (as distinct from the navigational API). However, CODASYL databases were complex and required significant training and effort to produce useful applications.
+IBM also had its own DBMS in 1966, known as Information Management System (IMS). IMS was a development of software written for the Apollo program on the System/360. IMS was generally similar in concept to CODASYL, but used a strict hierarchy for its model of data navigation instead of CODASYL's network model. Both concepts later became known as navigational databases due to the way data was accessed: the term was popularized by Bachman's 1973 Turing Award presentation The Programmer as Navigator. IMS is classified by IBM as a hierarchical database. IDMS and Cincom Systems' TOTAL databases are classified as network databases. IMS remains in use as of 2014.
+
+
+=== 1970s, relational DBMS ===
+Edgar F. Codd worked at IBM in San Jose, California, in one of their offshoot offices that were primarily involved in the development of hard disk systems. He was unhappy with the navigational model of the CODASYL approach, notably the lack of a "search" facility. In 1970, he wrote a number of papers that outlined a new approach to database construction that eventually culminated in the groundbreaking A Relational Model of Data for Large Shared Data Banks.
+In this paper, he described a new system for storing and working with large databases. Instead of records being stored in some sort of linked list of free-form records as in CODASYL, Codd's idea was to organize the data as a number of "tables", each table being used for a different type of entity. Each table would contain a fixed number of columns containing the attributes of the entity. One or more columns of each table were designated as a  primary key by which the rows of the table could be uniquely identified; cross-references between tables always used these primary keys, rather than disk addresses, and queries would join tables based on these key relationships, using a set of operations based on the mathematical system of relational calculus (from which the model takes its name). Splitting the data into a set of normalized tables (or relations) aimed to ensure that each "fact" was only stored once, thus simplifying update operations. Virtual tables called views could present the data in different ways for different users, but views could not be directly updated.
+Codd used mathematical terms to define the model: relations, tuples, and domains rather than tables, rows, and columns. The terminology that is now familiar came from early implementations. Codd would later criticize the tendency for practical implementations to depart from the mathematical foundations on which the model was based.
+
+The use of primary keys (user-oriented identifiers) to represent cross-table relationships, rather than disk addresses, had two primary motivations. From an engineering perspective, it enabled tables to be relocated and resized without expensive database reorganization. But Codd was more interested in the difference in semantics: the use of explicit identifiers made it easier to define update operations with clean mathematical definitions, and it also enabled query operations to be defined in terms of the established discipline of first-order predicate calculus; because these operations have clean mathematical properties, it becomes possible to rewrite queries in provably correct ways, which is the basis of query optimization. There is no loss of expressiveness compared with the hierarchic or network models, though the connections between tables are no longer so explicit.
+In the hierarchic and network models, records were allowed to have a complex internal structure. For example, the salary history of an employee might be represented as a "repeating group" within the employee record. In the relational model, the process of normalization led to such internal structures being replaced by data held in multiple tables, connected only by logical keys.
+For instance, a common use of a database system is to track information about users, their name, login information, various addresses and phone numbers. In the navigational approach, all of this data would be placed in a single variable-length record. In the relational approach, the data would be normalized into a user table, an address table and a phone number table (for instance). Records would be created in these optional tables only if the address or phone numbers were actually provided.
+As well as identifying rows/records using logical identifiers rather than disk addresses, Codd changed the way in which applications assembled data from multiple records. Rather than requiring applications to gather data one record at a time by navigating the links, they would use a declarative query language that expressed what data was required, rather than the access path by which it should be found. Finding an efficient access path to the data became the responsibility of the database management system, rather than the application programmer. This process, called query optimization, depended on the fact that queries were expressed in terms of mathematical logic.
+Codd's paper was picked up by two people at Berkeley, Eugene Wong and Michael Stonebraker. They started a project known as INGRES using funding that had already been allocated for a geographical database project and student programmers to produce code. Beginning in 1973, INGRES delivered its first test products which were generally ready for widespread use in 1979. INGRES was similar to System R in a number of ways, including the use of a "language" for data access, known as QUEL. Over time, INGRES moved to the emerging SQL standard.
+IBM itself did one test implementation of the relational model, PRTV, and a production one, Business System 12, both now discontinued. Honeywell wrote MRDS for Multics, and now there are two new implementations: Alphora Dataphor and Rel. Most other DBMS implementations usually called relational are actually SQL DBMSs.
+In 1970, the University of Michigan began development of the MICRO Information Management System based on D.L. Childs' Set-Theoretic Data model. MICRO was used to manage very large data sets by the US Department of Labor, the U.S. Environmental Protection Agency, and researchers from the University of Alberta, the University of Michigan, and Wayne State University. It ran on IBM mainframe computers using the Michigan Terminal System. The system remained in production until 1998.
+
+
+=== Integrated approach ===
+
+In the 1970s and 1980s, attempts were made to build database systems with integrated hardware and software. The underlying philosophy was that such integration would provide higher performance at a lower cost. Examples were IBM System/38, the early offering of Teradata, and the Britton Lee, Inc. database machine.
+Another approach to hardware support for database management was ICL's CAFS accelerator, a hardware disk controller with programmable search capabilities. In the long term, these efforts were generally unsuccessful because specialized database machines could not keep pace with the rapid development and progress of general-purpose computers. Thus most database systems nowadays are software systems running on general-purpose hardware, using general-purpose computer data storage. However, this idea is still pursued in certain applications by some companies like Netezza and Oracle (Exadata).
+
+
+=== Late 1970s, SQL DBMS ===
+IBM started working on a prototype system loosely based on Codd's concepts as System R in the early 1970s. The first version was ready in 1974/5, and work then started on multi-table systems in which the data could be split so that all of the data for a record (some of which is optional) did not have to be stored in a single large "chunk". Subsequent multi-user versions were tested by customers in 1978 and 1979, by which time a standardized query language – SQL – had been added. Codd's ideas were establishing themselves as both workable and superior to CODASYL, pushing IBM to develop a true production version of System R, known as SQL/DS, and, later, Database 2 (IBM Db2).
+Larry Ellison's Oracle Database (or more simply, Oracle) started from a different chain, based on IBM's papers on System R. Though Oracle V1 implementations were completed in 1978, it was not until Oracle Version 2 when Ellison beat IBM to market in 1979.
+Stonebraker went on to apply the lessons from INGRES to develop a new database, Postgres, which is now known as PostgreSQL. PostgreSQL is often used for global mission-critical applications (the .org and .info domain name registries use it as their primary data store, as do many large companies and financial institutions).
+In Sweden, Codd's paper was also read and Mimer SQL was developed in the mid-1970s at Uppsala University. In 1984, this project was consolidated into an independent enterprise.
+Another data model, the entity–relationship model, emerged in 1976 and gained popularity for database design as it emphasized a more familiar description than the earlier relational model. Later on, entity–relationship constructs were retrofitted as a data modeling construct for the relational model, and the difference between the two has become irrelevant.
+
+
+=== 1980s, on the desktop ===
+The 1980s ushered in the age of desktop computing. The new computers empowered their users with spreadsheets like Lotus 1-2-3 and database software like dBASE. The dBASE product was lightweight and easy for any computer user to understand out of the box. C. Wayne Ratliff, the creator of dBASE, stated: "dBASE was different from programs like BASIC, C, FORTRAN, and COBOL in that a lot of the dirty work had already been done. The data manipulation is done by dBASE instead of by the user, so the user can concentrate on what he is doing, rather than having to mess with the dirty details of opening, reading, and closing files, and managing space allocation." dBASE was one of the top selling software titles in the 1980s and early 1990s.
+
+
+=== 1990s, object-oriented ===
+The 1990s, along with a rise in object-oriented programming, saw a growth in how data in various databases were handled. Programmers and designers began to treat the data in their databases as objects. That is to say that if a person's data were in a database, that person's attributes, such as their address, phone number, and age, were now considered to belong to that person instead of being extraneous data. This allows for relations between data to be related to objects and their attributes and not to individual fields. The term "object–relational impedance mismatch" described the inconvenience of translating between programmed objects and database tables. Object databases and object–relational databases attempt to solve this problem by providing an object-oriented language (sometimes as extensions to SQL) that programmers can use as alternative to purely relational SQL. On the programming side, libraries known as object–relational mappings (ORMs) attempt to solve the same problem.
+
+
+=== 2000s, NoSQL and NewSQL ===
+
+XML databases are a type of structured document-oriented database that allows querying based on XML document attributes. XML databases are mostly used in applications where the data is conveniently viewed as a collection of documents, with a structure that can vary from the very flexible to the highly rigid: examples include scientific articles, patents, tax filings, and personnel records.
+NoSQL databases are often very fast, do not require fixed table schemas, avoid join operations by storing denormalized data, and are designed to scale horizontally.
+In recent years, there has been a strong demand for massively distributed databases with high partition tolerance, but according to the CAP theorem, it is impossible for a distributed system to simultaneously provide consistency, availability, and partition tolerance guarantees. A distributed system can satisfy any two of these guarantees at the same time, but not all three. For that reason, many NoSQL databases are using what is called eventual consistency to provide both availability and partition tolerance guarantees with a reduced level of data consistency.
+NewSQL is a class of modern relational databases that aims to provide the same scalable performance of NoSQL systems for online transaction processing (read-write) workloads while still using SQL and maintaining the ACID guarantees of a traditional database system.
+
+
+== Use cases ==
+
+Databases are used to support internal operations of organizations and to underpin online interactions with customers and suppliers (see Enterprise software).
+Databases are used to hold administrative information and more specialized data, such as engineering data or economic models. Examples include computerized library systems, flight reservation systems, computerized parts inventory systems, and many content management systems that store websites as collections of webpages in a database.
+
+
+== Classification ==
+One way to classify databases involves the type of their contents, for example: bibliographic, document-text, statistical, or multimedia objects. Another way is by their application area, for example: accounting, music compositions, movies, banking, manufacturing, or insurance. A third way is by some technical aspect, such as the database structure or interface type. This section lists a few of the adjectives used to characterize different kinds of databases.
+
+An in-memory database is a database that primarily resides in main memory, but is typically backed-up by non-volatile computer data storage. Main memory databases are faster than disk databases, and so are often used where response time is critical, such as in telecommunications network equipment.
+An active database includes an event-driven architecture which can respond to conditions both inside and outside the database. Possible uses include security monitoring, alerting, statistics gathering and authorization. Many databases provide active database features in the form of database triggers.
+A cloud database relies on cloud technology. Both the database and most of its DBMS reside remotely, "in the cloud", while its applications are both developed by programmers and later maintained and used by end-users through a web browser and Open APIs.
+Data warehouses archive data from operational databases and often from external sources such as market research firms. The warehouse becomes the central source of data for use by managers and other end-users who may not have access to operational data. For example, sales data might be aggregated to weekly totals and converted from internal product codes to use UPCs so that they can be compared with ACNielsen data. Some basic and essential components of data warehousing include extracting, analyzing, and mining data, transforming, loading, and managing data so as to make them available for further use.
+A deductive database combines logic programming with a relational database.
+A distributed database is one in which both the data and the DBMS span multiple computers.
+A document-oriented database is designed for storing, retrieving, and managing document-oriented, or semi structured, information. Document-oriented databases are one of the main categories of NoSQL databases.
+An embedded database system is a DBMS which is tightly integrated with an application software that requires access to stored data in such a way that the DBMS is hidden from the application's end-users and requires little or no ongoing maintenance.
+End-user databases consist of data developed by individual end-users. Examples of these are collections of documents, spreadsheets, presentations, multimedia, and other files. Several products exist to support such databases.
+A federated database system comprises several distinct databases, each with its own DBMS. It is handled as a single database by a federated database management system (FDBMS), which transparently integrates multiple autonomous DBMSs, possibly of different types (in which case it would also be a heterogeneous database system), and provides them with an integrated conceptual view.
+Sometimes the term multi-database is used as a synonym for federated database, though it may refer to a less integrated (e.g., without an FDBMS and a managed integrated schema) group of databases that cooperate in a single application. In this case, typically middleware is used for distribution, which typically includes an atomic commit protocol (ACP), e.g., the two-phase commit protocol, to allow distributed (global) transactions across the participating databases.
+A graph database is a kind of NoSQL database that uses graph structures with nodes, edges, and properties to represent and store information. General graph databases that can store any graph are distinct from specialized graph databases such as triplestores and network databases.
+An array DBMS is a kind of NoSQL DBMS that allows modeling, storage, and retrieval of (usually large) multi-dimensional arrays such as satellite images and climate simulation output.
+In a hypertext or hypermedia database, any word or a piece of text representing an object, e.g., another piece of text, an article, a picture, or a film, can be hyperlinked to that object. Hypertext databases are particularly useful for organizing large amounts of disparate information. For example, they are useful for organizing online encyclopedias, where users can conveniently jump around the text. The World Wide Web is thus a large distributed hypertext database.
+A knowledge base (abbreviated KB, kb or Δ) is a special kind of database for knowledge management, providing the means for the computerized collection, organization, and retrieval of knowledge. Also a collection of data representing problems with their solutions and related experiences.
+A mobile database can be carried on or synchronized from a mobile computing device.
+Operational databases store detailed data about the operations of an organization. They typically process relatively high volumes of updates using transactions. Examples include customer databases that record contact, credit, and demographic information about a business's customers, personnel databases that hold information such as salary, benefits, skills data about employees, enterprise resource planning systems that record details about product components, parts inventory, and financial databases that keep track of the organization's money, accounting and financial dealings.
+A parallel database seeks to improve performance through parallelization for tasks such as loading data, building indexes and evaluating queries.
+The major parallel DBMS architectures which are induced by the underlying hardware architecture are:
+Shared memory architecture, where multiple processors share the main memory space, as well as other data storage.
+Shared disk architecture, where each processing unit (typically consisting of multiple processors) has its own main memory, but all units share the other storage.
+Shared-nothing architecture, where each processing unit has its own main memory and other storage.
+Probabilistic databases employ fuzzy logic to draw inferences from imprecise data.
+Real-time databases process transactions fast enough for the result to come back and be acted on right away.
+A spatial database can store the data with multidimensional features. The queries on such data include location-based queries, like "Where is the closest hotel in my area?".
+A temporal database has built-in time aspects, for example a temporal data model and a temporal version of SQL. More specifically the temporal aspects usually include valid-time and transaction-time.
+A terminology-oriented database builds upon an object-oriented database, often customized for a specific field.
+An unstructured data database is intended to store in a manageable and protected way diverse objects that do not fit naturally and conveniently in common databases. It may include email messages, documents, journals, multimedia objects, etc. The name may be misleading since some objects can be highly structured. However, the entire possible object collection does not fit into a predefined structured framework. Most established DBMSs now support unstructured data in various ways, and new dedicated DBMSs are emerging.
+
+
+== Database management system ==
+Connolly and Begg define database management system (DBMS) as a "software system that enables users to define, create, maintain and control access to the database." Examples of DBMS's include MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle Database, and Microsoft Access.
+The DBMS acronym is sometimes extended to indicate the underlying database model, with RDBMS for the relational, OODBMS for the object (oriented) and ORDBMS for the object–relational model. Other extensions can indicate some other characteristics, such as DDBMS for a distributed database management systems.
+The functionality provided by a DBMS can vary enormously. The core functionality is the storage, retrieval and update of data. Codd proposed the following functions and services a fully-fledged general purpose DBMS should provide:
+
+Data storage, retrieval and update
+User accessible catalog or data dictionary describing the metadata
+Support for transactions and concurrency
+Facilities for recovering the database should it become damaged
+Support for authorization of access and update of data
+Access support from remote locations
+Enforcing constraints to ensure data in the database abides by certain rules
+It is also generally to be expected the DBMS will provide a set of utilities for such purposes as may be necessary to administer the database effectively, including import, export, monitoring, defragmentation and analysis utilities. The core part of the DBMS interacting between the database and the application interface sometimes referred to as the database engine.
+Often DBMSs will have configuration parameters that can be statically and dynamically tuned, for example the maximum amount of main memory on a server the database can use. The trend is to minimize the amount of manual configuration, and for cases such as embedded databases the need to target zero-administration is paramount.
+The large major enterprise DBMSs have tended to increase in size and functionality and have involved up to thousands of human years of development effort throughout their lifetime.
+Early multi-user DBMS typically only allowed for the application to reside on the same computer with access via terminals or terminal emulation software. The client–server architecture was a development where the application resided on a client desktop and the database on a server allowing the processing to be distributed. This evolved into a multitier architecture incorporating application servers and web servers with the end user interface via a web browser with the database only directly connected to the adjacent tier.
+A general-purpose DBMS will provide public application programming interfaces (API) and optionally a processor for database languages such as SQL to allow applications to be written to interact with and manipulate the database. A special purpose DBMS may use a private API and be specifically customized and linked to a single application. For example, an email system performs many of the functions of a general-purpose DBMS such as message insertion, message deletion, attachment handling, blocklist lookup, associating messages an email address and so forth however these functions are limited to what is required to handle email.
+
+
+== Application ==
+
+External interaction with the database will be via an application program that interfaces with the DBMS. This can range from a database tool that allows users to execute SQL queries textually or graphically, to a website that happens to use a database to store and search information.
+
+
+=== Application program interface ===
+A programmer will code interactions to the database (sometimes referred to as a datasource) via an application program interface (API) or via a database language. The particular API or language chosen will need to be supported by DBMS, possibly indirectly via a preprocessor or a bridging API. Some API's aim to be database independent, ODBC being a commonly known example. Other common API's include JDBC and ADO.NET.
+
+
+== Database languages ==
+Database languages are special-purpose languages, which allow one or more of the following tasks, sometimes distinguished as sublanguages:
+
+Data control language (DCL) – controls access to data;
+Data definition language (DDL) – defines data types such as creating, altering, or dropping tables and the relationships among them;
+Data manipulation language (DML) – performs tasks such as inserting, updating, or deleting data occurrences;
+Data query language (DQL) – allows searching for information and computing derived information.
+Database languages are specific to a particular data model. Notable examples include:
+
+SQL combines the roles of data definition, data manipulation, and query in a single language. It was one of the first commercial languages for the relational model, although it departs in some respects from the relational model as described by Codd (for example, the rows and columns of a table can be ordered). SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987. The standards have been regularly enhanced since and are supported (with varying degrees of conformance) by all mainstream commercial relational DBMSs.
+OQL is an object model language standard (from the Object Data Management Group). It has influenced the design of some of the newer query languages like JDOQL and EJB QL.
+XQuery is a standard XML query language implemented by XML database systems such as MarkLogic and eXist, by relational databases with XML capability such as Oracle and Db2, and also by in-memory XML processors such as Saxon.
+SQL/XML combines XQuery with SQL.
+A database language may also incorporate features like:
+
+DBMS-specific configuration and storage engine management
+Computations to modify query results, like counting, summing, averaging, sorting, grouping, and cross-referencing
+Constraint enforcement (e.g. in an automotive database, only allowing one engine type per car)
+Application programming interface version of the query language, for programmer convenience
+
+
+== Storage ==
+
+Database storage is the container of the physical materialization of a database. It comprises the internal (physical) level in the database architecture. It also contains all the information needed (e.g., metadata, "data about the data", and internal data structures) to reconstruct the conceptual level and external level from the internal level when needed. Databases as digital objects contain three layers of information which must be stored: the data, the structure, and the semantics. Proper storage of all three layers is needed for future preservation and longevity of the database. Putting data into permanent storage is generally the responsibility of the database engine a.k.a. "storage engine". Though typically accessed by a DBMS through the underlying operating system (and often using the operating systems' file systems as intermediates for storage layout), storage properties and configuration settings are extremely important for the efficient operation of the DBMS, and thus are closely maintained by database administrators. A DBMS, while in operation, always has its database residing in several types of storage (e.g., memory and external storage). The database data and the additional needed information, possibly in very large amounts, are coded into bits. Data typically reside in the storage in structures that look completely different from the way the data look at the conceptual and external levels, but in ways that attempt to optimize (the best possible) these levels' reconstruction when needed by users and programs, as well as for computing additional types of needed information from the data (e.g., when querying the database).
+Some DBMSs support specifying which character encoding was used to store data, so multiple encodings can be used in the same database.
+Various low-level database storage structures are used by the storage engine to serialize the data model so it can be written to the medium of choice. Techniques such as indexing may be used to improve performance. Conventional storage is row-oriented, but there are also column-oriented and correlation databases.
+
+
+=== Materialized views ===
+
+Often storage redundancy is employed to increase performance. A common example is storing materialized views, which consist of frequently needed external views or query results. Storing such views saves the expensive computing them each time they are needed. The downsides of materialized views are the overhead incurred when updating them to keep them synchronized with their original updated database data, and the cost of storage redundancy.
+
+
+=== Replication ===
+
+Occasionally a database employs storage redundancy by database objects replication (with one or more copies) to increase data availability (both to improve performance of simultaneous multiple end-user accesses to the same database object, and to provide resiliency in a case of partial failure of a distributed database). Updates of a replicated object need to be synchronized across the object copies. In many cases, the entire database is replicated.
+
+
+=== Virtualization ===
+With data virtualization, the data used remains in its original locations and real-time access is established to allow analytics across multiple sources. This can aid in resolving some technical difficulties such as compatibility problems when combining data from various platforms, lowering the risk of error caused by faulty data, and guaranteeing that the newest data is used. Furthermore, avoiding the creation of a new database containing personal information can make it easier to comply with privacy regulations. However, with data virtualization, the connection to all necessary data sources must be operational as there is no local copy of the data, which is one of the main drawbacks of the approach.
+
+
+== Security ==
+
+Database security deals with all various aspects of protecting the database content, its owners, and its users. It ranges from protection from intentional unauthorized database uses to unintentional database accesses by unauthorized entities (e.g., a person or a computer program).
+Database access control deals with controlling who (a person or a certain computer program) are allowed to access what information in the database. The information may comprise specific database objects (e.g., record types, specific records, data structures), certain computations over certain objects (e.g., query types, or specific queries), or using specific access paths to the former (e.g., using specific indexes or other data structures to access information). Database access controls are set by special authorized (by the database owner) personnel that uses dedicated protected security DBMS interfaces.
+This may be managed directly on an individual basis, or by the assignment of individuals and privileges to groups, or (in the most elaborate models) through the assignment of individuals and groups to roles which are then granted entitlements. Data security prevents unauthorized users from viewing or updating the database. Using passwords, users are allowed access to the entire database or subsets of it called "subschemas". For example, an employee database can contain all the data about an individual employee, but one group of users may be authorized to view only payroll data, while others are allowed access to only work history and medical data. If the DBMS provides a way to interactively enter and update the database, as well as interrogate it, this capability allows for managing personal databases.
+Data security in general deals with protecting specific chunks of data, both physically (i.e., from corruption, or destruction, or removal; e.g., see physical security), or the interpretation of them, or parts of them to meaningful information (e.g., by looking at the strings of bits that they comprise, concluding specific valid credit-card numbers; e.g., see data encryption).
+Change and access logging records who accessed which attributes, what was changed, and when it was changed. Logging services allow for a forensic database audit later by keeping a record of access occurrences and changes. Sometimes application-level code is used to record changes rather than leaving this in the database. Monitoring can be set up to attempt to detect security breaches. Therefore, organizations must take database security seriously because of the many benefits it provides. Organizations will be safeguarded from security breaches and hacking activities like firewall intrusion, virus spread, and ransom ware. This helps in protecting the company's essential information, which cannot be shared with outsiders at any cause.
+
+
+== Transactions and concurrency ==
+
+Database transactions can be used to introduce some level of fault tolerance and data integrity after recovery from a crash. A database transaction is a unit of work, typically encapsulating a number of operations over a database (e.g., reading a database object, writing, acquiring or releasing a lock, etc.), an abstraction supported in database and also other systems. Each transaction has well defined boundaries in terms of which program/code executions are included in that transaction (determined by the transaction's programmer via special transaction commands).
+The acronym ACID describes some ideal properties of a database transaction: atomicity, consistency, isolation, and durability.
+
+
+== Migration ==
+
+A database built with one DBMS is not portable to another DBMS (i.e., the other DBMS cannot run it). However, in some situations, it is desirable to migrate a database from one DBMS to another. The reasons are primarily economical (different DBMSs may have different total costs of ownership or TCOs), functional, and operational (different DBMSs may have different capabilities). The migration involves the database's transformation from one DBMS type to another. The transformation should maintain (if possible) the database related application (i.e., all related application programs) intact. Thus, the database's conceptual and external architectural levels should be maintained in the transformation. It may be desired that also some aspects of the architecture internal level are maintained. A complex or large database migration may be a complicated and costly (one-time) project by itself, which should be factored into the decision to migrate. This is in spite of the fact that tools may exist to help migration between specific DBMSs. Typically, a DBMS vendor provides tools to help import databases from other popular DBMSs.
+
+
+== Building, maintaining, and tuning ==
+
+After designing a database for an application, the next stage is building the database. Typically, an appropriate general-purpose DBMS can be selected to be used for this purpose. A DBMS provides the needed user interfaces to be used by database administrators to define the needed application's data structures within the DBMS's respective data model. Other user interfaces are used to select needed DBMS parameters (like security related, storage allocation parameters, etc.).
+When the database is ready (all its data structures and other needed components are defined), it is typically populated with initial application's data (database initialization, which is typically a distinct project; in many cases using specialized DBMS interfaces that support bulk insertion) before making it operational. In some cases, the database becomes operational while empty of application data, and data are accumulated during its operation.
+After the database is created, initialized and populated it needs to be maintained. Various database parameters may need changing and the database may need to be tuned (tuning) for better performance; application's data structures may be changed or added, new related application programs may be written to add to the application's functionality, etc.
+
+
+== Backup and restore ==
+
+Sometimes it is desired to bring a database back to a previous state (for many reasons, e.g., cases when the database is found corrupted due to a software error, or if it has been updated with erroneous data). To achieve this, a backup operation is done occasionally or continuously, where each desired database state (i.e., the values of its data and their embedding in database's data structures) is kept within dedicated backup files (many techniques exist to do this effectively). When it is decided by a database administrator to bring the database back to this state (e.g., by specifying this state by a desired point in time when the database was in this state), these files are used to restore that state.
+
+
+== Static analysis ==
+Static analysis techniques for software verification can be applied also in the scenario of query languages. In particular, the *Abstract interpretation framework has been extended to the field of query languages for relational databases as a way to support sound approximation techniques. The semantics of query languages can be tuned according to suitable abstractions of the concrete domain of data. The abstraction of relational database systems has many interesting applications, in particular, for security purposes, such as fine-grained access control, watermarking, etc.
+
+
+== Miscellaneous features ==
+Other DBMS features might include:
+
+Database logs – This helps in keeping a history of the executed functions.
+Graphics component for producing graphs and charts, especially in a data warehouse system.
+Query optimizer – Performs query optimization on every query to choose an efficient query plan (a partial order (tree) of operations) to be executed to compute the query result. May be specific to a particular storage engine.
+Tools or hooks for database design, application programming, application program maintenance, database performance analysis and monitoring, database configuration monitoring, DBMS hardware configuration (a DBMS and related database may span computers, networks, and storage units) and related database mapping (especially for a distributed DBMS), storage allocation and database layout monitoring, storage migration, etc.
+Increasingly, there are calls for a single system that incorporates all of these core functionalities into the same build, test, and deployment framework for database management and source control. Borrowing from other developments in the software industry, some market such offerings as "DevOps for database".
+
+
+== Design and modeling ==
+
+The first task of a database designer is to produce a conceptual data model that reflects the structure of the information to be held in the database. A common approach to this is to develop an entity–relationship model, often with the aid of drawing tools. Another popular approach is the Unified Modeling Language. A successful data model will accurately reflect the possible state of the external world being modeled: for example, if people can have more than one phone number, it will allow this information to be captured. Designing a good conceptual data model requires a good understanding of the application domain; it typically involves asking deep questions about the things of interest to an organization, like "can a customer also be a supplier?", or "if a product is sold with two different forms of packaging, are those the same product or different products?", or "if a plane flies from New York to Dubai via Frankfurt, is that one flight or two (or maybe even three)?". The answers to these questions establish definitions of the terminology used for entities (customers, products, flights, flight segments) and their relationships and attributes.
+Producing the conceptual data model sometimes involves input from business processes, or the analysis of workflow in the organization. This can help to establish what information is needed in the database, and what can be left out. For example, it can help when deciding whether the database needs to hold historic data as well as current data.
+Having produced a conceptual data model that users are happy with, the next stage is to translate this into a schema that implements the relevant data structures within the database. This process is often called logical database design, and the output is a logical data model expressed in the form of a schema. Whereas the conceptual data model is (in theory at least) independent of the choice of database technology, the logical data model will be expressed in terms of a particular database model supported by the chosen DBMS. (The terms data model and database model are often used interchangeably, but in this article we use data model for the design of a specific database, and database model for the modeling notation used to express that design).
+The most popular database model for general-purpose databases is the relational model, or more precisely, the relational model as represented by the SQL language. The process of creating a logical database design using this model uses a methodical approach known as normalization. The goal of normalization is to ensure that each elementary "fact" is only recorded in one place, so that insertions, updates, and deletions automatically maintain consistency.
+The final stage of database design is to make the decisions that affect performance, scalability, recovery, security, and the like, which depend on the particular DBMS. This is often called physical database design, and the output is the physical data model. A key goal during this stage is data independence, meaning that the decisions made for performance optimization purposes should be invisible to end-users and applications. There are two types of data independence: Physical data independence and logical data independence. Physical design is driven mainly by performance requirements, and requires a good knowledge of the expected workload and access patterns, and a deep understanding of the features offered by the chosen DBMS.
+Another aspect of physical database design is security. It involves both defining access control to database objects as well as defining security levels and methods for the data itself.
+
+
+=== Models ===
+
+A database model is a type of data model that determines the logical structure of a database and fundamentally determines in which manner data can be stored, organized, and manipulated. The most popular example of a database model is the relational model (or the SQL approximation of relational), which uses a table-based format.
+Common logical data models for databases include:
+
+Navigational databases
+Hierarchical database model
+Network model
+Graph database
+Relational model
+Entity–relationship model
+Enhanced entity–relationship model
+Object model
+Document model
+Entity–attribute–value model
+Star schema
+An object–relational database combines the two related structures.
+Physical data models include:
+
+Inverted index
+Flat file
+Other models include:
+
+Multidimensional model
+Array model
+Multivalue model
+Specialized models are optimized for particular types of data:
+
+XML database
+Semantic model
+Content store
+Event store
+Time series model
+
+
+=== External, conceptual, and internal views ===
+
+A database management system provides three views of the database data:
+
+The external level defines how each group of end-users sees the organization of data in the database. A single database can have any number of views at the external level.
+The conceptual level (or logical level) unifies the various external views into a compatible global view. It provides the synthesis of all the external views. It is out of the scope of the various database end-users, and is rather of interest to database application developers and database administrators.
+The internal level (or physical level) is the internal organization of data inside a DBMS. It is concerned with cost, performance, scalability and other operational matters. It deals with storage layout of the data, using storage structures such as indexes to enhance performance. Occasionally it stores data of individual views (materialized views), computed from generic data, if performance justification exists for such redundancy. It balances all the external views' performance requirements, possibly conflicting, in an attempt to optimize overall performance across all activities.
+While there is typically only one conceptual and internal view of the data, there can be any number of different external views. This allows users to see database information in a more business-related way rather than from a technical, processing viewpoint. For example, a financial department of a company needs the payment details of all employees as part of the company's expenses, but does not need details about employees that are in the interest of the human resources department. Thus different departments need different views of the company's database.
+The three-level database architecture relates to the concept of data independence which was one of the major initial driving forces of the relational model. The idea is that changes made at a certain level do not affect the view at a higher level. For example, changes in the internal level do not affect application programs written using conceptual level interfaces, which reduces the impact of making physical changes to improve performance.
+The conceptual view provides a level of indirection between internal and external. On the one hand it provides a common view of the database, independent of different external view structures, and on the other hand it abstracts away details of how the data are stored or managed (internal level). In principle every level, and even every external view, can be presented by a different data model. In practice usually a given DBMS uses the same data model for both the external and the conceptual levels (e.g., relational model). The internal level, which is hidden inside the DBMS and depends on its implementation, requires a different level of detail and uses its own types of data structure types.
+
+
+== Research ==
+Database technology has been an active research topic since the 1960s, both in academia and in the research and development groups of companies (for example IBM Research). Research activity includes theory and development of prototypes. Notable research topics have included models, the atomic transaction concept, related concurrency control techniques, query languages and query optimization methods, RAID, and more.
+The database research area has several dedicated academic journals (for example, ACM Transactions on Database Systems-TODS, Data and Knowledge Engineering-DKE) and annual conferences (e.g., ACM SIGMOD, ACM PODS, VLDB, IEEE ICDE).
+
+
+== See also ==
+
+
+== Notes ==
+
+
+== References ==
+
+
+== Sources ==
+
+
+== Further reading ==
+Ling Liu and Tamer M. Özsu (Eds.) (2009).  "Encyclopedia of Database Systems, 4100 p. 60 illus. ISBN 978-0-387-49616-0.
+Gray, J. and Reuter, A. Transaction Processing: Concepts and Techniques, 1st edition,  Morgan Kaufmann Publishers, 1992.
+Kroenke, David M. and David J. Auer. Database Concepts. 3rd ed. New York: Prentice, 2007.
+Raghu Ramakrishnan and Johannes Gehrke, Database Management Systems.
+Abraham Silberschatz, Henry F. Korth, S. Sudarshan, Database System Concepts.
+Lightstone, S.; Teorey, T.; Nadeau, T. (2007). Physical Database Design: the database professional's guide to exploiting indexes, views, storage, and more. Morgan Kaufmann Press. ISBN 978-0-12-369389-1.
+Teorey, T.; Lightstone, S. and Nadeau, T. Database Modeling & Design: Logical Design, 4th edition, Morgan Kaufmann Press, 2005. ISBN 0-12-685352-5.
+CMU Database courses playlist
+MIT OCW 6.830 | Fall 2010 | Database Systems
+Berkeley CS W186
+
+
+== External links ==
+DB File extension – information about files with the DB extension
+
+Cloud computing
+Cloud computing is "a paradigm for enabling network access to a scalable and elastic pool of shareable physical or virtual resources with self-service provisioning and administration on-demand," according to ISO.
+
+
+== Essential Characteristics ==
+In 2011, the National Institute of Standards and Technology (NIST) identified five "essential characteristics" for cloud systems. Below are the exact definitions according to NIST:
+
+On-demand self-service: "A consumer can unilaterally provision computing capabilities, such as server time and network storage, as needed automatically without requiring human interaction with each service provider."
+Broad network access: "Capabilities are available over the network and accessed through standard mechanisms that promote use by heterogeneous thin or thick client platforms (e.g., mobile phones, tablets, laptops, and workstations)."
+Resource pooling: " The provider's computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand."
+Rapid elasticity: "Capabilities can be elastically provisioned and released, in some cases automatically, to scale rapidly outward and inward commensurate with demand. To the consumer, the capabilities available for provisioning often appear unlimited and can be appropriated in any quantity at any time."
+Measured service: "Cloud systems automatically control and optimize resource use by leveraging a metering capability at some level of abstraction appropriate to the type of service (e.g., storage, processing, bandwidth, and active user accounts). Resource usage can be monitored, controlled, and reported, providing transparency for both the provider and consumer of the utilized service.
+By 2023, the International Organization for Standardization (ISO) had expanded and refined the list.
+
+
+== History ==
+
+The history of cloud computing extends back to the 1960s, with the initial concepts of time-sharing becoming popularized via remote job entry (RJE). The "data center" model, where users submitted jobs to operators to run on mainframes, was predominantly used during this era. This was a time of exploration and experimentation with ways to make large-scale computing power available to more users through time-sharing, optimizing the infrastructure, platform, and applications, and increasing efficiency for end users.
+The "cloud" metaphor for virtualized services dates to 1994, when it was used by General Magic for the universe of "places" that mobile agents in the Telescript environment could "go". The metaphor is credited to David Hoffman, a General Magic communications specialist, based on its long-standing use in networking and telecom. The expression cloud computing became more widely known in 1996 when Compaq Computer Corporation drew up a business plan for future computing and the Internet. The company's ambition was to supercharge sales with "cloud computing-enabled applications". The business plan foresaw that online consumer file storage would likely be commercially successful. As a result, Compaq decided to sell server hardware to internet service providers.
+In the 2000s, the application of cloud computing began to take shape with the establishment of Amazon Web Services (AWS) in 2002, which allowed developers to build applications independently. In 2006 Amazon Simple Storage Service, known as Amazon S3, and the Amazon Elastic Compute Cloud (EC2) were released. In 2008 NASA's development of the first open-source software for deploying private and hybrid clouds.
+The following decade saw the launch of various cloud services. In 2010, Microsoft launched Microsoft Azure, and Rackspace Hosting and NASA initiated an open-source cloud-software project, OpenStack. IBM introduced the IBM SmartCloud framework in 2011, and Oracle announced the Oracle Cloud in 2012. In December 2019, Amazon launched AWS Outposts, a service that extends AWS infrastructure, services, APIs, and tools to customer data centers, co-location spaces, or on-premises facilities.
+
+
+== Value proposition ==
+
+Cloud computing can enable shorter time to market by providing pre-configured tools, scalable resources, and managed services, allowing users to focus on their core business value instead of maintaining infrastructure. Cloud platforms can enable organizations and individuals to reduce upfront capital expenditures on physical infrastructure by shifting to an operational expenditure model, where costs scale with usage. Cloud platforms also offer managed services and tools, such as artificial intelligence, data analytics, and machine learning, which might otherwise require significant in-house expertise and infrastructure investment.
+While cloud computing can offer cost advantages through effective resource optimization, organizations often face challenges such as unused resources, inefficient configurations, and hidden costs without proper oversight and governance. Many cloud platforms provide cost management tools, such as AWS Cost Explorer and Azure Cost Management, and frameworks like FinOps have emerged to standardize financial operations in the cloud. Cloud computing also facilitates collaboration, remote work, and global service delivery by enabling secure access to data and applications from any location with an internet connection.
+Cloud providers offer various redundancy options for core services, such as managed storage and managed databases, though redundancy configurations often vary by service tier. Advanced redundancy strategies, such as cross-region replication or failover systems, typically require explicit configuration and may incur additional costs or licensing fees.
+Cloud environments operate under a shared responsibility model, where providers are typically responsible for infrastructure security, physical hardware, and software updates, while customers are accountable for data encryption, identity and access management (IAM), and application-level security. These responsibilities vary depending on the cloud service model—Infrastructure as a Service (IaaS), Platform as a Service (PaaS), or Software as a Service (SaaS)—with customers typically having more control and responsibility in IaaS environments and progressively less in PaaS and SaaS models, often trading control for convenience and managed services.
+
+
+== Factors Influencing Adoption and Suitability of Cloud Computing ==
+
+The decision to adopt cloud computing or maintain on-premises infrastructure depends on factors such as scalability, cost structure, latency requirements, regulatory constraints, and infrastructure customization.
+Organizations with variable or unpredictable workloads, limited capital for upfront investments, or a focus on rapid scalability benefit from cloud adoption. Startups, SaaS companies, and e-commerce platforms often prefer the pay-as-you-go operational expenditure (OpEx) model of cloud infrastructure. Additionally, companies prioritizing global accessibility, remote workforce enablement, disaster recovery, and leveraging advanced services such as AI/ML and analytics are well-suited for the cloud. In recent years, some cloud providers have started offering specialized services for high-performance computing and low-latency applications, addressing some use cases previously exclusive to on-premises setups.
+On the other hand, organizations with strict regulatory requirements, highly predictable workloads, or reliance on deeply integrated legacy systems may find cloud infrastructure less suitable. Businesses in industries like defense, government, or those handling highly sensitive data often favor on-premises setups for greater control and data sovereignty. Additionally, companies with ultra-low latency requirements, such as high-frequency trading (HFT) firms, rely on custom hardware (e.g., FPGAs) and physical proximity to exchanges, which most cloud providers cannot fully replicate despite recent advancements. Similarly, tech giants like Google, Meta, and Amazon build their own data centers due to economies of scale, predictable workloads, and the ability to customize hardware and network infrastructure for optimal efficiency. However, these companies also use cloud services selectively for certain workloads and applications where it aligns with their operational needs.
+In practice, many organizations are increasingly adopting hybrid cloud architectures, combining on-premises infrastructure with cloud services. This approach allows businesses to balance scalability, cost-effectiveness, and control, offering the benefits of both deployment models while mitigating their respective limitations.
+
+
+== Challenges and limitations ==
+
+One of the main challenges of cloud computing, in comparison to more traditional on-premises computing, is data security and privacy. Cloud users entrust their sensitive data to third-party providers, who may not have adequate measures to protect it from unauthorized access, breaches, or leaks. Cloud users also face compliance risks if they have to adhere to certain regulations or standards regarding data protection, such as GDPR or HIPAA.
+Another challenge of cloud computing is reduced visibility and control. Cloud users may not have full insight into how their cloud resources are managed, configured, or optimized by their providers. They may also have limited ability to customize or modify their cloud services according to their specific needs or preferences. Complete understanding of all technology may be impossible, especially given the scale, complexity, and deliberate opacity of contemporary systems; however, there is a need for understanding complex technologies and their interconnections to have power and agency within them. The metaphor of the cloud can be seen as problematic as cloud computing retains the aura of something noumenal and numinous; it is something experienced without precisely understanding what it is or how it works.
+Additionally, cloud migration is a significant challenge. This process involves transferring data, applications, or workloads from one cloud environment to another, or from on-premises infrastructure to the cloud. Cloud migration can be complicated, time-consuming, and expensive, particularly when there are compatibility issues between different cloud platforms or architectures. If not carefully planned and executed, cloud migration can lead to downtime, reduced performance, or even data loss.
+
+
+=== Cloud migration challenges ===
+According to the 2024 State of the Cloud Report by Flexera, approximately 50% of respondents identified the following top challenges when migrating workloads to public clouds:
+
+"Understanding application dependencies"
+"Comparing on-premise and cloud costs"
+"Assessing technical feasibility."
+
+
+=== Implementation challenges ===
+Applications hosted in the cloud are susceptible to the fallacies of distributed computing, a series of misconceptions that can lead to significant issues in software development and deployment.
+
+
+=== Cloud cost overruns ===
+In a report by Gartner, a survey of 200 IT leaders revealed that 69% experienced budget overruns in their organizations' cloud expenditures during 2023. Conversely, 31% of IT leaders whose organizations stayed within budget attributed their success to accurate forecasting and budgeting, proactive monitoring of spending, and effective optimization.
+The 2024 Flexera State of Cloud Report identifies the top cloud challenges as managing cloud spend, followed by security concerns and lack of expertise. Public cloud expenditures exceeded budgeted amounts by an average of 15%. The report also reveals that cost savings is the top cloud initiative for 60% of respondents. Furthermore, 65% measure cloud progress through cost savings, while 42% prioritize shorter time-to-market, indicating that cloud's promise of accelerated deployment is often overshadowed by cost concerns.
+
+
+=== Service Level Agreements ===
+Typically, cloud providers' Service Level Agreements (SLAs) do not encompass all forms of service interruptions. Exclusions typically include planned maintenance, downtime resulting from external factors such as network issues, human errors, like misconfigurations, natural disasters, force majeure events, or security breaches. Typically, customers bear the responsibility of monitoring SLA compliance and must file claims for any unmet SLAs within a designated timeframe. Customers should be aware of how deviations from SLAs are calculated, as these parameters may vary by service. These requirements can place a considerable burden on customers. Additionally, SLA percentages and conditions can differ across various services within the same provider, with some services lacking any SLA altogether. In cases of service interruptions due to hardware failures in the cloud provider, the company typically does not offer monetary compensation. Instead, eligible users may receive credits as outlined in the corresponding SLA.
+
+
+=== Leaky abstractions ===
+Cloud computing abstractions aim to simplify resource management, but leaky abstractions can expose underlying complexities. These variations in abstraction quality depend on the cloud vendor, service and architecture. Mitigating leaky abstractions requires users to understand the implementation details and limitations of the cloud services they utilize.
+
+
+=== Service lock-in within the same vendor ===
+Service lock-in within the same vendor occurs when a customer becomes dependent on specific services within a cloud vendor, making it challenging to switch to alternative services within the same vendor when their needs change.
+
+
+=== Security and privacy ===
+
+Cloud computing poses privacy concerns because the service provider can access the data that is in the cloud at any time.  It could accidentally or deliberately alter or delete information. Many cloud providers can share information with third parties if necessary for purposes of law and order without a warrant. That is permitted in their privacy policies, which users must agree to before they start using cloud services. Solutions to privacy include policy and legislation as well as end-users' choices for how data is stored. Users can encrypt data that is processed or stored within the cloud to prevent unauthorized access. Identity management systems can also provide practical solutions to privacy concerns in cloud computing. These systems distinguish between authorized and unauthorized users and determine the amount of data that is accessible to each entity. The systems work by creating and describing identities, recording activities, and getting rid of unused identities.
+According to the Cloud Security Alliance, the top three threats in the cloud are Insecure Interfaces and APIs, Data Loss & Leakage, and Hardware Failure—which accounted for 29%, 25% and 10% of all cloud security outages respectively. Together, these form shared technology vulnerabilities. In a cloud provider platform being shared by different users, there may be a possibility that information belonging to different customers resides on the same data server. Additionally, Eugene Schultz, chief technology officer at Emagined Security, said that hackers are spending substantial time and effort looking for ways to penetrate the cloud. "There are some real Achilles' heels in the cloud infrastructure that are making big holes for the bad guys to get into". Because data from hundreds or thousands of companies can be stored on large cloud servers, hackers can theoretically gain control of huge stores of information through a single attack—a process he called "hyperjacking". Some examples of this include the Dropbox security breach, and iCloud 2014 leak. Dropbox had been breached in October 2014, having over seven million of its users passwords stolen by hackers in an effort to get monetary value from it by Bitcoins (BTC). By having these passwords, they are able to read private data as well as have this data be indexed by search engines (making the information public).
+There is the problem of legal ownership of the data (If a user stores some data in the cloud, can the cloud provider profit from it?). Many Terms of Service agreements are silent on the question of ownership. Physical control of the computer equipment (private cloud) is more secure than having the equipment off-site and under someone else's control (public cloud). This delivers great incentive to public cloud computing service providers to prioritize building and maintaining strong management of secure services. Some small businesses that do not have expertise in IT security could find that it is more secure for them to use a public cloud. There is the risk that end users do not understand the issues involved when signing on to a cloud service (persons sometimes do not read the many pages of the terms of service agreement, and just click "Accept" without reading). This is important now that cloud computing is common and required for some services to work, for example for an intelligent personal assistant (Apple's Siri or Google Assistant). Fundamentally, private cloud is seen as more secure with higher levels of control for the owner, however public cloud is seen to be more flexible and requires less time and money investment from the user.
+The attacks that can be made on cloud computing systems include man-in-the middle attacks, phishing attacks, authentication attacks, and malware attacks. One of the largest threats is considered to be malware attacks, such as Trojan horses. Recent research conducted in 2022 has revealed that the Trojan horse injection method is a serious problem with harmful impacts on cloud computing systems.
+
+
+== Service models ==
+
+The National Institute of Standards and Technology recognized three cloud service models in 2011: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). The International Organization for Standardization (ISO) later identified additional models in 2023, including "Network as a Service", "Communications as a Service", "Compute as a Service", and "Data Storage as a Service".
+
+
+=== Infrastructure as a service (IaaS) ===
+
+Infrastructure as a service (IaaS) refers to online services that provide high-level APIs used to abstract various low-level details of underlying network infrastructure like physical computing resources, location, data partitioning, scaling, security, backup, etc. A hypervisor runs the virtual machines as guests. Pools of hypervisors within the cloud operational system can support large numbers of virtual machines and the ability to scale services up and down according to customers' varying requirements. Linux containers run in isolated partitions of a single Linux kernel running directly on the physical hardware. Linux cgroups and namespaces are the underlying Linux kernel technologies used to isolate, secure and manage the containers. The use of containers offers higher performance than virtualization because there is no hypervisor overhead. IaaS clouds often offer additional resources such as a virtual-machine disk-image library, raw block storage, file or object storage, firewalls, load balancers, IP addresses, virtual local area networks (VLANs), and software bundles.
+
+The NIST's definition of cloud computing describes IaaS as "where the consumer is able to deploy and run arbitrary software, which can include operating systems and applications. The consumer does not manage or control the underlying cloud infrastructure but has control over operating systems, storage, and deployed applications; and possibly limited control of select networking components (e.g., host firewalls)."
+IaaS-cloud providers supply these resources on-demand from their large pools of equipment installed in data centers. For wide-area connectivity, customers can use either the Internet or carrier clouds (dedicated virtual private networks). To deploy their applications, cloud users install operating-system images and their application software on the cloud infrastructure. In this model, the cloud user patches and maintains the operating systems and the application software. Cloud providers typically bill IaaS services on a utility computing basis: cost reflects the number of resources allocated and consumed.
+
+
+=== Platform as a service (PaaS) ===
+
+The NIST's definition of cloud computing defines Platform as a Service as:
+
+The capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
+PaaS vendors offer a development environment to application developers. The provider typically develops toolkit and standards for development and channels for distribution and payment. In the PaaS models, cloud providers deliver a computing platform, typically including an operating system, programming-language execution environment, database, and the web server. Application developers develop and run their software on a cloud platform instead of directly buying and managing the underlying hardware and software layers. With some PaaS, the underlying computer and storage resources scale automatically to match application demand so that the cloud user does not have to allocate resources manually.
+Some integration and data management providers also use specialized applications of PaaS as delivery models for data. Examples include iPaaS (Integration Platform as a Service) and dPaaS (Data Platform as a Service). iPaaS enables customers to develop, execute and govern integration flows. Under the iPaaS integration model, customers drive the development and deployment of integrations without installing or managing any hardware or middleware. dPaaS delivers integration—and data-management—products as a fully managed service. Under the dPaaS model, the PaaS provider, not the customer, manages the development and execution of programs by building data applications for the customer. dPaaS users access data through data-visualization tools.
+
+
+=== Software as a service (SaaS) ===
+
+The NIST's definition of cloud computing defines Software as a Service as:
+
+The capability provided to the consumer is to use the provider's applications running on a cloud infrastructure. The applications are accessible from various client devices through either a thin client interface, such as a web browser (e.g., web-based email), or a program interface. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, storage, or even individual application capabilities, with the possible exception of limited user-specific application configuration settings.
+In the software as a service (SaaS) model, users gain access to application software and databases. Cloud providers manage the infrastructure and platforms that run the applications. SaaS is sometimes referred to as "on-demand software" and is usually priced on a pay-per-use basis or using a subscription fee. In the SaaS model, cloud providers install and operate application software in the cloud and cloud users access the software from cloud clients. Cloud users do not manage the cloud infrastructure and platform where the application runs. This eliminates the need to install and run the application on the cloud user's own computers, which simplifies maintenance and support. Cloud applications differ from other applications in their scalability—which can be achieved by cloning tasks onto multiple virtual machines at run-time to meet changing work demand. Load balancers distribute the work over the set of virtual machines. This process is transparent to the cloud user, who sees only a single access-point. To accommodate a large number of cloud users, cloud applications can be multitenant, meaning that any machine may serve more than one cloud-user organization.
+The pricing model for SaaS applications is typically a monthly or yearly flat fee per user, so prices become scalable and adjustable if users are added or removed at any point. It may also be free. Proponents claim that SaaS gives a business the potential to reduce IT operational costs by outsourcing hardware and software maintenance and support to the cloud provider. This enables the business to reallocate IT operations costs away from hardware/software spending and from personnel expenses, towards meeting other goals. In addition, with applications hosted centrally, updates can be released without the need for users to install new software. One drawback of SaaS comes with storing the users' data on the cloud provider's server. As a result, there could be unauthorized access to the data. Examples of applications offered as SaaS are games and productivity software like Google Docs and Office Online. SaaS applications may be integrated with cloud storage or File hosting services, which is the case with Google Docs being integrated with Google Drive, and Office Online being integrated with OneDrive.
+
+
+=== Serverless computing ===
+
+Serverless computing allows customers to use various cloud capabilities without the need to provision, deploy, or manage hardware or software resources, apart from providing their application code or data. ISO/IEC 22123-2:2023 classifies serverless alongside Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) under the broader category of cloud service categories. Notably, while ISO refers to these classifications as cloud service categories, the National Institute of Standards and Technology (NIST) refers to them as service models.
+
+
+== Deployment models ==
+
+"A cloud deployment model represents the way in which cloud computing can be organized based on the control and sharing of physical or virtual resources." Cloud deployment models define the fundamental patterns of interaction between cloud customers and cloud providers. They do not detail implementation specifics or the configuration of resources.
+
+
+=== Private ===
+Private cloud is cloud infrastructure operated solely for a single organization, whether managed internally or by a third party, and hosted either internally or externally. Undertaking a private cloud project requires significant engagement to virtualize the business environment, and requires the organization to reevaluate decisions about existing resources. It can improve business, but every step in the project raises security issues that must be addressed to prevent serious vulnerabilities. Self-run data centers are generally capital intensive. They have a significant physical footprint, requiring allocations of space, hardware, and environmental controls. These assets have to be refreshed periodically, resulting in additional capital expenditures. They have attracted criticism because users "still have to buy, build, and manage them" and thus do not benefit from less hands-on management, essentially "[lacking] the economic model that makes cloud computing such an intriguing concept".
+
+
+=== Public ===
+
+Cloud services are considered "public" when they are delivered over the public Internet, and they may be offered as a paid subscription, or free of charge. Architecturally, there are few differences between public- and private-cloud services, but security concerns increase substantially when services (applications, storage, and other resources) are shared by multiple customers. Most public-cloud providers offer direct-connection services that allow customers to securely link their legacy data centers to their cloud-resident applications.
+Several factors like the functionality of the solutions, cost, integrational and organizational aspects as well as safety & security are influencing the decision of enterprises and organizations to choose a public cloud or on-premises solution.
+
+
+=== Hybrid ===
+
+Hybrid cloud is a composition of a public cloud and a private environment, such as a private cloud or on-premises resources, that remain distinct entities but are bound together, offering the benefits of multiple deployment models. Hybrid cloud can also mean the ability to connect collocation, managed and/or dedicated services with cloud resources. Gartner defines a hybrid cloud service as a cloud computing service that is composed of some combination of private, public and community cloud services, from different service providers. A hybrid cloud service crosses isolation and provider boundaries so that it cannot be simply put in one category of private, public, or community cloud service. It allows one to extend either the capacity or the capability of a cloud service, by aggregation, integration or customization with another cloud service.
+Varied use cases for hybrid cloud composition exist. For example, an organization may store sensitive client data in house on a private cloud application, but interconnect that application to a business intelligence application provided on a public cloud as a software service. This example of hybrid cloud extends the capabilities of the enterprise to deliver a specific business service through the addition of externally available public cloud services. Hybrid cloud adoption depends on a number of factors such as data security and compliance requirements, level of control needed over data, and the applications an organization uses.
+Another example of hybrid cloud is one where IT organizations use public cloud computing resources to meet temporary capacity needs that can not be met by the private cloud. This capability enables hybrid clouds to employ cloud bursting for scaling across clouds. Cloud bursting is an application deployment model in which an application runs in a private cloud or data center and "bursts" to a public cloud when the demand for computing capacity increases. A primary advantage of cloud bursting and a hybrid cloud model is that an organization pays for extra compute resources only when they are needed. Cloud bursting enables data centers to create an in-house IT infrastructure that supports average workloads, and use cloud resources from public or private clouds, during spikes in processing demands.
+
+
+=== Community ===
+Community cloud shares infrastructure between several organizations from a specific community with common concerns (security, compliance, jurisdiction, etc.), whether it is managed internally or by a third-party, and hosted internally or externally, the costs are distributed among fewer users compared to a public cloud (but more than a private cloud). As a result, only a portion of the potential cost savings of cloud computing is achieved.
+
+
+=== Multi cloud ===
+
+According to ISO/IEC 22123-1: "multi-cloud is a cloud deployment model in which a customer uses public cloud services provided by two or more cloud service providers".   Poly cloud refers to the use of multiple public clouds for the purpose of leveraging specific services that each provider offers. It differs from Multi cloud in that it is not designed to increase flexibility or mitigate against failures but is rather used to allow an organization to achieve more than could be done with a single provider.
+
+
+== Market ==
+According to International Data Corporation (IDC), global spending on cloud computing services has reached $706 billion and is expected to reach $1.3 trillion by 2025. Gartner estimated that global public cloud services end-user spending would reach $600 billion by 2023. According to a McKinsey & Company report, cloud cost-optimization levers and value-oriented business use cases foresee more than $1 trillion in run-rate EBITDA across Fortune 500 companies as up for grabs in 2030. In 2022, more than $1.3 trillion in enterprise IT spending was at stake from the shift to the cloud, growing to almost $1.8 trillion in 2025, according to Gartner.
+The European Commission's 2012 Communication identified several issues which were impeding the development of the cloud computing market:: Section 3 
+
+fragmentation of the digital single market across the EU
+concerns about contracts including reservations about data access and ownership, data portability, and change control
+variations in standards applicable to cloud computing
+The Communication set out a series of "digital agenda actions" which the Commission proposed to undertake in order to support the development of a fair and effective market for cloud computing services.: Pages 6–14 
+
+
+== List of public clouds ==
+Adobe Creative Cloud
+Amazon Web Services
+Google Cloud
+IBM Cloud
+Microsoft Azure
+OpenStack
+Oracle Cloud
+Panorama9
+
+
+== Similar concepts ==
+The goal of cloud computing is to allow users to take benefit from all of these technologies, without the need for deep knowledge about or expertise with each one of them. The cloud aims to cut costs and helps the users focus on their core business instead of being impeded by IT obstacles. The main enabling technology for cloud computing is virtualization. Virtualization software separates a physical computing device into one or more "virtual" devices, each of which can be easily used and managed to perform computing tasks. With operating system–level virtualization essentially creating a scalable system of multiple independent computing devices, idle computing resources can be allocated and used more efficiently. Virtualization provides the agility required to speed up IT operations and reduces cost by increasing infrastructure utilization. Autonomic computing automates the process through which the user can provision resources on-demand. By minimizing user involvement, automation speeds up the process, reduces labor costs and reduces the possibility of human errors.
+Cloud computing uses concepts from utility computing to provide metrics for the services used. Cloud computing attempts to address QoS (quality of service) and reliability problems of other grid computing models.
+Cloud computing shares characteristics with:
+
+Client–server model – Client–server computing refers broadly to any distributed application that distinguishes between service providers (servers) and service requestors (clients).
+Computer bureau – A service bureau providing computer services, particularly from the 1960s to 1980s.
+Grid computing – A form of distributed and parallel computing, whereby a 'super and virtual computer' is composed of a cluster of networked, loosely coupled computers acting in concert to perform very large tasks.
+Fog computing – Distributed computing paradigm that provides data, compute, storage and application services closer to the client or near-user edge devices, such as network routers. Furthermore, fog computing handles data at the network level, on smart devices and on the end-user client-side (e.g. mobile devices), instead of sending data to a remote location for processing.
+Utility computing – The "packaging of computing resources, such as computation and storage, as a metered service similar to a traditional public utility, such as electricity."
+Peer-to-peer – A distributed architecture without the need for central coordination. Participants are both suppliers and consumers of resources (in contrast to the traditional client-server model).
+Cloud sandbox – A live, isolated computer environment in which a program, code or file can run without affecting the application in which it runs.
+
+
+== See also ==
+
+
+== Notes ==
+
+
+== References ==
+
+
+== Further reading ==
+Millard, Christopher (2013). Cloud Computing Law. Oxford University Press. ISBN 978-0-19-967168-7.
+Weisser, Alexander (2020). International Taxation of Cloud Computing. Editions Juridiques Libres, ISBN 978-2-88954-030-3.
+Singh, Jatinder; Powles, Julia; Pasquier, Thomas; Bacon, Jean (July 2015). "Data Flow Management and Compliance in Cloud Computing". IEEE Cloud Computing. 2 (4): 24–32. doi:10.1109/MCC.2015.69. S2CID 9812531.
+Armbrust, Michael; Stoica, Ion; Zaharia, Matei; Fox, Armando; Griffith, Rean; Joseph, Anthony D.; Katz, Randy; Konwinski, Andy; Lee, Gunho; Patterson, David; Rabkin, Ariel (1 April 2010). "A view of cloud computing". Communications of the ACM. 53 (4): 50. doi:10.1145/1721654.1721672. S2CID 1673644.
+Hu, Tung-Hui (2015). A Prehistory of the Cloud. MIT Press. ISBN 978-0-262-02951-3.
+Mell, P. (2011, September). The NIST Definition of Cloud Computing. Retrieved November 1, 2015, from National Institute of Standards and Technology website
+ Media related to Cloud computing at Wikimedia Commons
+
