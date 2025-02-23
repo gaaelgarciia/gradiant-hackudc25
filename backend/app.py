@@ -84,4 +84,4 @@ def verificar_persona(persona: PersonaLogin):
             raise HTTPException(status_code=404, detail="Persona no encontrada o contraseña incorrecta")
         return {"message": "Persona verificada"}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)
