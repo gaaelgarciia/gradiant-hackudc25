@@ -1,6 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { fetchPerfil } from '../services/api';
 
-const UserInfoPopup = ({ user, onClose, onLogout }) => {
+const UserInfoPopup = ({ userId, onClose, onLogout }) => {
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    const getUserInfo = async () => {
+      const data = await fetchPerfil(userId);
+      setUserInfo(data);
+    };
+
+    getUserInfo();
+  }, [userId]);
+
+  if (!userInfo) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="popup-overlay">
       <div className="popup-content">
@@ -9,17 +25,17 @@ const UserInfoPopup = ({ user, onClose, onLogout }) => {
           <button className="close-button" onClick={onClose}>×</button>
         </div>
         <div>
-          <p><strong>Nombre:</strong> {user.name}</p>
-          <p><strong>Email:</strong> {user.email}</p>
+          <p><strong>Nombre:</strong> {userInfo.name}</p>
+          <p><strong>Email:</strong> {userInfo.email}</p>
           <h3>Skills</h3>
           <ul>
-            {user.skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
+            {userInfo.skills.map((skill, index) => (
+              <li key={index}>{skill.skill}: Level {skill.level}</li>
             ))}
           </ul>
           <h3>Repositorios</h3>
           <ul>
-            {user.repositories.map((repo, index) => (
+            {userInfo.repositories.map((repo, index) => (
               <li key={index}>{repo}</li>
             ))}
           </ul>

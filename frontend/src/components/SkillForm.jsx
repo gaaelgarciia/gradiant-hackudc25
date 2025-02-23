@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { fetchProgrammingLanguages } from '../services/api';
-
+import React, { useState, useEffect } from 'react';
+import { fetchProgrammingLanguages, addSkill } from '../services/api';
 
 const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
   const [nombre, setNombre] = useState(selectedResult ? selectedResult.name : '');
@@ -18,10 +17,16 @@ const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
     loadLanguages();
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit({ nombre, tipo, nivel, descripcion });
-    onClose(); // Cerrar el popup al enviar el formulario
+    const personaId = selectedResult ? selectedResult.id : null;
+    const response = await addSkill(personaId, tipo, nivel, descripcion);
+    if (response) {
+      onSubmit({ nombre, tipo, nivel, descripcion });
+      onClose(); // Cerrar el popup al enviar el formulario
+    } else {
+      console.error("Error adding skill");
+    }
   };
 
   return (

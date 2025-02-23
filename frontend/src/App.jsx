@@ -98,8 +98,8 @@ function App() {
           ) : (
             <SearchResults results={results} onResultClick={handleResultClick} />
           )}
-          {showUserInfoPopup && (
-            <UserInfoPopup user={user} onClose={handleCloseUserInfoPopup} onLogout={handleLogout} />
+          {showUserInfoPopup && user && (
+            <UserInfoPopup userId={user.id} onClose={handleCloseUserInfoPopup} onLogout={handleLogout} />
           )}
         </>
       )}

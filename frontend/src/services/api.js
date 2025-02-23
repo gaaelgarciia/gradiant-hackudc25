@@ -136,3 +136,27 @@ export const fetchAutentication = async (email, password) => {
         return false;
     }
 };
+
+const ADD_SKILL_API_URL = "http://127.0.0.1:8000/personas/PutCompetencia"
+
+export const addSkill = async (personaId, competencia, nivel, repositorio) => {
+    try {
+        const response = await fetch(ADD_SKILL_API_URL, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ persona_id: personaId, competencia, nivel, repositorio })
+        });
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error adding skill:", error);
+        return null;
+    }
+};
