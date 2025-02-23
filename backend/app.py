@@ -23,9 +23,16 @@ g.parse("database/data.ttl", format="turtle")
 @app.get("/personas/competencias/{consulta}")
 def get_personas(consulta: str):
     try:
-        consulta = sparql_querys.parse_query(g, consulta)
-        resultado = sparql_querys.consultar_personas(g, consulta)
-        return {"personas": resultado}
+        consulta_mod = sparql_querys.parse_query(g, consulta)
+        if consulta_mod:
+            resultado = sparql_querys.consultar_personas(g, consulta_mod)
+            print('11111111')
+            return {"personas": resultado}
+        else:
+            print('22222222')
+            return rag_system(consulta)
+
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
