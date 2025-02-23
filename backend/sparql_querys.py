@@ -110,16 +110,19 @@ def get_persona(graph, id_persona):
         resultado[predicado] = str(o)
     return resultado
     
-def parse_query(graph,query):
+def parse_query(graph, query):
     # List of common programming languages and frameworks (you can expand this list)
     programming_terms = consultar_lenguajes_programacion(graph)
+    
     # Normalize the query to lowercase for case insensitivity
     query = query.lower()
     
     # Find all matches in the query
     matches = []
     for term in programming_terms:
-        if term.lower() in query:
+        # Create a regex pattern that matches the whole word
+        pattern = r'\b' + re.escape(term.lower()) + r'\b'
+        if re.search(pattern, query):
             matches.append(term.capitalize())
     
     # Join matches with underscore and return
