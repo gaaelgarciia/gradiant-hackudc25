@@ -28,10 +28,15 @@ function App() {
     setShowUserInfoPopup(true);
   };
 
-  const handleFormSubmit = (data) => {
-    console.log(data);
-    setSelectedResult(null); // Reset selected result after form submission
-    setShowForm(false); // Hide form after submission
+  const handleFormSubmit = async (data) => {
+    try {
+      console.log('Submitting skill:', data);
+      setSelectedResult(null);
+      setShowForm(false);
+      // Optionally refresh the results or user data here
+    } catch (error) {
+      console.error('Error submitting skill:', error);
+    }
   };
 
   const handleAddButtonClick = () => {
@@ -113,7 +118,7 @@ function App() {
             <SkillForm 
               onSubmit={handleFormSubmit} 
               onClose={handleCloseForm}
-              userId={user?.id}
+              userEmail={user?.email} // Changed from userId to userEmail
             />
           )}
 

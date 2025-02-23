@@ -1,32 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { fetchProgrammingLanguages, addSkill } from '../services/api';
+import React, { useState } from 'react';
+import { addSkill } from '../services/api';
 
-const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
-  const [nombre, setNombre] = useState(selectedResult ? selectedResult.name : '');
-  const [tipo, setTipo] = useState('');
-  const [nivel, setNivel] = useState('');
-  const [descripcion, setDescripcion] = useState('');
-  const [programmingLanguages, setProgrammingLanguages] = useState([]);
-
-  useEffect(() => {
-    const loadLanguages = async () => {
-      const languages = await fetchProgrammingLanguages();
-      setProgrammingLanguages(languages);
-    };
-    
-    loadLanguages();
-  }, []);
+const SkillForm = ({ onSubmit, userEmail, onClose }) => { // Change userId to userEmail
+  const [formData, setFormData] = useState({
+    email: userEmail, // Change persona_id to email
+    competencia: '',
+    nivel: '',
+    repositorio: ''
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const personaId = selectedResult ? selectedResult.id : null;
-    const response = await addSkill(personaId, tipo, nivel, descripcion);
-    if (response) {
-      onSubmit({ nombre, tipo, nivel, descripcion });
-      onClose(); // Cerrar el popup al enviar el formulario
-    } else {
-      console.error("Error adding skill");
+    try {
+      const response = await addSkill({
+        email: formData.email,
+        competencia: formData.competencia,
+        nivel: parseInt(formData.nivel),
+        repositorio: formData.repositorio
+      });
+      
+      if (response) {
+        onSubmit(formData);
+        onClose();
+      }
+    } catch (error) {
+      console.error('Error adding skill:', error);
     }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   return (
@@ -38,49 +45,38 @@ const SkillForm = ({ onSubmit, selectedResult, onClose }) => {
         </div>
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Nombre del Tópico:</label>
+            <label>Competencia:</label>
             <input
               type="text"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
+              name="competencia"
+              value={formData.competencia}
+              onChange={handleChange}
               required
             />
-          </div>
-          <div>
-            <label>Tipo del Tópico:</label>
-            <select
-              value={tipo}
-              onChange={(e) => setTipo(e.target.value)}
-              required
-            >
-              <option value="">Seleccione un tipo</option>
-              {programmingLanguages.map((language) => (
-                <option key={language} value={language}>
-                  {language}
-                </option>
-              ))}
-            </select>
           </div>
           <div>
             <label>Nivel:</label>
             <input
               type="number"
-              value={nivel}
-              onChange={(e) => setNivel(e.target.value)}
+              name="nivel"
+              value={formData.nivel}
+              onChange={handleChange}
               min="1"
               max="5"
               required
             />
           </div>
           <div>
-            <label>Descripción:</label>
-            <textarea
-              value={descripcion}
-              onChange={(e) => setDescripcion(e.target.value)}
+            <label>Repositorio:</label>
+            <input
+              type="text"
+              name="repositorio"
+              value={formData.repositorio}
+              onChange={handleChange}
               required
             />
           </div>
-          <button type="submit" className="add-button">Enviar</button>
+          <button type="submit" className="add-button">Añadir</button>
         </form>
       </div>
     </div>
