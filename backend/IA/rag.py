@@ -46,7 +46,7 @@ def generate_answer(retrieved_docs, query):
     generator = pipeline('text-generation', model='gpt2')
     
     # Join the retrieved documents and create a prompt
-    context = " ".join(retrieved_docs)
+    context = "RESPUESTA GENERADA CON IA: ".join(retrieved_docs)
     prompt = f"Answer the following question based on the context: {query}\n\nContext: {context}\nAnswer:"
     
     # Generate a response
