@@ -55,7 +55,7 @@ def put_competencia(graph: Graph, persona_id: int, competencia: str, nivel: int,
     if nivel in range(1, 6):
         nivel_formato = EX[f'know_with_level_{nivel}']
     else:
-        raise ValueError("El nivel debe estar entre 1 y 5")
+        raise ValueError("El nivel debe esta2r entre 1 y 5")
 
     persona_uri = EX[f"Person{persona_id}"]
     repositorio_uri = EX[repositorio]
@@ -102,12 +102,13 @@ def verbos(graph):
     # Return the list of unique predicates
     return list(predicates)
 
-def get_persona(graph, id_persona):
-    persona_uri = EX[f"{id_persona}"]
+def get_persona(graph: Graph, persona_id: int):
+    persona_uri = EX[f"Person{persona_id}"]
     resultado = {}
     for s, p, o in graph.triples((persona_uri, None, None)):
         predicado = str(p).split("/")[-1]
-        resultado[predicado] = str(o)
+        if predicado != "password" and predicado != "22-rdf-syntax-ns#type":
+            resultado[predicado] = str(o)
     return resultado
     
 def parse_query(graph, query):

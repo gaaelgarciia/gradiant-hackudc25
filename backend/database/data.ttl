@@ -10,15 +10,11 @@ ex:ProgrammingLanguage a rdfs:Class .
 
 ex:Repositorio a rdfs:Class .
 
-ex:password a rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-
 ex:Backend a ex:ProgrammingLanguage ;
     rdf:value "Backend" .
 
 ex:C a ex:ProgrammingLanguage ;
-    rdf:value "C" .    
+    rdf:value "C" .
 
 ex:Frontend a ex:ProgrammingLanguage ;
     rdf:value "Frontend" .
@@ -38,8 +34,8 @@ ex:Person1 a ex:Person ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "Backend" ;
     ex:name "Alice" ;
-    ex:repositories ex:Repo1 ;
-    ex:password "alice_password" .
+    ex:password "alice_password" ;
+    ex:repositories ex:Repo1 .
 
 ex:Person10 a ex:Person ;
     ex:email "jack@example.com" ;
@@ -50,8 +46,8 @@ ex:Person10 a ex:Person ;
     ex:know_with_level_4 "Python" ;
     ex:know_with_level_5 "Backend" ;
     ex:name "Jack" ;
-    ex:repositories ex:Repo10 ;
-    ex:password "jack_password" .
+    ex:password "jack_password" ;
+    ex:repositories ex:Repo10 .
 
 ex:Person11 a ex:Person ;
     ex:email "kathy@example.com" ;
@@ -62,8 +58,8 @@ ex:Person11 a ex:Person ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Java" ;
     ex:name "Kathy" ;
-    ex:repositories ex:Repo11 ;
-    ex:password "kathy_password" .
+    ex:password "kathy_password" ;
+    ex:repositories ex:Repo11 .
 
 ex:Person12 a ex:Person ;
     ex:email "leo@example.com" ;
@@ -74,8 +70,8 @@ ex:Person12 a ex:Person ;
     ex:know_with_level_4 "React" ;
     ex:know_with_level_5 "Python" ;
     ex:name "Leo" ;
-    ex:repositories ex:Repo12 ;
-    ex:password "leo_password" .
+    ex:password "leo_password" ;
+    ex:repositories ex:Repo12 .
 
 ex:Person13 a ex:Person ;
     ex:email "mia@example.com" ;
@@ -86,8 +82,8 @@ ex:Person13 a ex:Person ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "React" ;
     ex:name "Mia" ;
-    ex:repositories ex:Repo13 ;
-    ex:password "mia_password" .
+    ex:password "mia_password" ;
+    ex:repositories ex:Repo13 .
 
 ex:Person14 a ex:Person ;
     ex:email "nina@example.com" ;
@@ -98,8 +94,8 @@ ex:Person14 a ex:Person ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "C#" ;
     ex:name "Nina" ;
-    ex:repositories ex:Repo14 ;
-    ex:password "nina_password" .
+    ex:password "nina_password" ;
+    ex:repositories ex:Repo14 .
 
 ex:Person15 a ex:Person ;
     ex:email "oscar@example.com" ;
@@ -110,8 +106,8 @@ ex:Person15 a ex:Person ;
     ex:know_with_level_4 "C" ;
     ex:know_with_level_5 "React" ;
     ex:name "Oscar" ;
-    ex:repositories ex:Repo15 ;
-    ex:password "oscar_password" .
+    ex:password "oscar_password" ;
+    ex:repositories ex:Repo15 .
 
 ex:Person16 a ex:Person ;
     ex:email "paul@example.com" ;
@@ -122,8 +118,8 @@ ex:Person16 a ex:Person ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Backend" ;
     ex:name "Paul" ;
-    ex:repositories ex:Repo16 ;
-    ex:password "paul_password" .
+    ex:password "paul_password" ;
+    ex:repositories ex:Repo16 .
 
 ex:Person17 a ex:Person ;
     ex:email "quinn@example.com" ;
@@ -134,9 +130,9 @@ ex:Person17 a ex:Person ;
     ex:know_with_level_4 "Java" ;
     ex:know_with_level_5 "React" ;
     ex:name "Quinn" ;
+    ex:password "quinn_password" ;
     ex:repositories ex:Repo17,
-        <http://127.0.0.1:8000/github.com/17/Hackaton> ;
-    ex:password "quinn_password" .
+        <http://127.0.0.1:8000/github.com/17/Hackaton> .
 
 ex:Person18 a ex:Person ;
     ex:email "rose@example.com" ;
@@ -147,8 +143,8 @@ ex:Person18 a ex:Person ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "Frontend" ;
     ex:name "Rose" ;
-    ex:repositories ex:Repo18 ;
-    ex:password "rose_password" .
+    ex:password "rose_password" ;
+    ex:repositories ex:Repo18 .
 
 ex:Person19 a ex:Person ;
     ex:email "sam@example.com" ;
@@ -159,8 +155,8 @@ ex:Person19 a ex:Person ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "JavaScript" ;
     ex:name "Sam" ;
-    ex:repositories ex:Repo19 ;
-    ex:password "sam_password" .
+    ex:password "sam_password" ;
+    ex:repositories ex:Repo19 .
 
 ex:Person2 a ex:Person ;
     ex:email "bob@example.com" ;
@@ -171,8 +167,8 @@ ex:Person2 a ex:Person ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "Java" ;
     ex:name "Bob" ;
-    ex:repositories ex:Repo2 ;
-    ex:password "bob_password" .
+    ex:password "bob_password" ;
+    ex:repositories ex:Repo2 .
 
 ex:Person20 a ex:Person ;
     ex:email "tina@example.com" ;
@@ -181,10 +177,11 @@ ex:Person20 a ex:Person ;
     ex:know_with_level_2 "Frontend" ;
     ex:know_with_level_3 "JavaScript" ;
     ex:know_with_level_4 "Python" ;
-    ex:know_with_level_5 "Backend" ;
+    ex:know_with_level_5 "Backend, C, C" ;
     ex:name "Tina" ;
-    ex:repositories ex:Repo20 ;
-    ex:password "tina_password" .
+    ex:password "tina_password" ;
+    ex:repositories ex:Repo20,
+        <http://127.0.0.1:8000/github.com/20/hackaton> .
 
 ex:Person3 a ex:Person ;
     ex:email "charlie@example.com" ;
@@ -195,8 +192,8 @@ ex:Person3 a ex:Person ;
     ex:know_with_level_4 "Frontend" ;
     ex:know_with_level_5 "Backend" ;
     ex:name "Charlie" ;
-    ex:repositories ex:Repo3 ;
-    ex:password "charlie_password" .
+    ex:password "charlie_password" ;
+    ex:repositories ex:Repo3 .
 
 ex:Person4 a ex:Person ;
     ex:email "david@example.com" ;
@@ -207,8 +204,8 @@ ex:Person4 a ex:Person ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "Java" ;
     ex:name "David" ;
-    ex:repositories ex:Repo4 ;
-    ex:password "david_password" .
+    ex:password "david_password" ;
+    ex:repositories ex:Repo4 .
 
 ex:Person5 a ex:Person ;
     ex:email "eve@example.com" ;
@@ -219,8 +216,8 @@ ex:Person5 a ex:Person ;
     ex:know_with_level_4 "React" ;
     ex:know_with_level_5 "Frontend" ;
     ex:name "Eve" ;
-    ex:repositories ex:Repo5 ;
-    ex:password "eve_password" .
+    ex:password "eve_password" ;
+    ex:repositories ex:Repo5 .
 
 ex:Person6 a ex:Person ;
     ex:email "frank@example.com" ;
@@ -231,8 +228,8 @@ ex:Person6 a ex:Person ;
     ex:know_with_level_4 "React" ;
     ex:know_with_level_5 "Frontend" ;
     ex:name "Frank" ;
-    ex:repositories ex:Repo6 ;
-    ex:password "frank_password" .
+    ex:password "frank_password" ;
+    ex:repositories ex:Repo6 .
 
 ex:Person7 a ex:Person ;
     ex:email "grace@example.com" ;
@@ -243,8 +240,8 @@ ex:Person7 a ex:Person ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Frontend" ;
     ex:name "Grace" ;
-    ex:repositories ex:Repo7 ;
-    ex:password "grace_password" .
+    ex:password "grace_password" ;
+    ex:repositories ex:Repo7 .
 
 ex:Person8 a ex:Person ;
     ex:email "hank@example.com" ;
@@ -255,8 +252,8 @@ ex:Person8 a ex:Person ;
     ex:know_with_level_4 "JavaScript" ;
     ex:know_with_level_5 "Java" ;
     ex:name "Hank" ;
-    ex:repositories ex:Repo8 ;
-    ex:password "hank_password" .
+    ex:password "hank_password" ;
+    ex:repositories ex:Repo8 .
 
 ex:Person9 a ex:Person ;
     ex:email "ivy@example.com" ;
@@ -267,8 +264,8 @@ ex:Person9 a ex:Person ;
     ex:know_with_level_4 "Backend" ;
     ex:know_with_level_5 "JavaScript" ;
     ex:name "Ivy" ;
-    ex:repositories ex:Repo9 ;
-    ex:password "ivy_password" .
+    ex:password "ivy_password" ;
+    ex:repositories ex:Repo9 .
 
 ex:Python a ex:ProgrammingLanguage ;
     rdf:value "Python" .
@@ -304,6 +301,11 @@ ex:know_with_level_4 a rdf:Property ;
     rdfs:range xsd:string ;
     owl:hasValue 4 .
 
+ex:know_with_level_5 a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    owl:hasValue 5 .
+
 ex:lenguaje a rdf:Property,
         rdfs:Property ;
     rdfs:domain ex:Repositorio ;
@@ -313,6 +315,10 @@ ex:lenguaje a rdf:Property,
 ex:nombre a rdf:Property ;
     rdfs:domain ex:Person,
         ex:Repositorio ;
+    rdfs:range xsd:string .
+
+ex:password a rdf:Property ;
+    rdfs:domain ex:Person ;
     rdfs:range xsd:string .
 
 ex:repositories a rdf:Property ;
@@ -423,7 +429,3 @@ ex:Repo9 a ex:Repositorio ;
     ex:nombre "Repo9" ;
     ex:url "http://repo9.example.com" .
 
-ex:know_with_level_5 a rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string ;
-    owl:hasValue 5 .
